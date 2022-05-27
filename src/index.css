@@ -1,13 +1,93 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  background-color: var(--white-color)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.hidden {
+  display: none !important;
+}
+
+/* Tipografías */
+* {
+  font-family: 'Questrial', sans-serif;
+}
+
+.font-light {
+  font-family: 'Questrial';
+  font-weight: 300;
+}
+
+.font-regular {
+  font-family: 'Questrial';
+  font-weight: 400;
+}
+
+.font-medium {
+  font-family: 'Questrial';
+  font-weight:500;
+}
+
+.font-semibold {
+  font-family: 'Questrial';
+  font-weight: 600;
+}
+
+.font-bold {
+  font-family: 'Questrial';
+  font-weight: bold;
+}
+/* Fin tipografías */
+
+/* Colors */
+.text-black-color {
+  color: var(--black-color)
+}
+
+.text-white-color {
+  color: var(--white-color)
+}
+
+.text-aqua-color {
+  color: var(--aqua-color)
+}
+
+.text-gray-color {
+  color: var(--gray-color)
+}
+
+.text-red-color {
+  color: var(--red-color);
+  font-size: 35px;
+}
+
+.text-pink-color {
+  color: var(--pink-color);
+}
+/* Colors */
+
+.form-check-input:checked {
+  background-color: var(--aqua-color);
+  border-color: var(--aqua-color);
+}
+
+.form-check-input {
+  background-color: var(--white-color);
+  border-color: var(--aqua-color);
+}
+
+.form-check-input:focus {
+  border-color: var(--aqua-color);
+  outline: 0;
+  box-shadow: 0 0 0 .25rem #407b8386;
+}
+
+:root{ 
+  --white-color: #FEFEFE;
+  --red-color: #CC2936;
+  --gray-color: #868787;
+  --aqua-color: #407B83;
+  --black-color: #1c2022;
+  --pink-color: #ca527b;
+  --true-black-color: #020202;
 }
