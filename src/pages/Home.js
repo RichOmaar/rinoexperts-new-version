@@ -4,7 +4,7 @@ import "../components/home/home.css";
 import MainVideo from "../components/mainVideo/MainVideo";
 import MainResume from '../components/mainResume/MainResume';
 // import SliderResults from '../components/sliderResults/SliderResults';
-// import Location from '../components/location/Location';
+import Location from '../components/location/Location';
 
 const Home = () => {
   // useEffect(() => {
@@ -16,7 +16,7 @@ const Home = () => {
       <MainVideo />
       <MainResume />
       {/* <SliderResults /> */}
-      {/* <Location /> */}
+      <Location />
       <p>Hola mundo</p>
     </div>
   );

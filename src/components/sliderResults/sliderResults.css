@@ -1,0 +1,11 @@
+.owl-theme .item {
+    border: 2px solid var(--pink-color);
+}
+
+.slider-result-caontainer {
+    padding: 0px 0px 40px 0px;
+}
+
+.owl-theme {
+    padding-bottom: 20px 0px;
+}
