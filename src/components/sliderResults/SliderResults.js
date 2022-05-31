@@ -12,25 +12,25 @@ import Result3 from '../../assets/results/compare-3.png';
 
 const SliderResults = () => {
 
-    const state= {
-        responsive:{
-            0: {
-                items: 2,
-            },
-            576: {
-                items: 3,
-            },
-            768: {
-                items: 3,
-            },
-            992: {
-                items: 5,
-            },
-            1200: {
-                items: 5,
-            },
-        },
-    }
+  const state= {
+      responsive:{
+          0: {
+              items: 2,
+          },
+          576: {
+              items: 3,
+          },
+          768: {
+              items: 3,
+          },
+          992: {
+              items: 5,
+          },
+          1200: {
+              items: 5,
+          },
+      },
+  }
 
   return (
     <div className="slider-result-caontainer">

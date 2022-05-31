@@ -3,7 +3,7 @@ import "../components/home/home.css";
 
 import MainVideo from "../components/mainVideo/MainVideo";
 import MainResume from '../components/mainResume/MainResume';
-// import SliderResults from '../components/sliderResults/SliderResults';
+import SliderResults from '../components/sliderResults/SliderResults';
 import Location from '../components/location/Location';
 
 const Home = () => {
@@ -15,7 +15,7 @@ const Home = () => {
     <div class="container-fluid home-container p-0">
       <MainVideo />
       <MainResume />
-      {/* <SliderResults /> */}
+      <SliderResults />
       <Location />
       <p>Hola mundo</p>
     </div>
