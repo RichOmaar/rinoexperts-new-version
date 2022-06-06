@@ -54,39 +54,41 @@ const SliderResults = () => {
           //
         >
           <div class="item">
-            <img
-              alt="img1"
-              src={Result1}
-            />
+            <div className="row">
+              <div className="col-12">
+                <img alt="img1" src={Result1} />
+              </div>
+              <div className="col-12 text-white-color py-3 px-4">
+                <h3>Itzel Estrella</h3>
+                <p>México</p>
+                <h5>Gracias, son los mejores. Si me cambiaron cañon</h5>
+              </div>
+            </div>
           </div>
           <div class="item">
-            <img
-              alt="img1"
-              src={Result2}
-            />
+            <div className="row">
+              <div className="col-12">
+                <img alt="img1" src={Result2} />
+              </div>
+              <div className="col-12 text-white-color py-3 px-4">
+                <h3>Ele Ross</h3>
+                <p>México</p>
+                <h5>@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi nariz</h5>
+              </div>
+            </div>
           </div>
           <div class="item">
-            <img
-              alt="img1"
-              src={Result3}
-            />
+            <div className="row">
+              <div className="col-12">
+                <img alt="img1" src={Result3} />
+              </div>
+              <div className="col-12 text-white-color py-3 px-4">
+                <h3>Belem</h3>
+                <p>México</p>
+                <h5>Se ve súper diferente, me gustó mil</h5>
+              </div>
+            </div>
           </div>
-          <div class="item">
-            <img
-              alt="img1"
-              src={Result2}
-            />
-          </div>
-          <div class="item">
-            <img
-              alt="img1"
-              src={Result1}
-            />
-          </div>
-          <div class="item">
-            <img src={Result3} />
-          </div>
-
           {/* {imagenesMaterial.map(mat => (
                         <div key={mat.id_imagenProducto} className="item">
                             <img className="carruselInfoMaterial_img" src={mat.ruta} alt="ImagenProducto" />

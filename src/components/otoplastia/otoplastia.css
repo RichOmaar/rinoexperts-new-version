@@ -1,0 +1,10 @@
+.otoplastia-img {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+
+.otoplastia-img-container {
+    border: 1px solid var(--pink-color);
+    padding: 0px;
+    
+}
