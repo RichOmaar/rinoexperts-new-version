@@ -15,12 +15,19 @@
 
 .navbar a:hover {
     color: var(--pink-color)!important;
+    border-style: none none solid none!important;
     transition: 0.3s;
 }
 
 .navbar-light .navbar-toggler {
     background-color: var(--pink-color)!important;
 }
+
+.dropdown-menu {
+    background-color: var(--true-black-color);
+    border-color: var(--pink-color);
+}
+
 /* .navbar-nav .active {
     font-weight: bold;
     font-size: 20px;

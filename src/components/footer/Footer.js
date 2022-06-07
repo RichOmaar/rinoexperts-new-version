@@ -23,7 +23,7 @@ const Footer = () => {
                             </div>
                             <div className="col-10 contact-us-footer">
                                 <h3 className="p-0 m-0">Contáctanos</h3>
-                                <a href="#"><p>+525512436587</p></a>
+                                <a href="tel:5534080969"><p>+525512436587</p></a>
                             </div>
                         </div>
                     </div>

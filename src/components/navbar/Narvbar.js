@@ -9,7 +9,7 @@ const Narvbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light bg-light">
       <Link to="/" className="navbar-brand p-3">
-        <img src={RinoexpertsLogo} className="img-logo-navbar" alt="Responsive image" />
+        <img src={RinoexpertsLogo} className="img-logo-navbar" alt="Rinoexperts" />
       </Link>
       <button
         className="navbar-toggler"

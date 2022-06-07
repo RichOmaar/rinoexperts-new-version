@@ -82,6 +82,10 @@ body {
   box-shadow: 0 0 0 .25rem #407b8386;
 }
 
+.black-background {
+    background-color: var(--true-black-color);
+}
+
 :root{ 
   --white-color: #FEFEFE;
   --red-color: #CC2936;

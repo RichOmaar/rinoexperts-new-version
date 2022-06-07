@@ -8,3 +8,66 @@
     padding: 0px;
     
 }
+
+.otoplastia-container .accordion-body {
+    text-align: start;
+}
+
+.otoplastia-container .accordion-item:last-of-type .accordion-collapse {
+    border-radius: 0px!important;
+}
+
+.otoplastia-container .accordion {
+    margin-top: 30px;
+}
+
+.otoplastia-container .tab-content p,ul {
+    color: var(--white-color);
+}
+
+.otoplastia-container .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    border-radius: 1px;
+    background-color: var(--pink-color)!important;
+}
+
+.otoplastia-container .nav-pills .nav-link {
+    border-radius: 0;
+    color: var(--white-color);
+    border: 0.05rem solid var(--pink-color);
+    transition: 0.3s;
+}
+
+.otoplastia-container .nav-link:focus, .nav-link:hover {
+    border: 0.1rem solid var(--pink-color);
+    transition: 0.3s;
+}
+
+/* .accordion-item:last-of-type .accordion-button.collapsed {
+
+} */
+
+.otoplastia-container .accordion-item {
+    /* border-radius: 0px !important; */
+    /* border-radius: 0px !important; */
+    border-width: 1px!important;
+    border-style: none none solid none !important;
+}
+
+.otoplastia-container .accordion-button {
+    background-color: var(--white-color)!important;
+    color: var(--pink-color)!important;
+    transition: 0.3s!important;
+}
+
+.otoplastia-container .accordion-button.collapsed{
+    background-color: var(--true-black-color)!important;
+    color: var(--pink-color)!important;
+    transition: 0.3s!important;
+    border-radius: 0px !important;
+}
+
+.otoplastia-container .accordion-button:focus {
+    outline: 1px solid var(--pink-color)!important;
+    box-shadow: var(--pink-color)!important;
+    border-color: var(--pink-color)!important;
+}

@@ -53,7 +53,7 @@ const SliderResults = () => {
           // ]}
           //
         >
-          <div class="item">
+          <div className="item">
             <div className="row">
               <div className="col-12">
                 <img alt="img1" src={Result1} />
@@ -65,10 +65,10 @@ const SliderResults = () => {
               </div>
             </div>
           </div>
-          <div class="item">
+          <div className="item">
             <div className="row">
               <div className="col-12">
-                <img alt="img1" src={Result2} />
+                <img alt="img2" src={Result2} />
               </div>
               <div className="col-12 text-white-color py-3 px-4">
                 <h3>Ele Ross</h3>
@@ -77,10 +77,10 @@ const SliderResults = () => {
               </div>
             </div>
           </div>
-          <div class="item">
+          <div className="item">
             <div className="row">
               <div className="col-12">
-                <img alt="img1" src={Result3} />
+                <img alt="img3" src={Result3} />
               </div>
               <div className="col-12 text-white-color py-3 px-4">
                 <h3>Belem</h3>

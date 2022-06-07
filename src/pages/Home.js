@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../components/home/home.css";
 
 import MainVideo from "../components/mainVideo/MainVideo";
@@ -12,12 +12,11 @@ const Home = () => {
   // }, [])
 
   return (
-    <div class="container-fluid home-container p-0">
+    <div className="container-fluid black-background p-0">
       <MainVideo />
       <MainResume />
       <SliderResults />
       <Location />
-      <p>Hola mundo</p>
     </div>
   );
 };
