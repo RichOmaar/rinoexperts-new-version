@@ -22,9 +22,9 @@ const MainVideo = () => {
         <div className="row">
           <div className="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 text-center">
             <span className="video-tittle">
-              Expertos en cosmética facial y rinoplastias
+              Expertos en arquitectura facial
             </span>
-            <p className="text-pink-color font-bold fs-3 py-3">
+            <p className="text-pink-color font-bold fs-4 py-4">
               Cirugía de nariz, rostro y cuello. Rinoplastia estética,
               funcional, reparadora y revisional
             </p>

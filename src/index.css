@@ -1,7 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: var(--white-color)
+  background-color: var(--white-color);
+  animation: fadeInAnimation ease 3s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .hidden {
@@ -10,50 +22,50 @@ body {
 
 /* Tipografías */
 * {
-  font-family: 'Questrial', sans-serif;
+  font-family: "Questrial", sans-serif;
 }
 
 .font-light {
-  font-family: 'Questrial';
+  font-family: "Questrial";
   font-weight: 300;
 }
 
 .font-regular {
-  font-family: 'Questrial';
+  font-family: "Questrial";
   font-weight: 400;
 }
 
 .font-medium {
-  font-family: 'Questrial';
-  font-weight:500;
+  font-family: "Questrial";
+  font-weight: 500;
 }
 
 .font-semibold {
-  font-family: 'Questrial';
+  font-family: "Questrial";
   font-weight: 600;
 }
 
 .font-bold {
-  font-family: 'Questrial';
+  font-family: "Questrial";
   font-weight: bold;
 }
 /* Fin tipografías */
 
 /* Colors */
 .text-black-color {
-  color: var(--black-color)
+  color: var(--black-color);
 }
 
 .text-white-color {
-  color: var(--white-color)
+  color: var(--white-color);
 }
 
 .text-aqua-color {
-  color: var(--aqua-color)
+  color: var(--aqua-color);
 }
 
 .text-gray-color {
-  color: var(--gray-color)
+  color: var(--gray-color);
 }
 
 .text-red-color {
@@ -79,18 +91,18 @@ body {
 .form-check-input:focus {
   border-color: var(--aqua-color);
   outline: 0;
-  box-shadow: 0 0 0 .25rem #407b8386;
+  box-shadow: 0 0 0 0.25rem #407b8386;
 }
 
 .black-background {
-    background-color: var(--true-black-color);
+  background-color: var(--true-black-color);
 }
 
-:root{ 
-  --white-color: #FEFEFE;
-  --red-color: #CC2936;
-  --gray-color: #868787;
-  --aqua-color: #407B83;
+:root {
+  --white-color: #fefefe;
+  --red-color: #cc2936;
+  --gray-color: #292c36;
+  --aqua-color: #407b83;
   --black-color: #1c2022;
   --pink-color: #ca527b;
   --true-black-color: #020202;

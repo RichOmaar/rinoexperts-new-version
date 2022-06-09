@@ -6,9 +6,11 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
-import Result1 from '../../assets/results/compare-1.png';
-import Result2 from '../../assets/results/compare-2.png';
-import Result3 from '../../assets/results/compare-3.png';
+import Review1 from '../../assets/img/reviews/review-square-1.png';
+import Review2 from '../../assets/img/reviews/review-square-2.png';
+import Review3 from '../../assets/img/reviews/review-square-3.png';
+import Review4 from '../../assets/img/reviews/review-square-4.png';
+import Review5 from '../../assets/img/reviews/review-square-5.png';
 
 const SliderResults = () => {
 
@@ -43,7 +45,6 @@ const SliderResults = () => {
           autoplay={true}
           loop
           dots={true}
-          touchDrag={true}
           animateIn={true}
           responsive={state.responsive}
           center={true}
@@ -55,17 +56,84 @@ const SliderResults = () => {
         >
           <div className="item">
             <div className="row">
-              <div className="col-12">
-                <img alt="img1" src={Result1} />
+              <div className="col-4">
+                <img alt="img1" src={Review1} />
               </div>
-              <div className="col-12 text-white-color py-3 px-4">
-                <h3>Itzel Estrella</h3>
+              <div className="col-8 text-white-color">
+                <h4>Itzel Estrella</h4>
                 <p>México</p>
-                <h5>Gracias, son los mejores. Si me cambiaron cañon</h5>
+              </div>
+              <div className="col-12 text-white-color">
+                <p className="font-regular"><em>"Gracias, son los mejores. Si me cambiaron cañon"</em></p>
+                <small className="font-light">28/04/2022</small>
               </div>
             </div>
           </div>
+
           <div className="item">
+            <div className="row">
+              <div className="col-4">
+                <img alt="img1" src={Review2} />
+              </div>
+              <div className="col-8 text-white-color">
+                <h4>Ele Ross</h4>
+                <p>México</p>
+              </div>
+              <div className="col-12 text-white-color">
+                <p className="font-regular"><em>"@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi nariz"</em></p>
+                <small className="font-light">30/05/2022</small>
+              </div>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="row">
+              <div className="col-4">
+                <img alt="img1" src={Review3} />
+              </div>
+              <div className="col-8 text-white-color">
+                <h4>Belem</h4>
+                <p>México</p>
+              </div>
+              <div className="col-12 text-white-color">
+                <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
+                <small className="font-light">08/06/2022</small>
+              </div>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="row">
+              <div className="col-4">
+                <img alt="img1" src={Review4} />
+              </div>
+              <div className="col-8 text-white-color">
+                <h4>Belem</h4>
+                <p>México</p>
+              </div>
+              <div className="col-12 text-white-color">
+                <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
+                <small className="font-light">08/06/2022</small>
+              </div>
+            </div>
+          </div>
+
+          <div className="item">
+            <div className="row">
+              <div className="col-4">
+                <img alt="img1" src={Review5} />
+              </div>
+              <div className="col-8 text-white-color">
+                <h4>Belem</h4>
+                <p>México</p>
+              </div>
+              <div className="col-12 text-white-color">
+                <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
+                <small className="font-light">08/06/2022</small>
+              </div>
+            </div>
+          </div>
+          {/* <div className="item">
             <div className="row">
               <div className="col-12">
                 <img alt="img2" src={Result2} />
@@ -77,6 +145,7 @@ const SliderResults = () => {
               </div>
             </div>
           </div>
+          
           <div className="item">
             <div className="row">
               <div className="col-12">
@@ -88,7 +157,7 @@ const SliderResults = () => {
                 <h5>Se ve súper diferente, me gustó mil</h5>
               </div>
             </div>
-          </div>
+          </div> */}
           {/* {imagenesMaterial.map(mat => (
                         <div key={mat.id_imagenProducto} className="item">
                             <img className="carruselInfoMaterial_img" src={mat.ruta} alt="ImagenProducto" />

@@ -18,12 +18,12 @@ const Footer = () => {
                         <img src={RinoexpertsLogo} className="img-fluid" alt="Rinoexperts Logo" />
                         <p className="short-text">Lorem ipsum is dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et.</p>
                         <div className="row">
-                            <div className="col-2 container-icon">
+                            <div className="col-2 d-flex align-items-center justify-content-start">
                                 <ImWhatsapp className="whatsapp-icon"/>
                             </div>
                             <div className="col-10 contact-us-footer">
                                 <h3 className="p-0 m-0">Contáctanos</h3>
-                                <a href="tel:5534080969"><p>+525512436587</p></a>
+                                <a href="tel:5534080969"><p className="m-0">+525512436587</p></a>
                             </div>
                         </div>
                     </div>
@@ -63,7 +63,7 @@ const Footer = () => {
                     </div>
                     <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <h3 className="font-bold">Redes sociales</h3>
-                        <div className=" social-icons">
+                        <div className="social-icons">
                             <a href="https://www.facebook.com/" target="_blank" className="facebook-icon mx-3"><FiFacebook /></a>
                             <a href="https://www.instagram.com/rinoexperts/" target="_blank" className="instagram-icon mx-3"><BsInstagram /></a>
                         </div>

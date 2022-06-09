@@ -1,7 +1,8 @@
 import React from "react";
 import "../../components/otoplastia/otoplastia.css";
 
-import OtoplastiaImg from "../../assets/img/servicios/otoplastia-slow.png";
+import SliderResults from '../../components/sliderResults/SliderResults';
+import OtoplastiaImg from "../../assets/img/servicios/otoplastia.jpg";
 
 const Otoplastia = () => {
   return (
@@ -211,6 +212,9 @@ const Otoplastia = () => {
               </div>
             </div>
           </div>
+          <>
+          <SliderResults />
+          </>
         </div>
       </div>
     </div>

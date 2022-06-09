@@ -11,20 +11,21 @@
   font-size: 30px;
 }
 
-.container-footer .container-icon {
+/* .container-footer .container-icon {
   margin: auto;
   width: 50%;
-  /* padding: 10px; */
-}
+  //padding: 10px;
+} */
 
 .contact-us-footer a {
   color: var(--pink-color);
+  text-decoration: none;
   transition: 0.3s;
 }
 
 .contact-us-footer a:hover {
-  text-decoration: none;
   transition: 0.3s;
+  text-decoration: underline;
 }
 
 .quick-links li {
@@ -61,5 +62,37 @@
     color: var(--pink-color);
     font-size: 35px;
     transition: 0.3s;
+
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+  .rinoexperts-info {
+    padding-bottom: 30px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .rinoexperts-info {
+    padding-bottom: 30px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) {
 
 }
