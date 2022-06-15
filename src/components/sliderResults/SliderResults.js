@@ -35,7 +35,7 @@ const SliderResults = () => {
   }
 
   return (
-    <div className="slider-result-caontainer">
+    <div className="slider-result-container">
         <h2 className="d-block text-white-color text-center py-4">Nuestros pacientes</h2>
         
         <OwlCarousel

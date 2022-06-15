@@ -1,103 +1,88 @@
 import React from "react";
 import "./topServices.css";
 
+import { Link } from "react-router-dom";
+
 import OwlCarousel from "react-owl-carousel";
 
-import Review1 from '../../assets/img/reviews/review-square-1.png';
-import Review2 from '../../assets/img/reviews/review-square-2.png';
-import Review3 from '../../assets/img/reviews/review-square-3.png';
-
 const TopServices = () => {
-
-    const responsive = {
-        0: {
-          items: 1,
-        },
-        576: {
-          items: 1,
-        },
-        768: {
-          items: 2,
-        },
-        992: {
-          items: 2,
-        },
-        1200: {
-          items: 2,
-        },
-    };
+  const responsive = {
+    0: {
+      items: 3,
+      autoWidth: true,
+    },
+    576: {
+      items: 3,
+      autoWidth: true,
+    },
+    768: {
+      items: 2,
+    },
+    992: {
+      items: 2,
+    },
+    1200: {
+      items: 2,
+    },
+  };
 
   return (
-    <div className="slider-result-caontainer">
+    <div className="slider-result-container black-background">
       <OwlCarousel
         className="owl-theme"
-        items="1"
-        margin={10}
+        items="3"
+        margin={20}
         autoplay={true}
         loop
-        dots={false}
+        lazyLoad={true}
+        dots={true}
         touchDrag={true}
         animateIn={true}
         center={true}
+        nav={true}
         responsive={responsive}
       >
-        <div className="item">
+        <div className="item banner-top-service-one text-center">
           <div className="row">
-            <div className="col-4">
-              <img alt="img1" src={Review1} />
+            <div className="col-12 py-5">
+              <h2 className="font-bold text-white-color fs-1">RINOPLASTIA</h2>
+              <h3 className="text-white-color">
+                <Link to="/servicios/rinoplastia">
+                  <span className="top-services-btn">Ver más</span>
+                </Link>
+              </h3>
             </div>
-            <div className="col-8 text-white-color">
-              <h4>Itzel Estrella</h4>
-              <p>México</p>
-            </div>
-            <div className="col-12 text-white-color">
-              <p className="font-regular">
-                <em>"Gracias, son los mejores. Si me cambiaron cañon"</em>
-              </p>
-              <small className="font-light">28/04/2022</small>
-            </div>
+            <div className="col-12 text-center"></div>
           </div>
         </div>
 
-        <div className="item">
+        <div className="item banner-top-service-two text-center">
           <div className="row">
-            <div className="col-4">
-              <img alt="img1" src={Review2} />
+            <div className="col-12 py-5">
+              <h2 className="font-bold text-white-color fs-1">BICHECTOMIA</h2>
+              <h3 className="text-white-color">
+                <Link to="/servicios/rinoplastia">
+                  <span className="top-services-btn">Ver más</span>
+                </Link>
+              </h3>
             </div>
-            <div className="col-8 text-white-color">
-              <h4>Ele Ross</h4>
-              <p>México</p>
-            </div>
-            <div className="col-12 text-white-color">
-              <p className="font-regular">
-                <em>
-                  "@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi
-                  nariz"
-                </em>
-              </p>
-              <small className="font-light">30/05/2022</small>
-            </div>
+            <div className="col-12 text-center"></div>
           </div>
         </div>
 
-        <div className="item">
+        <div className="item banner-top-service-three text-center">
           <div className="row">
-            <div className="col-4">
-              <img alt="img1" src={Review3} />
+            <div className="col-12 py-5">
+              <h2 className="font-bold text-white-color fs-1">MENTOPLASTIA</h2>
+              <h3 className="text-white-color">
+                <Link to="/servicios/rinoplastia">
+                  <span className="top-services-btn">Ver más</span>
+                </Link>
+              </h3>
             </div>
-            <div className="col-8 text-white-color">
-              <h4>Belem</h4>
-              <p>México</p>
-            </div>
-            <div className="col-12 text-white-color">
-              <p className="font-regular">
-                <em>"Se ve súper diferente, me gustó mil"</em>
-              </p>
-              <small className="font-light">08/06/2022</small>
-            </div>
+            <div className="col-12 text-center"></div>
           </div>
         </div>
-        
       </OwlCarousel>
     </div>
   );

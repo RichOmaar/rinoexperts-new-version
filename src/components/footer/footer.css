@@ -34,7 +34,7 @@
 }
 
 .quick-links li a {
-    color: var(--black-color);
+    color: var(--true-black-color);
     transition: 0.3s;
 }
 

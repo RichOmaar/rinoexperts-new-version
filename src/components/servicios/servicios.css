@@ -1,9 +1,105 @@
+.servicios-main-container {
+  overflow: hidden;
+}
+
 .banner-services-container {
-    background-image: url("../../assets/img/servicios-banner-long.jpg");
-    width: 100%; 
-    height: auto;
-    /* object-fit: cover; */
-    /* object-fit: contain; */
-    background-position: center;
-    padding: 150px 0px;
+  background-image: url("../../assets/img/servicios-banner-long.jpg");
+  width: 100%;
+  height: auto;
+  /* object-fit: cover; */
+  /* object-fit: contain; */
+  background-position: center;
+  padding: 150px 0px;
+}
+
+.top-services-tittle {
+  margin-top: 30px;
+}
+
+.accordion-item {
+  border: none;
+}
+
+.accordion-button.collapsed {
+    background-color: transparent;
+    color: var(--white-color);
+}
+
+.accordion-button:not(.collapsed)::after {
+    color: var(--orange-color)!important;
+}
+
+.accordion-button::after {
+    color: var(--orange-color)!important;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--pink-color)!important;
+    color: var(--orange-color);
+    border-radius: 0px!important;
+}
+
+.accordion-button:focus {
+    border-color: var(--pink-color);
+    box-shadow: none;
+    /* box-shadow: 0 0 0 .25rem var(--pink-color); */
+}
+
+.accordion-item {
+  border: none;
+  background-color: transparent;
+}
+
+.accordion-body {
+  border: 0.01rem var(--orange-color);
+  border-style: solid none;
+}
+
+.see-more-button-orange {
+  background-color: var(--orange-color);
+  color: var(--white-color);
+  border-radius: 5px;
+  padding: 10px 8px;
+  font-size: 13px;
+  /* font-weight: bold; */
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border-color: var(--orange-color);
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1200px){
+  .hide-not-mobile {
+    display: none;
+  }
+}
+
+/*ESCRITORIO MEDIANO O TABLET HORIZONTAL LG*/
+@media (max-width: 1199px) and (min-width: 992px){
+  .hide-not-mobile {
+    display: none;
+  }
+}
+
+/*ESCRITORIO PEQUEÑO O TABLET VERTICAL MD*/
+@media(max-width: 991px) and (min-width: 768px){
+  .hide-not-mobile {
+    display: none;
+  }
+}
+
+/*TELÉFONO CELULAR SM*/
+@media(max-width: 767px) and (min-width: 576px){	
+  .hide-not-mobile {
+    display: none;
+  }
+}
+
+/*TELÉFONO CELULAR XS*/
+@media (max-width: 575px){
+  .hide-on-mobile {
+    display: none;
+  }
 }

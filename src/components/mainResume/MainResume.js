@@ -1,12 +1,13 @@
 import React from 'react';
 import './mainResume.css';
+import MainDoctor from '../../assets/img/doctor-main.jpg';
 
 const MainResume = () => {
   return (
-    <div className="container py-5">
+    <div className="container">
         <div className="row">
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                <img src="https://via.placeholder.com/630x840" className="img-fluid" alt="Imagen del Doctor Jorge"/>
+                <img src={MainDoctor} className="img-fluid main-doctor" alt="Imagen del Doctor Jorge"/>
             </div>
             <div className="col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 d-flex justify-content-center align-items-center py-sm-4">
                 <div className="row">

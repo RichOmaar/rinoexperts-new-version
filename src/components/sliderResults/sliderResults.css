@@ -1,24 +1,50 @@
 .owl-theme .item {
-    background-color: var(--gray-color);
-    border-radius: 10px;
-    padding: 10px;
-    -webkit-box-shadow: -3px 3px 16px 0px #292C36; 
-    box-shadow: -3px 3px 16px 0px #292C36;
+  background-color: var(--gray-color);
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-shadow: -3px 3px 16px 0px #292c36;
+  box-shadow: -3px 3px 16px 0px #292c36;
 }
 
 .owl-item {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .owl-theme .item img {
-    border-radius: 5px;
-    border: 2px solid var(--pink-color);
+  border-radius: 5px;
+  border: 2px solid var(--pink-color);
 }
 
-.slider-result-caontainer {
-    padding: 0px 0px 40px 0px;
+.slider-result-container {
+  padding: 30px 0px;
 }
 
 .owl-theme {
-    padding-bottom: 20px 0px;
+  padding-bottom: 20px 0px;
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 576px) {
+    .slider-result-container {
+        padding: 25px 0px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (max-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (max-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (max-width: 1400px) {
 }

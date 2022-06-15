@@ -16,6 +16,11 @@ body {
   }
 }
 
+.container-fluid {
+  padding: 0!important;
+  margin: 0!important;
+}
+
 .hidden {
   display: none !important;
 }
@@ -100,10 +105,13 @@ body {
 
 :root {
   --white-color: #fefefe;
-  --red-color: #cc2936;
-  --gray-color: #292c36;
-  --aqua-color: #407b83;
-  --black-color: #1c2022;
-  --pink-color: #ca527b;
+  /* --red-color: #8F0031; */
+  --gray-color: #7F8790;
+  --aqua-color: #7FD1B9;
+  /* --black-color: #1c2022; */
+  --pink-color: #CA527B;
   --true-black-color: #020202;
+  /* --orange-color: #F79B19; */
+  /* --purple-color: #91198E; */
+  --sweet-pink-color: #F4D6CC;
 }

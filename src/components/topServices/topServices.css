@@ -1,0 +1,52 @@
+.banner-top-service-one {
+    background-image: url("../../assets/img/servicios/rinoplastia-top-green.png");
+    width: 100%; 
+    height: auto;
+    /* object-fit: cover; */
+    /* object-fit: contain; */
+    background-position: center;
+    /* padding: 150px 0px; */
+}
+
+.banner-top-service-two {
+    background-image: url("../../assets/img/servicios/bichectomia-top-green.png");
+    width: 100%; 
+    height: auto;
+    /* object-fit: cover; */
+    /* object-fit: contain; */
+    background-position: center;
+    /* padding: 150px 0px; */
+}
+
+.banner-top-service-three {
+    background-image: url("../../assets/img/servicios/mentoplastia-top-green.png");
+    width: 100%; 
+    height: auto;
+    /* object-fit: cover; */
+    /* object-fit: contain; */
+    background-position: center;
+    /* padding: 150px 0px; */
+}
+
+.top-services-btn {
+    background-color: var(--pink-color);
+    font-size: 25px;
+    padding: 10px 8px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: var(--white-color);
+    transition: 0.3s!important;
+}
+
+.top-services-btn:hover {
+    text-decoration: underline;
+    transition: 0.3s!important;
+}
+
+.item .row div h3 a {
+    text-decoration: none;
+}
+
+.item .row div h3 {
+    margin-top: 35px;
+}
