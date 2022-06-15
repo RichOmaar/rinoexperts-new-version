@@ -59,11 +59,11 @@ const SliderResults = () => {
               <div className="col-4">
                 <img alt="img1" src={Review1} />
               </div>
-              <div className="col-8 text-white-color">
+              <div className="col-8">
                 <h4>Itzel Estrella</h4>
                 <p>México</p>
               </div>
-              <div className="col-12 text-white-color">
+              <div className="col-12">
                 <p className="font-regular"><em>"Gracias, son los mejores. Si me cambiaron cañon"</em></p>
                 <small className="font-light">28/04/2022</small>
               </div>
@@ -75,11 +75,11 @@ const SliderResults = () => {
               <div className="col-4">
                 <img alt="img1" src={Review2} />
               </div>
-              <div className="col-8 text-white-color">
+              <div className="col-8">
                 <h4>Ele Ross</h4>
                 <p>México</p>
               </div>
-              <div className="col-12 text-white-color">
+              <div className="col-12">
                 <p className="font-regular"><em>"@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi nariz"</em></p>
                 <small className="font-light">30/05/2022</small>
               </div>
@@ -91,11 +91,11 @@ const SliderResults = () => {
               <div className="col-4">
                 <img alt="img1" src={Review3} />
               </div>
-              <div className="col-8 text-white-color">
+              <div className="col-8">
                 <h4>Belem</h4>
                 <p>México</p>
               </div>
-              <div className="col-12 text-white-color">
+              <div className="col-12">
                 <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
                 <small className="font-light">08/06/2022</small>
               </div>
@@ -107,11 +107,11 @@ const SliderResults = () => {
               <div className="col-4">
                 <img alt="img1" src={Review4} />
               </div>
-              <div className="col-8 text-white-color">
+              <div className="col-8">
                 <h4>Belem</h4>
                 <p>México</p>
               </div>
-              <div className="col-12 text-white-color">
+              <div className="col-12">
                 <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
                 <small className="font-light">08/06/2022</small>
               </div>
@@ -123,11 +123,11 @@ const SliderResults = () => {
               <div className="col-4">
                 <img alt="img1" src={Review5} />
               </div>
-              <div className="col-8 text-white-color">
+              <div className="col-8">
                 <h4>Belem</h4>
                 <p>México</p>
               </div>
-              <div className="col-12 text-white-color">
+              <div className="col-12">
                 <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
                 <small className="font-light">08/06/2022</small>
               </div>
@@ -138,7 +138,7 @@ const SliderResults = () => {
               <div className="col-12">
                 <img alt="img2" src={Result2} />
               </div>
-              <div className="col-12 text-white-color py-3 px-4">
+              <div className="col-12 py-3 px-4">
                 <h3>Ele Ross</h3>
                 <p>México</p>
                 <h5>@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi nariz</h5>
