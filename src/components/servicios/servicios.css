@@ -25,10 +25,6 @@
     color: var(--white-color);
 }
 
-.accordion-button:not(.collapsed)::after {
-    color: var(--orange-color)!important;
-}
-
 .accordion-button::after {
     color: var(--orange-color)!important;
 }
@@ -51,12 +47,12 @@
 }
 
 .accordion-body {
-  border: 0.01rem var(--orange-color);
-  border-style: solid none;
+  border: 0.01rem var(--gray-color);
+  border-style: none none solid none;
 }
 
-.see-more-button-orange {
-  background-color: var(--orange-color);
+.see-more-button {
+  background-color: var(--aqua-color);
   color: var(--white-color);
   border-radius: 5px;
   padding: 10px 8px;
@@ -66,7 +62,7 @@
   letter-spacing: 1px;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
-  border-color: var(--orange-color);
+  border-color: var(--aqua-color);
 }
 
 /* XX-Large devices (larger desktops, 1400px and up) */
@@ -87,6 +83,12 @@
 @media(max-width: 991px) and (min-width: 768px){
   .hide-not-mobile {
     display: none;
+  }
+
+  .col-md-0 {
+    padding: 0;
+    margin: 0;
+    width: 0;
   }
 }
 

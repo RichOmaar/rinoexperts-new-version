@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
 import Servicios from "./pages/services/Servicios";
 import Otoplastia from "./pages/services/Otoplastia";
+import Rinoplastia from "./pages/services/Rinoplastia";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/servicios/otoplastia" element={<Otoplastia />} />
+        <Route path="/servicios/rinoplastia" element={<Rinoplastia />} />
       </Routes>
 
       <Footer />
