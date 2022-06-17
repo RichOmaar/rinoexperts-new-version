@@ -1,0 +1,37 @@
+.benefits-container {
+  padding: 50px 30px;
+}
+
+.benefits-container .col-12 img {
+  filter: invert(90%);
+  width: 50px;
+}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1200px) {
+}
+
+/*ESCRITORIO MEDIANO O TABLET HORIZONTAL LG*/
+@media (max-width: 1199px) and (min-width: 992px) {
+}
+
+/*ESCRITORIO PEQUEÑO O TABLET VERTICAL MD*/
+@media (max-width: 991px) and (min-width: 768px) {
+    .benefits-container {
+        padding: 50px 0px;
+    }
+}
+
+/*TELÉFONO CELULAR SM*/
+@media (max-width: 767px) and (min-width: 576px) {
+    .benefits-container {
+        padding: 50px 0px;
+    }
+}
+
+/*TELÉFONO CELULAR XS*/
+@media (max-width: 575px) {
+  .benefits-container {
+    padding: 50px 0px;
+  }
+}

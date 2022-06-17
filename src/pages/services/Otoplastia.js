@@ -2,7 +2,7 @@ import React from "react";
 import "../../components/otoplastia/otoplastia.css";
 
 import SliderResults from '../../components/sliderResults/SliderResults';
-import OtoplastiaImg from "../../assets/img/servicios/otoplastia.jpg";
+import OtoplastiaImg from "../../assets/img/servicios//otoplastia/otoplastia.jpg";
 
 const Otoplastia = () => {
   return (
