@@ -12,7 +12,7 @@ const Otoplastia = () => {
           <div className="col-3 text-center otoplastia-img-container my-3">
             <img
               src={OtoplastiaImg}
-              class="img-fluid otoplastia-img"
+              className="img-fluid otoplastia-img"
               alt="Otoplastia"
             />
           </div>
@@ -20,11 +20,11 @@ const Otoplastia = () => {
             <div className="col-12 text-center">
               <h2 className="font-bold text-white-color">OTOPLASTIA</h2>
             </div>
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
+            <div className="accordion" id="accordionExample">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingOne">
                   <button
-                    class="accordion-button"
+                    className="accordion-button"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseOne"
@@ -36,21 +36,21 @@ const Otoplastia = () => {
                 </h2>
                 <div
                   id="collapseOne"
-                  class="accordion-collapse collapse show"
+                  className="accordion-collapse collapse show"
                   aria-labelledby="headingOne"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     <p>
                     La otoplastia es la cirugía facial que tiene como objetivo corregir y remodelar las orejas prominentes, logrando mejorar su proporción y posición. La intervención se encarga tanto de resituar las orejas de soplillo que están demasiado separadas del cráneo, como reducir su tamaño si son excesivamente grandes, remodelar el lóbulo colgante o recrear el pliegue exterior si es necesario.
                     </p>
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingTwo">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseTwo"
@@ -62,11 +62,11 @@ const Otoplastia = () => {
                 </h2>
                 <div
                   id="collapseTwo"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="headingTwo"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     <p>
                       Mejora la autoestima y seguridad en niños y adultos que
                       dejan de cargar el estigma de “las orejas grandes” para el
@@ -80,10 +80,10 @@ const Otoplastia = () => {
                   </div>
                 </div>
               </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
+              <div className="accordion-item">
+                <h2 className="accordion-header" id="headingThree">
                   <button
-                    class="accordion-button collapsed"
+                    className="accordion-button collapsed"
                     type="button"
                     data-bs-toggle="collapse"
                     data-bs-target="#collapseThree"
@@ -95,11 +95,11 @@ const Otoplastia = () => {
                 </h2>
                 <div
                   id="collapseThree"
-                  class="accordion-collapse collapse"
+                  className="accordion-collapse collapse"
                   aria-labelledby="headingThree"
                   data-bs-parent="#accordionExample"
                 >
-                  <div class="accordion-body">
+                  <div className="accordion-body">
                     <p>
                       También es posible realizarse en adultos inconformes con
                       la forma de sus orejas y obtener resultados igualmente
@@ -115,15 +115,15 @@ const Otoplastia = () => {
               </div>
             </div>
           </div>
-          <div class="col-12 py-4">
+          <div className="col-12 py-4">
             <div className="col-12 text-center py-3">
               <h2 className="font-bold text-white-color">¿Qué incluye?</h2>
               <p className="text-white-color">A continuación te desglozamos todos los beneficios excluivos de RINOEXPERTS</p>
             </div>
-            <ul class="nav nav-pills mb-3 d-flex justify-content-evenly" id="pills-tab" role="tablist">
-              <li class="nav-item" role="presentation">
+            <ul className="nav nav-pills mb-3 d-flex justify-content-evenly" id="pills-tab" role="tablist">
+              <li className="nav-item" role="presentation">
                 <button
-                  class="nav-link active"
+                  className="nav-link active"
                   id="pills-pre-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-pre"
@@ -135,9 +135,9 @@ const Otoplastia = () => {
                   Pre
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
+              <li className="nav-item" role="presentation">
                 <button
-                  class="nav-link"
+                  className="nav-link"
                   id="pills-procedimiento-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-procedimiento"
@@ -149,9 +149,9 @@ const Otoplastia = () => {
                   Procedimiento
                 </button>
               </li>
-              <li class="nav-item" role="presentation">
+              <li className="nav-item" role="presentation">
                 <button
-                  class="nav-link"
+                  className="nav-link"
                   id="pills-rehabilitacion-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-rehabilitacion"
@@ -164,9 +164,9 @@ const Otoplastia = () => {
                 </button>
               </li>
             </ul>
-            <div class="tab-content" id="pills-tabContent">
+            <div className="tab-content" id="pills-tabContent">
               <div
-                class="tab-pane fade show active"
+                className="tab-pane fade show active"
                 id="pills-pre"
                 role="tabpanel"
                 aria-labelledby="pills-pre-tab"
@@ -184,7 +184,7 @@ const Otoplastia = () => {
                 </ul>
               </div>
               <div
-                class="tab-pane fade"
+                className="tab-pane fade"
                 id="pills-procedimiento"
                 role="tabpanel"
                 aria-labelledby="pills-procedimiento-tab"
@@ -198,7 +198,7 @@ const Otoplastia = () => {
                 </ul>
               </div>
               <div
-                class="tab-pane fade"
+                className="tab-pane fade"
                 id="pills-rehabilitacion"
                 role="tabpanel"
                 aria-labelledby="pills-rehabilitacion-tab"
