@@ -82,10 +82,16 @@ const Rinoplastia = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-12 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 order-xl-2 order-lg-2 order-md-2 order-sm-1 order-xs-1 ">
+                {/* <div className="col-12 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 order-xl-2 order-lg-2 order-md-2 order-sm-1 order-xs-1">
                     <img src={BenefRinoex} className="img-fluid img-after-title" alt="Rinoplastia" />
+                </div> */}
+                <div className="col-12 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 order-xl-2 order-lg-2 order-md-2 order-sm-1 order-xs-1 image-center-text">
+                    <img src={BenefRinoex} className="img-fluid img-after-title" alt="Rinoplastia" />
+                    <div class="centered">
+                      <h2 className="font-bold">¡Agenda una cita ahora mismo!</h2>
+                      <button className="video-button">Agendar cita</button>
+                    </div>
                 </div>
-
             </div>
         </div>
         <div className="col-12 container">

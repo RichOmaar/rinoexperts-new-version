@@ -6,6 +6,20 @@
   filter: invert(90%);
   width: 50px;
 }
+
+.image-center-text {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* 
 .rinoplastia-container .accordion-body {
   text-align: start;

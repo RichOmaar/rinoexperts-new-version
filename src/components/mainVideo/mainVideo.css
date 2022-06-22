@@ -84,9 +84,11 @@
   }
   
   .video-button:hover {
-    border-color: var(--pink-color);
-    background-color: var(--black-color);
-    color: var(--pink-color);
+    border-color: var(--white-color);
+    border: 0.05rem solid;
+    /* background-color: transparent; */
+    /* color: var(--pink-color); */
+    /* font-weight: bold; */
     transition: 0.3s;
   }
   
