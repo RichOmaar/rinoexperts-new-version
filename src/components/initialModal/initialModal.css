@@ -1,0 +1,49 @@
+.presentation-account {
+    cursor: pointer;
+    border-style: none none solid;
+    border-width: .2rem;
+    border-color: var(--pink-color);
+}
+
+.presentation-account:hover {
+    color: var(--red-color);
+    font-weight: bold;
+}
+
+.initialmodal-login-button {
+    padding: 5px;
+    border-radius: 8px;
+    border: solid 2px;
+    border-color: var(--pink-color);
+    color: var(--pink-color);
+    background-color: transparent;
+    box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 27px -4px rgba(0,0,0,0.75);
+    /* Transitions */
+    -webkit-transition: background 0.5s 0s ease;
+    -moz-transition: background 0.5s 0s ease;
+    -o-transition: background 0.5s 0s ease;
+    transition: background 0.5s 0s ease;
+}
+
+.initialmodal-login-button:hover {
+    color: var(--white-color);
+    background-color: var(--pink-color);
+    /* Transitions */
+    -webkit-transition: background 0.5s 0s ease;
+    -moz-transition: background 0.5s 0s ease;
+    -o-transition: background 0.5s 0s ease;
+    transition: background 0.5s 0s ease;
+}
+
+.close-modal-button {
+    border-style: none;
+    background: top;
+    color: var(--pink-color);
+    font-size: large;
+}
+
+.modal-content {
+    background-color: var(--white-color);
+}

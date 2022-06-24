@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../components/rinoplastia/rinoplastia.css';
 
-import MainImage from '../../assets/img/servicios-banner-long.jpg';
+import RinoplastiaMain from '../../assets/img/servicios/rinoplastia/rinoplastia-main.jpg';
 import SecondIMage from '../../assets/img/servicios/rinoplastia/rinoplastia-page-1.jpg';
 import BenefRinoex from '../../assets/img/servicios/rinoplastia/beneficios-rinoexperts.jpg';
 
@@ -17,7 +17,7 @@ const Rinoplastia = () => {
             <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active">
-                    <img src={MainImage} className="d-block w-100" alt="..." />
+                    <img src={RinoplastiaMain} className="d-block w-100" alt="..." />
                     </div>
                 </div>
             </div>

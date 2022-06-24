@@ -78,9 +78,13 @@ body {
 }
 /* Fin tipografías */
 
+.no-text-decoration {
+  text-decoration: none;
+}
+
 /* Colors */
 .text-black-color {
-  color: var(--black-color);
+  color: var(--true-black-color);
 }
 
 .text-white-color {
@@ -124,6 +128,18 @@ body {
 .black-background {
   background-color: var(--true-black-color);
   overflow: clip;
+}
+
+.form-control-plaintext {
+  color: var(--gray-color);
+}
+
+.form-control-plaintext:focus-visible {
+  outline: 1px solid var(--aqua-color);
+}
+
+.form-select:focus {
+  outline: 1px solid var(--aqua-color);
 }
 
 :root {

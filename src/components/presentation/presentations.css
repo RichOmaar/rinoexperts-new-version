@@ -1,0 +1,35 @@
+.presentation-next-button {
+    padding: 8px;
+    border-radius: 8px;
+    border: solid 2px;
+    border-color: var(--pink-color);
+    background-color: var(--pink-color);
+    color: var(--white-color);
+    /* Transitions */
+    -webkit-transition: background 0.5s 0s ease;
+    -moz-transition: background 0.5s 0s ease;
+    -o-transition: background 0.5s 0s ease;
+    transition: background 0.5s 0s ease;
+}
+
+.presentation-next-button:hover {
+    color: var(--pink-color);
+    background-color: transparent;
+    /* Transitions */
+    -webkit-transition: background 0.5s 0s ease;
+    -moz-transition: background 0.5s 0s ease;
+    -o-transition: background 0.5s 0s ease;
+    transition: background 0.5s 0s ease;
+}
+
+.presentation-next-button:focus {
+
+}
+
+.presentation-container ul {
+    list-style: none;
+}
+
+.presentation-icon {
+    padding-right: 8px;
+}
