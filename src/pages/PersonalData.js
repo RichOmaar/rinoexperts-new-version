@@ -5,7 +5,7 @@ import InitialModal from '../components/initialModal/InitialModal';
 
 import { useNavigate } from 'react-router-dom';
 
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 // import withReactContent from 'sweetalert2-react-content';
 
 import { AiOutlineEye } from 'react-icons/ai';
@@ -91,10 +91,10 @@ const PersonalData = () => {
                     console.log('response: ',responseData);
                     if(responseData === true) {
                     } else {
-                        // Swal.fire({
-                        //     icon: 'error',
-                        //     text: 'Este número ya se encuentra registrado, por favor inicia sesión o verifica que tu número sea correcto',
-                        // })
+                        Swal.fire({
+                            icon: 'error',
+                            text: 'Este número ya se encuentra registrado, por favor inicia sesión o verifica que tu número sea correcto',
+                        })
                         setPhone('');
                         // window.location.href = "#login-modal";
                     }
@@ -102,11 +102,11 @@ const PersonalData = () => {
                 .catch(console.error);
             }
         } else {
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Oops...',
-            //     text: 'Por favor ingresa los números de tu teléfono de contacto',
-            // })
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor ingresa los números de tu teléfono de contacto',
+            })
         }
     }
 
@@ -119,11 +119,11 @@ const PersonalData = () => {
         if (!isNaN(e.target.value)) {
             setPostalCode(e.target.value);
         } else {
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Oops...',
-            //     text: 'Por favor ingresa los números de tu código postal',
-            // })
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Por favor ingresa los números de tu código postal',
+            })
         }
     }
    
@@ -143,11 +143,11 @@ const PersonalData = () => {
         if (!isNaN(e.target.value)) {
             setKey(e.target.value);
         } else {
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Por favor ingresa una clave de 4 números',
-            //     text: 'Resgudarda tu clave ya que con esta podrás continuar con tu registro.',
-            // })
+            Swal.fire({
+                icon: 'error',
+                title: 'Por favor ingresa una clave de 4 números',
+                text: 'Resgudarda tu clave ya que con esta podrás continuar con tu registro.',
+            })
         }
     }
 
@@ -175,20 +175,20 @@ const PersonalData = () => {
         e.preventDefault();
         
         if(genre === '') {
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Por favor selecciona un género',
-            // })
+            Swal.fire({
+                icon: 'error',
+                title: 'Por favor selecciona un género',
+            })
         } else if (phone.length <= 9) {
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Por favor ingresa un número de teléfono válido',
-            // })
+            Swal.fire({
+                icon: 'error',
+                title: 'Por favor ingresa un número de teléfono válido',
+            })
         } else if(postalCode.length <= 4) {
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Por favor ingresa un código postal de 5 dígitos',
-            // })
+            Swal.fire({
+                icon: 'error',
+                title: 'Por favor ingresa un código postal de 5 dígitos',
+            })
         }else if(verifyEmail(email)) {
 
             let allData = {
@@ -216,10 +216,10 @@ const PersonalData = () => {
             })
             .then(response => response.json())
             .then((responseData) => {
-                // Swal.fire({
-                //     title: <strong>Tu datos se han guardado con éxito</strong>,
-                //     icon: 'success'
-                // })
+                Swal.fire({
+                    title: <strong>Tu datos se han guardado con éxito</strong>,
+                    icon: 'success'
+                })
                 console.log('error')
             .then((result) => {
                 console.log(result);
@@ -235,10 +235,10 @@ const PersonalData = () => {
             .catch(console.error);
 
         } else{
-            // Swal.fire({
-            //     icon: 'error',
-            //     title: 'Por favor ingresa un correo válido',
-            // })
+            Swal.fire({
+                icon: 'error',
+                title: 'Por favor ingresa un correo válido',
+            })
         }
 
     }
