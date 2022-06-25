@@ -8,18 +8,20 @@ import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
 // import withReactContent from 'sweetalert2-react-content';
 
+import validatePhone from '../services/validatePhoneNumber';
+import addUser from '../services/addUser';
+
 import { AiOutlineEye } from 'react-icons/ai';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 
 import LogoHeader from '../components/logoHeader/LogoHeader';
+
 
 const PersonalData = () => {
 
     const navigate = useNavigate();
 
     const idStep = ".step-1";
-
-    // const MySwal = withReactContent(Swal)
 
     const [userName, setNombre] = useState('');
     
@@ -74,32 +76,27 @@ const PersonalData = () => {
         if (!isNaN(e.target.value)) {
             setPhone(e.target.value);
             if((e.target.value).length === 10) {
-                let phoneData = {
-                    "number": e.target.value
-                }
 
-                fetch ("http://localhost:8888/GitHub/rinoexperts-api/controllers/validatePhone.controller.php", {
-                // fetch ("http://localhost:8888/rinoexperts-api/controllers/validatePhone.controller.php", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(phoneData)
-                })
-                .then(response => response.json())
-                .then((responseData) => {
-                    console.log('response: ',responseData);
-                    if(responseData === true) {
-                    } else {
+                let formData = new FormData();
+
+                formData.append('phone',  e.target.value);
+                
+                validatePhone(formData)
+                .then((response) => {
+                    let _respuesta = JSON.parse(response);
+
+                    if(_respuesta.response === 'error') {
                         Swal.fire({
                             icon: 'error',
                             text: 'Este número ya se encuentra registrado, por favor inicia sesión o verifica que tu número sea correcto',
                         })
                         setPhone('');
-                        // window.location.href = "#login-modal";
                     }
                 })
-                .catch(console.error);
+                .catch((error) => {
+                    console.log(error);
+                });
+
             }
         } else {
             Swal.fire({
@@ -115,7 +112,7 @@ const PersonalData = () => {
     }
    
     function onChangePostalCode(e) {
-        console.log(e.target.value);
+
         if (!isNaN(e.target.value)) {
             setPostalCode(e.target.value);
         } else {
@@ -164,6 +161,7 @@ const PersonalData = () => {
     }
 
     function verifyEmail(email){
+        // eslint-disable-next-line
         var regex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
         if (email.match(regex)) {
             return true;
@@ -189,50 +187,47 @@ const PersonalData = () => {
                 icon: 'error',
                 title: 'Por favor ingresa un código postal de 5 dígitos',
             })
-        }else if(verifyEmail(email)) {
+        } else if(verifyEmail(email)) {
+            let formData = new FormData();
+            
+            formData.append('userName', userName);
+            formData.append('lastName', lastName);
+            formData.append('birthday', birthday);
+            formData.append('genre', genre);
+            formData.append('postalCode', postalCode);
+            formData.append('state', state);
+            formData.append('municipality', municipality);
+            formData.append('suburb', suburb);
+            formData.append('phone', phone);
+            formData.append('email', email);
+            formData.append('key', key);
+            
+            addUser(formData)
+            .then((response) => {
+                let _respuesta = JSON.parse(response);
+                console.log(_respuesta);
+                if(_respuesta.response === 'success') {
+                    localStorage.setItem("id_usuario",JSON.stringify(_respuesta.idUsuario));
+                    localStorage.setItem("nombre",JSON.stringify(userName));
+                    localStorage.setItem("apellidos",JSON.stringify(lastName));
+                    sessionStorage.setItem("token",JSON.stringify(_respuesta.idUsuario));
 
-            let allData = {
-                userName,
-                lastName,
-                birthday,
-                genre,
-                postalCode,
-                state,
-                municipality,
-                suburb,
-                phone,
-                email,
-                key
-            }
-            console.log(JSON.stringify(allData));
-    
-            fetch ("http://localhost:8888/GitHub/rinoexperts-api/controllers/addUser.controller.php", {
-            // fetch ("http://localhost:8888/rinoexperts-api/controllers/addUser.controller.php", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(allData)
-            })
-            .then(response => response.json())
-            .then((responseData) => {
-                Swal.fire({
-                    title: <strong>Tu datos se han guardado con éxito</strong>,
-                    icon: 'success'
-                })
-                console.log('error')
-            .then((result) => {
-                console.log(result);
-                localStorage.setItem("id_usuario",JSON.stringify(responseData));
-                localStorage.setItem("nombre",JSON.stringify(userName));
-                localStorage.setItem("apellidos",JSON.stringify(lastName));
-                sessionStorage.setItem("token",JSON.stringify(responseData));
-                if (result.isConfirmed) {
-                    navigate('/historial-medico');
+                    Swal.fire({
+                        title: 'Tus datos se han guardado con éxito',
+                        icon: 'success',
+                        showConfirmButton: false,
+                        timer: 2000
+                    })
+
+                    setTimeout(() => {
+                        navigate('/historial-medico');
+                    }, 2000);
                 }
-                })
             })
-            .catch(console.error);
+            .catch((error) => {
+                document.querySelector('#sendPersonalData').removeAttribute("disabled");
+                console.log(error);
+            });
 
         } else{
             Swal.fire({
@@ -299,7 +294,7 @@ const PersonalData = () => {
                         <label className="font-regular form-label pt-2">Colonia:</label>
                         <input id="suburb" type="text" className="form-control-plaintext state" placeholder="Colonia" value={ suburb } onChange={ onChangeSuburb }required/>
                         
-                        <p className="text-center pt-3">Introduzca una clave de 4 números. Esta clave te permitirá continuar tu Consulta más adelante, es importante que la recuerdes.</p>
+                        <p className="text-center pt-3">Introduzca una clave de 4 números. Esta clave te permitirá continuar con tu consulta más adelante, es importante que la recuerdes.</p>
 
                         <label className="font-regular form-label pt-2">Clave:</label>
                         <div className="d-flex">
@@ -310,7 +305,7 @@ const PersonalData = () => {
                             </span>
                         </div>
                         <div className="text-center">
-                            <button type="submit" className="presentation-next-button font-regular mt-3">Continuar</button>
+                            <button type="submit" id="sendPersonalData" className="presentation-next-button font-regular mt-3">Continuar</button>
                         </div>
                     </form>
 

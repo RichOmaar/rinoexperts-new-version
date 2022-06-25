@@ -1,0 +1,61 @@
+.schedule-button {
+    padding: 8px;
+    border-radius: 8px;
+    border: solid 2px;
+    border-color: var(--aqua-color);
+    color: var(--aqua-color);
+    margin: 15px !important;
+    /* Transitions */
+    -webkit-transition: background 0.5s 0s ease;
+    -moz-transition: background 0.5s 0s ease;
+    -o-transition: background 0.5s 0s ease;
+    transition: background 0.5s 0s ease;
+}
+
+.selected {
+    color: var(--white-color);
+    background-color: var(--aqua-color);
+}
+
+.schedule-button:hover {
+    color: var(--white-color);
+    background-color: var(--aqua-color);
+    /* Transitions */
+    -webkit-transition: background 0.5s 0s ease;
+    -moz-transition: background 0.5s 0s ease;
+    -o-transition: background 0.5s 0s ease;
+    transition: background 0.5s 0s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.schedule-alert-icon {
+    font-size: x-large;
+    color: var(--red-color)!important;
+}
+
+.react-calendar {
+    background-color: transparent!important;
+}
+
+.react-calendar__tile--active {
+    background: var(--red-color)!important;
+}
+
+.react-calendar__tile--now {
+    background: var(--aqua-color)!important;
+}
+
+.react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus {
+    background: var(--red-color)!important;
+}
+
+.react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
+    background-color: var(--gray-color)!important;
+}
+
+.react-calendar__tile--hasActive:enabled:hover {
+    background: var(--gray-color)!important;
+}

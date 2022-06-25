@@ -14,8 +14,8 @@
 .step-active {
     color: var(--aqua-color);
     box-shadow: 0px 0px 40px 14px rgba(127,209,185,0.33);
--webkit-box-shadow: 0px 0px 40px 14px rgba(127,209,185,0.33);
--moz-box-shadow: 0px 0px 40px 14px rgba(127,209,185,0.33);
+    -webkit-box-shadow: 0px 0px 40px 14px rgba(127,209,185,0.33);
+    -moz-box-shadow: 0px 0px 40px 14px rgba(127,209,185,0.33);
 
 }
 

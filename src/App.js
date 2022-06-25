@@ -11,6 +11,9 @@ import Rinoplastia from "./pages/services/Rinoplastia";
 import Presentation from "./pages/Presentation";
 import PersonalData from "./pages/PersonalData";
 import MedicalRecord from "./pages/MedicalRecord";
+import NosePreference from "./pages/NosePreference";
+import Appointment from "./pages/Appointment";
+// import Schedule from "./pages/Schedule";c
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
         <Route path="/presentacion" element={<Presentation />} />
         <Route path="/informacion-personal" element={<PersonalData />} />
         <Route path="/historial-medico" element={<MedicalRecord />} />
+        <Route path="/seleccion-nariz" element={<NosePreference />} />
+        <Route path="/consulta" element={<Appointment />} />
+        {/* <Route path="/agendar-citas" element={<Schedule />} /> */}
 
       </Routes>
 

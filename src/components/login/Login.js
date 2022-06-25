@@ -1,12 +1,11 @@
 import React, { useState }from 'react';
 
-import { useNavigate } from 'react-router-dom';
-
-// import Swal from 'sweetalert2';
-// import withReactContent from 'sweetalert2-react-content';
+import Swal from 'sweetalert2';
 
 import { AiOutlineEye } from 'react-icons/ai';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
+
+import login from '../../services/login.js';
 
 import './login.css';
 
@@ -27,22 +26,22 @@ const Login = () => {
       if (!isNaN(e.target.value)) {
           setPhone(e.target.value);
       } else {
-          // Swal.fire({
-          //     icon: 'error',
-          //     title: 'Oops...',
-          //     text: 'Por favor ingresa los números de tu teléfono con el que realiaste tu registro.',
-          // })
+          Swal.fire({
+              icon: 'error',
+              title: 'Oops...',
+              text: 'Por favor ingresa los números de tu teléfono con el que realiaste tu registro.',
+          })
       }
     }
 
     function onChangeKey(e) {
       if (!isNaN(e.target.value)) {
-          setKey(e.target.value);
+        setKey(e.target.value);
       } else {
-          // Swal.fire({
-          //     icon: 'error',
-          //     title: 'Por favor ingresa tu clave de 4 números',
-          // })
+        Swal.fire({
+            icon: 'error',
+            title: 'Por favor ingresa tu clave de 4 números',
+        })
       }
     }
 
@@ -62,55 +61,43 @@ const Login = () => {
       e.preventDefault();
 
       if (phone.length <= 9) {
-          // Swal.fire({
-          //     icon: 'error',
-          //     title: 'Por favor ingresa un número de teléfono válido',
-          // })
+        Swal.fire({
+            icon: 'error',
+            title: 'Por favor ingresa un número de teléfono válido',
+        })
       } else if(key.length < 4) {
-          // Swal.fire({
-          //     icon: 'error',
-          //     title: 'Por favor ingresa tu clave de 4 dígitos',
-          // })
+        Swal.fire({
+            icon: 'error',
+            title: 'Por favor ingresa tu clave de 4 dígitos',
+        })
       } else {
-        let loginData = {
-          phone,
-          key
-        }
-        console.log(JSON.stringify(loginData));
 
-        fetch ("http://localhost:8888/GitHub/rinoexperts-api/controllers/login.controller.php", {
-        // fetch ("http://localhost:8888/rinoexperts-api/controllers/login.controller.php", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(loginData)
+        let formData = new FormData();
+        
+        formData.append('phone', phone);
+        formData.append('key', key);
+
+        login(formData)
+        .then((response) => {
+          let _respuesta = JSON.parse(response);
+          
+          if(_respuesta.id_usuario){
+            localStorage.setItem("nombre",JSON.stringify(_respuesta['nombre']));
+            localStorage.setItem("apellidos",JSON.stringify(_respuesta['apellidos']));
+            sessionStorage.setItem("token",JSON.stringify(_respuesta['id_usuario']));
+            window.location.href = "/detalles-citas";
+          } else{
+            Swal.fire({
+              icon: 'error',
+              title: 'Ha ocurrido un error, verifica tus datos',
+            })
+          } 
+
         })
-        .then(response => response.json())
-        .then((responseData) => {
-          // Swal.fire({
-          //   icon: 'question',
-          //   title: 'Un momento por favor, estamos verificando tus datos.',
-          //   showConfirmButton: false,
-          //   timer: 1500
-          // })
-          console.log('Error')
-        .then((result) => {
-            if(responseData.id_usuario){
-              localStorage.setItem("nombre",JSON.stringify(responseData['nombre']));
-              localStorage.setItem("apellidos",JSON.stringify(responseData['apellidos']));
-              sessionStorage.setItem("token",JSON.stringify(responseData['id_usuario']));
-              window.location.href = "/detalles-citas";
-            } else{
-              // Swal.fire({
-              //   icon: 'error',
-              //   title: 'Ha ocurrido un error, verifica tus datos',
-              // })
-            } 
-          })
-        })
-        .catch(console.error);
-      }           
+        .catch((error) => {
+          console.log(error);
+        });
+      }
     }
 
   return (
