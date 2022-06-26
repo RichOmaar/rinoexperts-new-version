@@ -1,8 +1,8 @@
 import $ from 'jquery';
 import config from '../config';
-const URL_API = config.urlApi+'controllers/addUserImage.controller.php';
+const URL_API = config.urlApi+'controllers/timeAvailability.controller.php';
 
-export default function addUserImage(values){
+export default function getTimeAvailability(values){
     return $.ajax({
         data: values,
         url: URL_API,

@@ -2,8 +2,9 @@
     padding: 8px;
     border-radius: 8px;
     border: solid 2px;
-    border-color: var(--aqua-color);
-    color: var(--aqua-color);
+    border-color: var(--pink-color);
+    color: var(--white-color);
+    background-color: var(--pink-color);
     margin: 15px !important;
     /* Transitions */
     -webkit-transition: background 0.5s 0s ease;
@@ -19,7 +20,10 @@
 
 .schedule-button:hover {
     color: var(--white-color);
-    background-color: var(--aqua-color);
+    background-color: transparent;
+    border-radius: 8px;
+    border: solid 2px;
+    border-color: var(--pink-color);
     /* Transitions */
     -webkit-transition: background 0.5s 0s ease;
     -moz-transition: background 0.5s 0s ease;
@@ -33,15 +37,16 @@
 
 .schedule-alert-icon {
     font-size: x-large;
-    color: var(--red-color)!important;
+    color: var(--pink-color)!important;
 }
 
 .react-calendar {
-    background-color: transparent!important;
+    /* background-color: transparent!important; */
+    color: var(--true-black-color);
 }
 
 .react-calendar__tile--active {
-    background: var(--red-color)!important;
+    background: var(--pink-color)!important;
 }
 
 .react-calendar__tile--now {
@@ -49,7 +54,7 @@
 }
 
 .react-calendar__tile--active:enabled:hover, .react-calendar__tile--active:enabled:focus {
-    background: var(--red-color)!important;
+    background: var(--pink-color)!important;
 }
 
 .react-calendar__navigation button:enabled:hover, .react-calendar__navigation button:enabled:focus {
@@ -58,4 +63,22 @@
 
 .react-calendar__tile--hasActive:enabled:hover {
     background: var(--gray-color)!important;
+}
+
+.pick-time {
+    color: var(--white-color);
+    padding: 8px;
+    border-radius: 8px;
+    border: 1px solid var(--aqua-color);
+    background-color: var(--aqua-color);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pick-time:hover {
+    background-color: transparent;
+    box-shadow: 0px 0px 40px 14px rgba(127,209,185,0.33);
+    -webkit-box-shadow: 0px 0px 40px 14px rgba(127,209,185,0.33);
+    -moz-box-shadow: 0px 0px 40px 14px rgba(127,209,185,0.33);
+    transition: 0.3s;
 }

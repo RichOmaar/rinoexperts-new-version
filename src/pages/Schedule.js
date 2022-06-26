@@ -7,10 +7,11 @@ import ProgressTop from '../components/progressTop/ProgressTop';
 import { GrCircleAlert } from 'react-icons/gr';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
-// import Swal from 'sweetalert2';
+import Swal from 'sweetalert2';
 // import withReactContent from 'sweetalert2-react-content';
-
-import '../components/loaderJquery/loaderJquery';
+import getTimeAvailability from '../services/getTimeAvailability';
+import validateTimeSelected from '../services/validateTimeSelected';
+// import '../components/loaderJquery/loaderJquery';
 
 import { useNavigate } from 'react-router-dom';
 
@@ -23,7 +24,6 @@ const Schedule = () => {
     
     const idStep = ".step-5";
 
-    // const MySwal = withReactContent(Swal);
 
     const navigate = useNavigate();
 
@@ -57,32 +57,51 @@ const Schedule = () => {
 
         const isLogged = JSON.parse(sessionStorage.getItem('token'));
 
-        if(!isLogged) {
-            navigate('/');
-        }
+        // if(!isLogged) {
+        //     navigate('/');
+        // }
 
     }, []);
     
-    function onChageOnlineCalendar(value, e){
+    function onChageOnlineCalendar(value, e) {
         onChangeDate1(value);
         verifyOnlineAvailability(value, 1)
     }
 
-    function onChageFaceToFaceCalendar(value, e){
+    function onChageFaceToFaceCalendar(value, e) {
         onChangeDate2(value);
         verifyFaceToFaceAvailability(value, 2)
     }
    
-    function onChageSurgerCalendar(value, e){
+    function onChageSurgerCalendar(value, e) {
         onChangeDate3(value);
         verifySurgeryAvailability(value, 3)
     }
 
-    function verifyOnlineAvailability(date){
+    function verifyOnlineAvailability(date) {
+
+        // let formData = new FormData();
+
+        // formData.append("date", date.toISOString().replace(/T.*/,''));
+        // formData.append("appoinmentType", 1);
+
+        // getTimeAvailability(formData)
+        // .then(response => {
+        //     let _respuesta = JSON.parse(response);
+        //     if(_respuesta.response === 'success');{
+        //         setTimesDate1(_respuesta.times);
+        //     }
+        // })
+        // .catch((error) => {
+        //     console.log(error);
+        // });
+
         let loadOnlineDate = {
             "date":date.toISOString().replace(/T.*/,''),
             "appoinmentType":1
         }
+
+        console.log(loadOnlineDate);
 
         fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/timeAvailability.controller.php", {
         // fetch("http://localhost:8888/rinoexperts-api/controllers/timeAvailability.controller.php", {
@@ -99,7 +118,7 @@ const Schedule = () => {
         .catch(console.error);
     }
     
-    function verifyFaceToFaceAvailability(date){
+    function verifyFaceToFaceAvailability(date) {
         let loadFaceToFaceDate = {
             "date":date.toISOString().replace(/T.*/,''),
             "appoinmentType":2
@@ -118,9 +137,26 @@ const Schedule = () => {
             setTimesDate2(responseData);
         })
         .catch(console.error);
+
+        // let formData = new FormData();
+
+        // formData.append("date", date.toISOString().replace(/T.*/,''));
+        // formData.append("appoinmentType", 1);
+
+        // getTimeAvailability(formData)
+        // .then(response => {
+        //     let _respuesta = JSON.parse(response);
+        //     console.log(_respuesta);
+        //     if(_respuesta.response === 'success');{
+        //         setTimesDate1(_respuesta.times);
+        //     }
+        // })
+        // .catch((error) => {
+        //     console.log(error);
+        // });
     }
     
-    function verifySurgeryAvailability(date){
+    function verifySurgeryAvailability(date) {
         let loadSurgeryDate = {
             "date":date.toISOString().replace(/T.*/,''),
             "appoinmentType":3
@@ -139,9 +175,69 @@ const Schedule = () => {
             setTimesDate3(responseData);
         })
         .catch(console.error);
+
+        // let formData = new FormData();
+
+        // formData.append("date", date.toISOString().replace(/T.*/,''));
+        // formData.append("appoinmentType", 1);
+
+        // getTimeAvailability(formData)
+        // .then(response => {
+        //     let _respuesta = JSON.parse(response);
+        //     console.log(_respuesta);
+        //     if(_respuesta.response === 'success');{
+        //         setTimesDate1(_respuesta.times);
+        //     }
+        // })
+        // .catch((error) => {
+        //     console.log(error);
+        // });
+        
     }
 
     function verifyTimeSelected(date,time,appoinmentType){
+
+        // let formData = new FormData();
+
+        // formData.append("date", date.toISOString().replace(/T.*/,''));
+        // formData.append("appointmentTime", time);
+        // formData.append("appoinmentType", appoinmentType);
+
+        // validateTimeSelected(formData)
+        // .then(response => {
+        //     let _respuesta = JSON.parse(response);
+        //     console.log(_respuesta);
+
+        //     if(_respuesta.response === 'success') {
+        //         switch (appoinmentType) {
+
+        //             case 1:
+        //                 document.querySelector('.optionOnline'+time).classList.add('hidden');
+        //             break;
+                    
+        //             case 2:
+        //                 document.querySelector('.optionFaceToFace'+time).classList.add('hidden');
+        //             break;
+                    
+        //             case 3:
+        //                 document.querySelector('.optionSurgery'+time).classList.add('hidden');
+        //             break;
+
+        //             default:
+        //                 Swal.fire({
+        //                     icon: 'error',
+        //                     title: 'Por favor recarga la página',
+        //                 })
+        //         }
+
+        //     } else {
+        //         Swal.fire({
+        //             icon: 'error',
+        //             title: 'Por favor selecciona otro horario',
+        //         })
+        //     }
+           
+        // })
 
         let verifyTime = {
             "date": date.toISOString().replace(/T.*/,''),
@@ -159,6 +255,7 @@ const Schedule = () => {
         })
         .then(response => response.json())
         .then((result) => {
+            console.log(result);
             if(!result) {
                 switch (appoinmentType) {
                     case 1:
@@ -174,15 +271,15 @@ const Schedule = () => {
                     break;
 
                     default:
-                        // Swal.fire({
-                        //     icon: 'error',
-                        //     title: 'Por favor recarga la página',
-                        // })
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Por favor recarga la página',
+                        })
                 }
-                // Swal.fire({
-                //     icon: 'error',
-                //     title: 'Por favor selecciona otro horario',
-                // })
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Por favor selecciona otro horario',
+                })
             }
         })
         .catch(console.error);
@@ -195,11 +292,11 @@ const Schedule = () => {
             document.querySelector('.surgery-date-form').classList.add('hidden');
             setShowSurgery(!showSurgery);
         } else {
-            // Swal.fire({
-            //     icon: 'warning',
-            //     title: 'ATENCIÓN',
-            //     text: 'Recuerda que la fecha de tu cirugía DEBE ser posterior a la cita online y presencial'
-            // })
+            Swal.fire({
+                icon: 'warning',
+                title: 'ATENCIÓN',
+                text: 'Recuerda que la fecha de tu cirugía DEBE ser posterior a la cita online y presencial'
+            })
             document.querySelector('.surgery-date-form').classList.remove('hidden');
             setShowSurgery(!showSurgery);
         }
@@ -210,11 +307,11 @@ const Schedule = () => {
         e.preventDefault();
 
         if(onlineDate === "" || faceToFaceDate === ""){
-            // Swal.fire({
-            //     icon: 'warning',
-            //     title: 'ATENCIÓN',
-            //     text: 'Por favor selecciona una fecha y un horario para tus consultas.'
-            // })
+            Swal.fire({
+                icon: 'warning',
+                title: 'ATENCIÓN',
+                text: 'Por favor selecciona una fecha y un horario para tus consultas.'
+            })
         } else {
 
             let appointmentsData = [
@@ -233,26 +330,26 @@ const Schedule = () => {
             })
             .then(response => response.json())
             .then((responseData) => {
-                // Swal.fire({
-                //     icon: 'warning',
-                //     title: 'UN MOMENTO POR FAVOR',
-                //     text: 'Estamos validando la disponibilidad de las citas'
-                // })
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'UN MOMENTO POR FAVOR',
+                    text: 'Estamos validando la disponibilidad de las citas'
+                })
                 console.log('error')
                 .then((result) => {
                     if(responseData === true){
-                        // Swal.fire({
-                        //     icon: 'success',
-                        //     title: <strong>Tus citas se han agendado con éxito</strong>,
-                        // })
+                        Swal.fire({
+                            icon: 'success',
+                            title: <strong>Tus citas se han agendado con éxito</strong>,
+                        })
                         if (result.isConfirmed) {
                             navigate('/detalles-citas');
                         }
                     } else {
-                        // Swal.fire({
-                        //     icon: 'error',
-                        //     title: 'Ha ocurrido un error, por favor inténtalo nuevamente',
-                        // })
+                        Swal.fire({
+                            icon: 'error',
+                            title: 'Ha ocurrido un error, por favor inténtalo nuevamente',
+                        })
                     }
                 })
             })
@@ -279,78 +376,80 @@ const Schedule = () => {
     }
 
   return (
-    (!timesDate1 || !timesDate2 || !timesDate3)? <div>Por favor recarga la página...</div> 
+    (!timesDate1 || !timesDate2 || !timesDate3)? <div className="container py-4">Por favor recarga la página...</div> 
     :
-    <div className="schedule-container mt-3" id="schdedule-form-1" onSubmit={ handleSchdeule }>
-        <div className="row">
-            <div className="col-12">
-                <LogoHeader />
-            </div>
-            <div className="col-12">
-                <ProgressTop idStep={idStep}/>
-            </div>
-            <div className="col-12 text-center">
-                <h2 className="font-bold text-red-color">AGENDAR CITAS</h2>
-            </div>
-            <div className="col-12 text-center pt-3">
-                <p>Con el pago de tu consulta en línea tienes incluido la evaluación presencial previa a tu cirugía.</p>
-
-                <div className="align-middle">
-                    <p className=""><GrCircleAlert className="schedule-alert-icon" /> A continuación selecciona la fecha de tu consulta online.</p>
+    <div className="schedule-container black-background mp-3" id="schdedule-form-1" onSubmit={ handleSchdeule }>
+        <div className="container text-white-color">
+            <div className="row">
+                <div className="col-12">
+                    <LogoHeader />
                 </div>
+                <div className="col-12">
+                    <ProgressTop idStep={idStep}/>
+                </div>
+                <div className="col-12 text-center">
+                    <h2 className="font-bold text-red-color">AGENDAR CITAS</h2>
+                </div>
+                <div className="col-12 text-center pt-3">
+                    <p>Con el pago de tu consulta en línea tienes incluido la evaluación presencial previa a tu cirugía.</p>
 
-                <form>
-                    <div className="d-flex justify-content-center">
-                        <Calendar onChange={onChageOnlineCalendar} value={changeDate1}/>
-                    </div>
-                
-                    <select className="mt-4" id="online-selector" onChange={ handleOnlineDate }>
-                        <option defaultValue >Selecciona un horario</option>
-                            {Object.values(timesDate1).map(
-                                (item) => (
-                                    <option key={item.id_horario_citas} className={`optionOnline${item.id_horario_citas}`} value={item.id_horario_citas}>{item.hora_inicio}</option>
-                                )
-                            )}
-                    </select>
-
-                    <div className="align-middle mt-5">
-                        <p className=""><GrCircleAlert className="schedule-alert-icon"/> A continuación selecciona la fecha de tu consulta presencial.</p>
+                    <div className="align-middle">
+                        <p className=""><GrCircleAlert className="schedule-alert-icon" /> A continuación selecciona la fecha de tu consulta online.</p>
                     </div>
 
-                    <div className="d-flex justify-content-center">
-                        <Calendar onChange={onChageFaceToFaceCalendar} value={changeDate2} />
-                    </div>
-                
-                    <select className="mt-4" id="face-to-face-selector" onChange={ handleFaceToFaceDate }>
-                        <option defaultValue>Selecciona un horario</option>
-                            {Object.values(timesDate2).map(
-                                (item) => (
-                                    <option key={item.id_horario_citas} className={`optionFaceToFace${item.id_horario_citas}`} value={item.id_horario_citas}>{item.hora_inicio}</option>
-                                )
-                            )}
-                    </select>
+                    <form>
+                        <div className="d-flex justify-content-center">
+                            <Calendar onChange={onChageOnlineCalendar} value={changeDate1}/>
+                        </div>
+                    
+                        <select className="mt-4 pick-time" id="online-selector" onChange={ handleOnlineDate }>
+                            <option defaultValue >Selecciona un horario</option>
+                                {Object.values(timesDate1).map(
+                                    (item) => (
+                                        <option key={item.id_horario_citas} className={`optionOnline${item.id_horario_citas}`} value={item.id_horario_citas}>{item.hora_inicio}</option>
+                                    )
+                                )}
+                        </select>
 
-                    <div className="d-flex justify-content-center mt-3 mb-3">
-                        <button type="button" className="btn m-0 font-regular schedule-button" onClick={ handleShowSurgery }>Agendar cirugía</button>
-                        <button id="sendAppointmentData" type="submit" className="btn m-0 font-regular schedule-button" >Pagar ahora <FaLongArrowAltRight className=""/></button>
-                    </div>
-                </form>
+                        <div className="align-middle mt-5">
+                            <p className=""><GrCircleAlert className="schedule-alert-icon"/> A continuación selecciona la fecha de tu consulta presencial.</p>
+                        </div>
+
+                        <div className="d-flex justify-content-center">
+                            <Calendar onChange={onChageFaceToFaceCalendar} value={changeDate2} />
+                        </div>
+                    
+                        <select className="mt-4 pick-time" id="face-to-face-selector" onChange={ handleFaceToFaceDate }>
+                            <option defaultValue>Selecciona un horario</option>
+                                {Object.values(timesDate2).map(
+                                    (item) => (
+                                        <option key={item.id_horario_citas} className={`optionFaceToFace${item.id_horario_citas}`} value={item.id_horario_citas}>{item.hora_inicio}</option>
+                                    )
+                                )}
+                        </select>
+
+                        <div className="d-flex justify-content-center mt-4 mb-4">
+                            {/* <button type="button" className="btn m-0 font-regular schedule-button" onClick={ handleShowSurgery }>Agendar cirugía</button> */}
+                            <button id="sendAppointmentData" type="submit" className="btn m-0 font-regular schedule-button" >Pagar ahora <FaLongArrowAltRight className=""/></button>
+                        </div>
+                    </form>
 
 
-                <form className="surgery-date-form hidden pb-4" id="surgery">
-                    <div className="d-flex justify-content-center">
-                        <Calendar onChange={onChageSurgerCalendar} value={changeDate3} />
-                    </div>
-                
-                    <select className="mt-4" id="surgery-selector" onChange={ handleSurgeryDate }>
-                        <option defaultValue>Selecciona un horario</option>
-                            {Object.values(timesDate3).map(
-                                (item) => (
-                                    <option key={item.id_horario_citas} className={`optionSurgery${item.id_horario_citas}`} value={item.id_horario_citas}>{item.hora_inicio}</option>
-                                )
-                            )}
-                    </select>
-                </form>
+                    <form className="surgery-date-form hidden pb-4" id="surgery">
+                        <div className="d-flex justify-content-center">
+                            <Calendar onChange={onChageSurgerCalendar} value={changeDate3} />
+                        </div>
+                    
+                        <select className="mt-4" id="surgery-selector" onChange={ handleSurgeryDate }>
+                            <option defaultValue>Selecciona un horario</option>
+                                {Object.values(timesDate3).map(
+                                    (item) => (
+                                        <option key={item.id_horario_citas} className={`optionSurgery${item.id_horario_citas}`} value={item.id_horario_citas}>{item.hora_inicio}</option>
+                                    )
+                                )}
+                        </select>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
