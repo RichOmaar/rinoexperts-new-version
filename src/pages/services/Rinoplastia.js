@@ -46,7 +46,7 @@ const Rinoplastia = () => {
                                 <div className="col-2 align-self-center text-center">
                                     <img src={Model3d} alt="Rinoexperts Modelo 3D" />
                                 </div>
-                                <div className="col-10">
+                                <div className="col-10 px-1">
                                     <h3>Simulador de resultados</h3>
                                     <p>Con <span className="text-aqua-color">CRISALIX</span> podrás visualizar tu nueva imágen antes del procedimiento.</p>
                                 </div>
@@ -55,7 +55,7 @@ const Rinoplastia = () => {
                                 <div className="col-2 align-self-center text-center">
                                     <img src={MedicalEq} alt="Rinoexperts Equipo Médico" />
                                 </div>
-                                <div className="col-10">
+                                <div className="col-10 px-1">
                                     <h3>Personal certificado</h3>
                                     <p>El Dr. Ortiz y todo el equipo de rehabilitación están listos para darte el mejor servicio.</p>
                                 </div>
@@ -64,7 +64,7 @@ const Rinoplastia = () => {
                                 <div className="col-2 align-self-center text-center">
                                     <img src={MedicalInform} alt="Rinoexperts Reporte Médico" />
                                 </div>
-                                <div className="col-10">
+                                <div className="col-10 px-1">
                                     <h3>Atención personalizada</h3>
                                     <p>El equipo de Rinoexperts te acompañará durante todo el proceso, desde la primer consulta hasta el final de tu rehabilitación.</p>
                                 </div>
@@ -73,7 +73,7 @@ const Rinoplastia = () => {
                                 <div className="col-2 align-self-center text-center">
                                     <img src={Machine} alt="Rinoexperts maquinas" />
                                 </div>
-                                <div className="col-10">
+                                <div className="col-10 px-1">
                                     <h3>Tecnología e instalaciones modernas</h3>
                                     <p>Contamos con instalaciones seguras y equipadas con todo lo necesario para brindarte el mejor servicio.</p>
                                 </div>
@@ -94,7 +94,7 @@ const Rinoplastia = () => {
                 </div>
             </div>
         </div>
-        <div className="col-12 container">
+        <div className="col-12 container py-3">
             <div className="col-12 text-center py-3">
               <h2 className="font-bold text-white-color">¿Qué incluye?</h2>
               <p className="text-white-color">A continuación te desglozamos todos los beneficios excluivos de RINOEXPERTS</p>

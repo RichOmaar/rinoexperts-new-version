@@ -149,7 +149,7 @@ const Appointment = () => {
             .then(response => {
                 let _respuesta = JSON.parse(response);
 
-                if(_respuesta.status === 'success') {
+                if(_respuesta.response === 'success') {
                     Swal.fire({
                         title: 'Tus imágenes se han guardado con éxito',
                         icon: 'success',

@@ -23,10 +23,11 @@ import LogoHeader from '../components/logoHeader/LogoHeader';
 
 
 const Schedule = () => {
-    
+
     const idStep = ".step-5";
 
-
+    let today = new Date().setHours(0,0,0,0);
+    ;
     const navigate = useNavigate();
 
     const id_user = JSON.parse(sessionStorage.getItem('token'));
@@ -38,7 +39,7 @@ const Schedule = () => {
     const [timesDate1, setTimesDate1] = useState('');
     const [timesDate2, setTimesDate2] = useState('');
     // const [timesDate3, setTimesDate3] = useState('');
-    
+
     const [onlineDate, setOnlineDate] = useState('');
     const [faceToFaceDate, setFaceToFaceDate] = useState('');
     // const [surgeryDate, setSurgeryDate] = useState('');
@@ -46,7 +47,7 @@ const Schedule = () => {
     // const [showSurgery, setShowSurgery] = useState(false);
 
     useEffect(() => {
-        
+
         verifyOnlineAvailability(changeDate1);
         verifyFaceToFaceAvailability(changeDate2);
         // verifySurgeryAvailability(changeDate3);
@@ -54,7 +55,7 @@ const Schedule = () => {
         window.onload = function(){
             document.forms[0].submit();
             document.forms[1].submit();
-            
+
         }
 
         const isLogged = JSON.parse(sessionStorage.getItem('token'));
@@ -64,7 +65,7 @@ const Schedule = () => {
         // }
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-    
+
     function onChageOnlineCalendar(value, e) {
         onChangeDate1(value);
         verifyOnlineAvailability(value, 1)
@@ -74,7 +75,7 @@ const Schedule = () => {
         onChangeDate2(value);
         verifyFaceToFaceAvailability(value, 2)
     }
-   
+
     // function onChageSurgerCalendar(value, e) {
     //     onChangeDate3(value);
     //     verifySurgeryAvailability(value, 3)
@@ -82,63 +83,88 @@ const Schedule = () => {
 
     function verifyOnlineAvailability(date) {
 
-        let formData = new FormData();
+        if(today <= date) {
 
-        formData.append("date", date.toISOString().replace(/T.*/,''));
-        formData.append("appoinmentType", 1);
+            let formData = new FormData();
 
-        getTimeAvailability(formData)
-        .then((response) => {
-            
-            let _respuesta = JSON.parse(response);
+            formData.append("date", date.toISOString().replace(/T.*/,''));
+            formData.append("appoinmentType", 1);
 
-            if(_respuesta.response === 'sunday') {
-                setTimesDate1([]);
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Por favor selecciona otro día y horario.',
-                })
-            } else if(_respuesta) {
-                setTimesDate1(_respuesta);
-            }
-                
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+            getTimeAvailability(formData)
+            .then((response) => {
+
+                let _respuesta = JSON.parse(response);
+
+                if(_respuesta.response === 'sunday') {
+                    setTimesDate1([]);
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Por favor selecciona otra fecha y horario.',
+                    })
+                } else if(_respuesta) {
+                    setTimesDate1(_respuesta);
+                }
+
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        } else {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Por favor selecciona una fecha posterior.',
+            })
+            onChangeDate1(new Date());
+        }
 
     }
-    
+
     function verifyFaceToFaceAvailability(date) {
-        
-        let formData = new FormData();
 
-        formData.append("date", date.toISOString().replace(/T.*/,''));
-        formData.append("appoinmentType", 2);
+        if(date < changeDate1) {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Recuerda que la consulta presencial debe ser posterior a la consulta online.',
+            })
+            onChangeDate2(new Date());
+        } else if(today <= date){
 
-        getTimeAvailability(formData)
-        .then((response) => {
-            
-            let _respuesta = JSON.parse(response);
+            let formData = new FormData();
 
-            if(_respuesta.response === 'sunday') {
-                setTimesDate2([]);
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Por favor selecciona otro día y horario.',
-                })
-            } else if(_respuesta) {
-                setTimesDate2(_respuesta);
-            }
-                
-        })
-        .catch((error) => {
-            console.log(error);
-        });
+            formData.append("date", date.toISOString().replace(/T.*/,''));
+            formData.append("appoinmentType", 2);
+
+            getTimeAvailability(formData)
+            .then((response) => {
+
+                let _respuesta = JSON.parse(response);
+
+                if(_respuesta.response === 'sunday') {
+                    setTimesDate2([]);
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Por favor selecciona otra fecha y horario.',
+                    })
+                } else if(_respuesta) {
+                    setTimesDate2(_respuesta);
+                }
+
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+        } else {
+            Swal.fire({
+                icon: 'warning',
+                title: 'Por favor selecciona una fecha posterior.',
+            })
+            onChangeDate2(new Date());
+        }
 
     }
-    
+
     // function verifySurgeryAvailability(date) {
+    // if(today <= date) {
 
     //     let formData = new FormData();
 
@@ -156,7 +182,14 @@ const Schedule = () => {
     //     .catch((error) => {
     //         console.log(error);
     //     });
-        
+    // } else {
+    //     Swal.fire({
+    //         icon: 'warning',
+    //         title: 'Por favor selecciona otro día posterior.',
+    //     })
+    //      onChangeDate1(new Date());
+    // }
+
     // }
 
     function verifyTimeSelected(date,time,appoinmentType){
@@ -183,11 +216,11 @@ const Schedule = () => {
             //         case 1:
             //             document.querySelector('.optionOnline'+time).classList.add('hidden');
             //         break;
-                    
+
             //         case 2:
             //             document.querySelector('.optionFaceToFace'+time).classList.add('hidden');
             //         break;
-                    
+
             //         case 3:
             //             document.querySelector('.optionSurgery'+time).classList.add('hidden');
             //         break;
@@ -205,14 +238,14 @@ const Schedule = () => {
             //         title: 'Por favor selecciona otro horario',
             //     })
             // }
-           
+
         })
 
     }
 
     // const handleShowSurgery = (e) => {
     //     e.preventDefault();
-        
+
     //     if(showSurgery === true){
     //         document.querySelector('.surgery-date-form').classList.add('hidden');
     //         setShowSurgery(!showSurgery);
@@ -286,19 +319,19 @@ const Schedule = () => {
         setOnlineDate(e.target.value);
         verifyTimeSelected(changeDate1,e.target.value,1);
     }
-   
+
     const handleFaceToFaceDate = (e) => {
         setFaceToFaceDate(e.target.value);
         verifyTimeSelected(changeDate2,e.target.value,2);
     }
-   
+
     // const handleSurgeryDate = (e) => {
     //     setSurgeryDate(e.target.value);
     //     verifyTimeSelected(changeDate3,e.target.value,3);
     // }
 
   return (
-    (!timesDate1 || !timesDate2) ? <div className="container py-4">Por favor recarga la página...</div> 
+    (!timesDate1 || !timesDate2) ? <div className="container py-4">Por favor recarga la página...</div>
     :
     <div className="schedule-container black-background mp-3" id="schdedule-form-1" onSubmit={ handleSchdeule }>
         <div className="container text-white-color">
@@ -323,7 +356,7 @@ const Schedule = () => {
                         <div className="d-flex justify-content-center">
                             <Calendar onChange={onChageOnlineCalendar} value={changeDate1}/>
                         </div>
-                    
+
                         <select className="mt-4 pick-time" id="online-selector" onChange={ handleOnlineDate }>
                             <option defaultValue >Selecciona un horario</option>
                                 {Object.values(timesDate1).map(
@@ -340,7 +373,7 @@ const Schedule = () => {
                         <div className="d-flex justify-content-center">
                             <Calendar onChange={onChageFaceToFaceCalendar} value={changeDate2} />
                         </div>
-                    
+
                         <select className="mt-4 pick-time" id="face-to-face-selector" onChange={ handleFaceToFaceDate }>
                             <option defaultValue>Selecciona un horario</option>
                                 {Object.values(timesDate2).map(
@@ -361,7 +394,7 @@ const Schedule = () => {
                         <div className="d-flex justify-content-center">
                             <Calendar onChange={onChageSurgerCalendar} value={changeDate3} />
                         </div>
-                    
+
                         <select className="mt-4" id="surgery-selector" onChange={ handleSurgeryDate }>
                             <option defaultValue>Selecciona un horario</option>
                                 {Object.values(timesDate3).map(
