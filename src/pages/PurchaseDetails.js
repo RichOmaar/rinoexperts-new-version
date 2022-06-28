@@ -10,14 +10,14 @@ import { FiAlertCircle } from 'react-icons/fi';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
 
-// import Swal from 'sweetalert2';
-// import withReactContent from 'sweetalert2-react-content';
+import Swal from 'sweetalert2';
 
 import LogoHeader from '../components/logoHeader/LogoHeader';
 
 let stripePromise;
 
 const getStripe = () => {
+
     if(!stripePromise) {
         stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
     }
@@ -75,9 +75,10 @@ const PurchaseDetails = () => {
 
     useEffect(() => {
 
-        verifySurgery(id_user);
-        verifyAppointments(id_user);
+        // verifySurgery(id_user);
+        // verifyAppointments(id_user);
 
+        console.log(process.env.REACT_APP_STRIPE_KEY);
         // const script = document.createElement("script");
 
         // script.src = "https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch";
@@ -135,7 +136,7 @@ const PurchaseDetails = () => {
         })
         .then(response => response.json())
         .then((responseData) => {
-            if(responseData != false){
+            if(responseData !== false){
 
                 // console.log(responseData);
                 setUserDataAppointments(responseData);
@@ -149,29 +150,29 @@ const PurchaseDetails = () => {
         console.log(appointmentType);
         switch(appointmentType){
             case 'cita-online':
-                // Swal.fire({
-                //     text: 'Para la consulta online te contactaremos vía WhatsApp para enviarte el enlace correpsondiente para realizar la videoconsulta.'
-                // })
+                Swal.fire({
+                    text: 'Para la consulta online te contactaremos vía WhatsApp para enviarte el enlace correpsondiente para realizar la videoconsulta.'
+                })
                 break;
            
             case 'cita-presencial':
-                // Swal.fire({
-                //     text: 'Para la consulta presencial debes presentarte 15 minutos antes de la hora para evitar contratiempos.'
-                // })
+                Swal.fire({
+                    text: 'Para la consulta presencial debes presentarte 15 minutos antes de la hora para evitar contratiempos.'
+                })
                 break;
            
             case 'cita-cirugia':
-                // Swal.fire({
-                //     text: 'Los requerimientos se hablarán en la cita presencial, posteriormente te enviaremos nuevamente mediante WhatsApp la lista de requerimientos.',
-                //     // buttonsStyling: false
-                // })
+                Swal.fire({
+                    text: 'Los requerimientos se hablarán en la cita presencial, posteriormente te enviaremos nuevamente mediante WhatsApp la lista de requerimientos.',
+                    // buttonsStyling: false
+                })
                 break;
 
             default:
-                // Swal.fire({
-                //     icon: 'error',
-                //     title: 'Ha ocurrido un error al cargar tus imágenes, inténtalo nuevamente',
-                // })
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ha ocurrido un error al cargar tus imágenes, inténtalo nuevamente',
+                })
                 break;
         }
     }
@@ -225,15 +226,15 @@ const PurchaseDetails = () => {
             // body: JSON.stringify(paymentType)
         })
         .then(response => response.json())
-        // .then((responseData) => {
-        //     if(responseData === false){
-        //         // document.querySelector('.surgery-appointment-component').classList.remove('hidden');
-        //         // document.querySelector('.surgery-details').classList.add('hidden');
-        //         // setTotalAmount({baseAmount});
-        //         // window.location.href = "#total-details";
-        //     }
-        //     // window.location.reload();
-        // })
+        .then((responseData) => {
+            if(responseData === false){
+                // document.querySelector('.surgery-appointment-component').classList.remove('hidden');
+                // document.querySelector('.surgery-details').classList.add('hidden');
+                // setTotalAmount({baseAmount});
+                // window.location.href = "#total-details";
+            }
+            // window.location.reload();
+        })
         .catch(console.error);
     }
 
