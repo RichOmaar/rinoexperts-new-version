@@ -11,6 +11,7 @@ import Swal from 'sweetalert2';
 // import withReactContent from 'sweetalert2-react-content';
 import getTimeAvailability from '../services/getTimeAvailability';
 import validateTimeSelected from '../services/validateTimeSelected';
+import addSchedule from '../services/schedule';
 // import '../components/loaderJquery/loaderJquery';
 
 import { useNavigate } from 'react-router-dom';
@@ -19,6 +20,7 @@ import Calendar from 'react-calendar';
 import 'react-calendar/dist/Calendar.css';
 
 import LogoHeader from '../components/logoHeader/LogoHeader';
+
 
 const Schedule = () => {
     
@@ -31,23 +33,23 @@ const Schedule = () => {
 
     const [changeDate1, onChangeDate1] = useState(new Date());
     const [changeDate2, onChangeDate2] = useState(new Date());
-    const [changeDate3, onChangeDate3] = useState(new Date());
+    // const [changeDate3, onChangeDate3] = useState(new Date());
 
     const [timesDate1, setTimesDate1] = useState('');
     const [timesDate2, setTimesDate2] = useState('');
-    const [timesDate3, setTimesDate3] = useState('');
+    // const [timesDate3, setTimesDate3] = useState('');
     
     const [onlineDate, setOnlineDate] = useState('');
     const [faceToFaceDate, setFaceToFaceDate] = useState('');
-    const [surgeryDate, setSurgeryDate] = useState('');
+    // const [surgeryDate, setSurgeryDate] = useState('');
 
-    const [showSurgery, setShowSurgery] = useState(false);
+    // const [showSurgery, setShowSurgery] = useState(false);
 
     useEffect(() => {
         
         verifyOnlineAvailability(changeDate1);
         verifyFaceToFaceAvailability(changeDate2);
-        verifySurgeryAvailability(changeDate3);
+        // verifySurgeryAvailability(changeDate3);
 
         window.onload = function(){
             document.forms[0].submit();
@@ -60,7 +62,7 @@ const Schedule = () => {
         // if(!isLogged) {
         //     navigate('/');
         // }
-
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
     
     function onChageOnlineCalendar(value, e) {
@@ -73,235 +75,158 @@ const Schedule = () => {
         verifyFaceToFaceAvailability(value, 2)
     }
    
-    function onChageSurgerCalendar(value, e) {
-        onChangeDate3(value);
-        verifySurgeryAvailability(value, 3)
-    }
+    // function onChageSurgerCalendar(value, e) {
+    //     onChangeDate3(value);
+    //     verifySurgeryAvailability(value, 3)
+    // }
 
     function verifyOnlineAvailability(date) {
 
-        // let formData = new FormData();
+        let formData = new FormData();
 
-        // formData.append("date", date.toISOString().replace(/T.*/,''));
-        // formData.append("appoinmentType", 1);
+        formData.append("date", date.toISOString().replace(/T.*/,''));
+        formData.append("appoinmentType", 1);
 
-        // getTimeAvailability(formData)
-        // .then(response => {
-        //     let _respuesta = JSON.parse(response);
-        //     if(_respuesta.response === 'success');{
-        //         setTimesDate1(_respuesta.times);
-        //     }
-        // })
-        // .catch((error) => {
-        //     console.log(error);
-        // });
+        getTimeAvailability(formData)
+        .then((response) => {
+            
+            let _respuesta = JSON.parse(response);
 
-        let loadOnlineDate = {
-            "date":date.toISOString().replace(/T.*/,''),
-            "appoinmentType":1
-        }
-
-        console.log(loadOnlineDate);
-
-        fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/timeAvailability.controller.php", {
-        // fetch("http://localhost:8888/rinoexperts-api/controllers/timeAvailability.controller.php", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(loadOnlineDate)
+            if(_respuesta.response === 'sunday') {
+                setTimesDate1([]);
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Por favor selecciona otro día y horario.',
+                })
+            } else if(_respuesta) {
+                setTimesDate1(_respuesta);
+            }
+                
         })
-        .then(response => response.json())
-        .then((responseData) => {
-            setTimesDate1(responseData);
-        })
-        .catch(console.error);
+        .catch((error) => {
+            console.log(error);
+        });
+
     }
     
     function verifyFaceToFaceAvailability(date) {
-        let loadFaceToFaceDate = {
-            "date":date.toISOString().replace(/T.*/,''),
-            "appoinmentType":2
-        }
+        
+        let formData = new FormData();
 
-        fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/timeAvailability.controller.php", {
-        // fetch("http://localhost:8888/rinoexperts-api/controllers/timeAvailability.controller.php", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(loadFaceToFaceDate)
+        formData.append("date", date.toISOString().replace(/T.*/,''));
+        formData.append("appoinmentType", 2);
+
+        getTimeAvailability(formData)
+        .then((response) => {
+            
+            let _respuesta = JSON.parse(response);
+
+            if(_respuesta.response === 'sunday') {
+                setTimesDate2([]);
+                Swal.fire({
+                    icon: 'warning',
+                    title: 'Por favor selecciona otro día y horario.',
+                })
+            } else if(_respuesta) {
+                setTimesDate2(_respuesta);
+            }
+                
         })
-        .then(response => response.json())
-        .then((responseData) => {
-            setTimesDate2(responseData);
-        })
-        .catch(console.error);
+        .catch((error) => {
+            console.log(error);
+        });
 
-        // let formData = new FormData();
-
-        // formData.append("date", date.toISOString().replace(/T.*/,''));
-        // formData.append("appoinmentType", 1);
-
-        // getTimeAvailability(formData)
-        // .then(response => {
-        //     let _respuesta = JSON.parse(response);
-        //     console.log(_respuesta);
-        //     if(_respuesta.response === 'success');{
-        //         setTimesDate1(_respuesta.times);
-        //     }
-        // })
-        // .catch((error) => {
-        //     console.log(error);
-        // });
     }
     
-    function verifySurgeryAvailability(date) {
-        let loadSurgeryDate = {
-            "date":date.toISOString().replace(/T.*/,''),
-            "appoinmentType":3
-        }
+    // function verifySurgeryAvailability(date) {
 
-        fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/timeAvailability.controller.php", {
-        // fetch("http://localhost:8888/rinoexperts-api/controllers/timeAvailability.controller.php", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(loadSurgeryDate)
-        })
-        .then(response => response.json())
-        .then((responseData) => {
-            setTimesDate3(responseData);
-        })
-        .catch(console.error);
+    //     let formData = new FormData();
 
-        // let formData = new FormData();
+    //     formData.append("date", date.toISOString().replace(/T.*/,''));
+    //     formData.append("appoinmentType", 3);
 
-        // formData.append("date", date.toISOString().replace(/T.*/,''));
-        // formData.append("appoinmentType", 1);
-
-        // getTimeAvailability(formData)
-        // .then(response => {
-        //     let _respuesta = JSON.parse(response);
-        //     console.log(_respuesta);
-        //     if(_respuesta.response === 'success');{
-        //         setTimesDate1(_respuesta.times);
-        //     }
-        // })
-        // .catch((error) => {
-        //     console.log(error);
-        // });
+    //     getTimeAvailability(formData)
+    //     .then((response) => {
+    //         let _respuesta = JSON.parse(response);
+    //         console.log(_respuesta);
+    //         if(_respuesta.response === 'success') {
+    //             setTimesDate3(_respuesta.times);
+    //         }
+    //     })
+    //     .catch((error) => {
+    //         console.log(error);
+    //     });
         
-    }
+    // }
 
     function verifyTimeSelected(date,time,appoinmentType){
 
-        // let formData = new FormData();
+        let formData = new FormData();
 
-        // formData.append("date", date.toISOString().replace(/T.*/,''));
-        // formData.append("appointmentTime", time);
-        // formData.append("appoinmentType", appoinmentType);
+        formData.append("date", date.toISOString().replace(/T.*/,''));
+        formData.append("appointmentTime", time);
+        formData.append("appoinmentType", appoinmentType);
 
-        // validateTimeSelected(formData)
-        // .then(response => {
-        //     let _respuesta = JSON.parse(response);
-        //     console.log(_respuesta);
+        validateTimeSelected(formData)
+        .then(response => {
+            let _respuesta = JSON.parse(response);
 
-        //     if(_respuesta.response === 'success') {
-        //         switch (appoinmentType) {
-
-        //             case 1:
-        //                 document.querySelector('.optionOnline'+time).classList.add('hidden');
-        //             break;
-                    
-        //             case 2:
-        //                 document.querySelector('.optionFaceToFace'+time).classList.add('hidden');
-        //             break;
-                    
-        //             case 3:
-        //                 document.querySelector('.optionSurgery'+time).classList.add('hidden');
-        //             break;
-
-        //             default:
-        //                 Swal.fire({
-        //                     icon: 'error',
-        //                     title: 'Por favor recarga la página',
-        //                 })
-        //         }
-
-        //     } else {
-        //         Swal.fire({
-        //             icon: 'error',
-        //             title: 'Por favor selecciona otro horario',
-        //         })
-        //     }
-           
-        // })
-
-        let verifyTime = {
-            "date": date.toISOString().replace(/T.*/,''),
-            "appointmentTime":time,
-            "appoinmentType":appoinmentType
-        }
-
-        fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/validateTimeSelected.controller.php", {
-        // fetch("http://localhost:8888/rinoexperts-api/controllers/validateTimeSelected.controller.php", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(verifyTime)
-        })
-        .then(response => response.json())
-        .then((result) => {
-            console.log(result);
-            if(!result) {
-                switch (appoinmentType) {
-                    case 1:
-                        document.querySelector('.optionOnline'+time).classList.add('hidden');
-                    break;
-                    
-                    case 2:
-                        document.querySelector('.optionFaceToFace'+time).classList.add('hidden');
-                    break;
-                    
-                    case 3:
-                        document.querySelector('.optionSurgery'+time).classList.add('hidden');
-                    break;
-
-                    default:
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Por favor recarga la página',
-                        })
-                }
+            if(_respuesta.response === 'error') {
                 Swal.fire({
                     icon: 'error',
                     title: 'Por favor selecciona otro horario',
                 })
             }
+            // if(_respuesta.response === 'success') {
+            //     switch (appoinmentType) {
+
+            //         case 1:
+            //             document.querySelector('.optionOnline'+time).classList.add('hidden');
+            //         break;
+                    
+            //         case 2:
+            //             document.querySelector('.optionFaceToFace'+time).classList.add('hidden');
+            //         break;
+                    
+            //         case 3:
+            //             document.querySelector('.optionSurgery'+time).classList.add('hidden');
+            //         break;
+
+            //         default:
+            //             Swal.fire({
+            //                 icon: 'error',
+            //                 title: 'Por favor recarga la página',
+            //             })
+            //     }
+
+            // } else {
+            //     Swal.fire({
+            //         icon: 'error',
+            //         title: 'Por favor selecciona otro horario',
+            //     })
+            // }
+           
         })
-        .catch(console.error);
+
     }
 
-    const handleShowSurgery = (e) => {
-        e.preventDefault();
+    // const handleShowSurgery = (e) => {
+    //     e.preventDefault();
         
-        if(showSurgery === true){
-            document.querySelector('.surgery-date-form').classList.add('hidden');
-            setShowSurgery(!showSurgery);
-        } else {
-            Swal.fire({
-                icon: 'warning',
-                title: 'ATENCIÓN',
-                text: 'Recuerda que la fecha de tu cirugía DEBE ser posterior a la cita online y presencial'
-            })
-            document.querySelector('.surgery-date-form').classList.remove('hidden');
-            setShowSurgery(!showSurgery);
-        }
-        window.location.href='#surgery';
-    }
+    //     if(showSurgery === true){
+    //         document.querySelector('.surgery-date-form').classList.add('hidden');
+    //         setShowSurgery(!showSurgery);
+    //     } else {
+    //         Swal.fire({
+    //             icon: 'warning',
+    //             title: 'ATENCIÓN',
+    //             text: 'Recuerda que la fecha de tu cirugía DEBE ser posterior a la cita online y presencial'
+    //         })
+    //         document.querySelector('.surgery-date-form').classList.remove('hidden');
+    //         setShowSurgery(!showSurgery);
+    //     }
+    //     window.location.href='#surgery';
+    // }
 
     const handleSchdeule = (e) => {
         e.preventDefault();
@@ -314,48 +239,45 @@ const Schedule = () => {
             })
         } else {
 
-            let appointmentsData = [
-                {id_usuario: id_user, id_horario_citas: onlineDate, id_tipo_cita: 1, fecha_completa: changeDate1.toISOString().replace(/T.*/,'')},
-                {id_usuario: id_user, id_horario_citas: faceToFaceDate, id_tipo_cita: 2, fecha_completa: changeDate2.toISOString().replace(/T.*/,'')},
-                {id_usuario: id_user, id_horario_citas: surgeryDate, id_tipo_cita: 3, fecha_completa: changeDate3.toISOString().replace(/T.*/,'')}
-            ]
+            let formData = new FormData();
 
-            fetch ("http://localhost:8888/GitHub/rinoexperts-api/controllers/addAppointments.controller.php", {
-            // fetch ("http://localhost:8888/rinoexperts-api/controllers/addAppointments.controller.php", {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(appointmentsData)
-            })
-            .then(response => response.json())
-            .then((responseData) => {
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'UN MOMENTO POR FAVOR',
-                    text: 'Estamos validando la disponibilidad de las citas'
-                })
-                console.log('error')
-                .then((result) => {
-                    if(responseData === true){
-                        Swal.fire({
-                            icon: 'success',
-                            title: <strong>Tus citas se han agendado con éxito</strong>,
-                        })
-                        if (result.isConfirmed) {
-                            navigate('/detalles-citas');
-                        }
-                    } else {
-                        Swal.fire({
-                            icon: 'error',
-                            title: 'Ha ocurrido un error, por favor inténtalo nuevamente',
-                        })
-                    }
-                })
+            formData.append("id_usuario", id_user);
+            formData.append("id_horario_citas_online", onlineDate);
+            formData.append("id_tipo_cita_online", 1);
+            formData.append("fecha_completa_online", changeDate1.toISOString().replace(/T.*/,''));
+            formData.append("id_horario_citas_faceToFace", faceToFaceDate);
+            formData.append("id_tipo_cita_faceToFace", 2);
+            formData.append("fecha_completa_faceToFace", changeDate2.toISOString().replace(/T.*/,''));
+
+            addSchedule(formData)
+            .then(response => {
+
+                let _respuesta = JSON.parse(response);
+                console.log(_respuesta);
+                if(_respuesta.response === 'success'){
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Listo!',
+                        text: 'Tu cita ha sido agendada con éxito.',
+                        timer: 2000
+                    })
+
+                    setTimeout(() => {
+                        navigate('/detalles-citas');
+                    }, 2000);
+
+                } else {
+                    Swal.fire({
+                        icon: 'error',
+                        title: 'Ha ocurrido un error, por favor inténtalo nuevamente',
+                    })
+                }
             })
             .catch((error) => {
-                document.querySelector('#sendAppointmentData').removeAttribute("disabled");
-                console.log(error);
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ha ocurrido un error, por favor inténtalo nuevamente',
+                })
             });
         }
     }
@@ -370,13 +292,13 @@ const Schedule = () => {
         verifyTimeSelected(changeDate2,e.target.value,2);
     }
    
-    const handleSurgeryDate = (e) => {
-        setSurgeryDate(e.target.value);
-        verifyTimeSelected(changeDate3,e.target.value,3);
-    }
+    // const handleSurgeryDate = (e) => {
+    //     setSurgeryDate(e.target.value);
+    //     verifyTimeSelected(changeDate3,e.target.value,3);
+    // }
 
   return (
-    (!timesDate1 || !timesDate2 || !timesDate3)? <div className="container py-4">Por favor recarga la página...</div> 
+    (!timesDate1 || !timesDate2) ? <div className="container py-4">Por favor recarga la página...</div> 
     :
     <div className="schedule-container black-background mp-3" id="schdedule-form-1" onSubmit={ handleSchdeule }>
         <div className="container text-white-color">
@@ -435,7 +357,7 @@ const Schedule = () => {
                     </form>
 
 
-                    <form className="surgery-date-form hidden pb-4" id="surgery">
+                    {/* <form className="surgery-date-form hidden pb-4" id="surgery">
                         <div className="d-flex justify-content-center">
                             <Calendar onChange={onChageSurgerCalendar} value={changeDate3} />
                         </div>
@@ -448,7 +370,7 @@ const Schedule = () => {
                                     )
                                 )}
                         </select>
-                    </form>
+                    </form> */}
                 </div>
             </div>
         </div>
