@@ -52,8 +52,11 @@
 
 .cardDetail {
     border-radius: 20px;
-    background: #e7ecef;
-    box-shadow: 20px 20px 60px #c4c9cb, -20px -20px 60px #ffffff;
+    background: var(--gray-color);
+    /* box-shadow: 1px 10px 31px -1px rgba(127,135,144,0.59);
+-webkit-box-shadow: 1px 10px 31px -1px rgba(127,135,144,0.59);
+-moz-box-shadow: 1px 10px 31px -1px rgba(127,135,144,0.59); */
+
     padding-left: 50px!important;
 }
 
@@ -64,4 +67,8 @@
 .alert-icon-details {
     color: var(--red-color);
     cursor: pointer;
+}
+
+.swal2-styled.swal2-confirm {
+    background-color: var(--pink-color);
 }

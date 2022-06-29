@@ -24,6 +24,10 @@ import LogoHeader from '../components/logoHeader/LogoHeader';
 
 const Schedule = () => {
 
+    window.onunload = function() {
+        alert('Bye.');
+    }
+    
     const idStep = ".step-5";
 
     let today = new Date().setHours(0,0,0,0);
@@ -385,7 +389,7 @@ const Schedule = () => {
 
                         <div className="d-flex justify-content-center mt-4 mb-4">
                             {/* <button type="button" className="btn m-0 font-regular schedule-button" onClick={ handleShowSurgery }>Agendar cirugía</button> */}
-                            <button id="sendAppointmentData" type="submit" className="btn m-0 font-regular schedule-button" >Pagar ahora <FaLongArrowAltRight className=""/></button>
+                            <button id="sendAppointmentData" type="submit" className="btn m-0 font-regular schedule-button" >Agendar citas <FaLongArrowAltRight className=""/></button>
                         </div>
                     </form>
 
