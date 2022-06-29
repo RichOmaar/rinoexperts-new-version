@@ -89,7 +89,9 @@ const Rinoplastia = () => {
                     <img src={BenefRinoex} className="img-fluid img-after-title" alt="Rinoplastia" />
                     <div class="centered">
                       <h2 className="font-bold">¡Agenda una cita ahora mismo!</h2>
-                      <button className="video-button">Agendar cita</button>
+                      <Link to="/presentacion">
+                        <button className="video-button">Agendar cita</button>
+                      </Link>
                     </div>
                 </div>
             </div>
