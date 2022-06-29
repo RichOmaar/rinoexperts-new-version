@@ -10,6 +10,8 @@ import MedicalEq from '../../assets/icons/equipo-medico.svg';
 import MedicalInform from '../../assets/icons/informe-medico.svg';
 import Machine from '../../assets/icons/machine.svg';
 
+import { Link } from "react-router-dom";
+
 const Rinoplastia = () => {
   return (
     <div className="container-fluid rinoplastia-container black-background">
