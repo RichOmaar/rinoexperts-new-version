@@ -14,7 +14,8 @@ import MedicalRecord from "./pages/MedicalRecord";
 import NosePreference from "./pages/NosePreference";
 import Appointment from "./pages/Appointment";
 import Schedule from "./pages/Schedule";
-// import PurchaseDetails from "./pages/PurchaseDetails";
+import PurchaseDetails from "./pages/PurchaseDetails";
+import Summary from "./pages/Summary";
 
 function App() {
   return (
@@ -32,9 +33,8 @@ function App() {
         <Route path="/seleccion-nariz" element={<NosePreference />} />
         <Route path="/consulta" element={<Appointment />} />
         <Route path="/agendar-citas" element={<Schedule />} />
-        {/* <Route path="/detalles-citas" element={<PurchaseDetails />} /> */}
-
-
+        <Route path="/detalles-citas" element={<PurchaseDetails />} />
+        <Route path="/resumen-citas" element={<Summary />} />
       </Routes>
 
       <Footer />

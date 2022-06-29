@@ -1,23 +1,26 @@
 import React, { useState, useEffect } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
+import {Elements} from '@stripe/react-stripe-js';
+import {loadStripe} from '@stripe/stripe-js';
+
 
 import '../components/purchaseDetails/purchaseDetails.css';
 
-import SurgeryAppointment from '../components/surgeryAppointment/SurgeryAppointment';
+// import SurgeryAppointment from '../components/surgeryAppointment/SurgeryAppointment';
 
-import { ImCancelCircle } from 'react-icons/im';
+// import { ImCancelCircle } from 'react-icons/im';
 import { FiAlertCircle } from 'react-icons/fi';
 import { FaLongArrowAltRight } from 'react-icons/fa';
 
+import getAppointmentDetail from '../services/getAppointmentDetail';
 
-// import Swal from 'sweetalert2';
-// import withReactContent from 'sweetalert2-react-content';
+import Swal from 'sweetalert2';
 
 import LogoHeader from '../components/logoHeader/LogoHeader';
 
 let stripePromise;
 
 const getStripe = () => {
+
     if(!stripePromise) {
         stripePromise = loadStripe(process.env.REACT_APP_STRIPE_KEY);
     }
@@ -27,6 +30,14 @@ const getStripe = () => {
 
 const PurchaseDetails = () => {
 
+    // window.addEventListener("beforeunload", function (e) {
+    //     e.preventDefault();
+    //     console.log("Borrar los datos del usuario de todas las tablas.");
+    //     Swal.fire({
+    //         text: 'Para la consulta presencial debes presentarte 15 minutos antes de la hora para evitar contratiempos.'
+    //     })
+    // });
+    
     const [stripeError, setStripeError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
 
@@ -38,14 +49,14 @@ const PurchaseDetails = () => {
     const checkoutOptions = {
         lineItems: [item],
         mode: 'payment',
-        successUrl: `${window.location.origin}/success?session_id={CHECKOUT_SESSION_ID}`,
+        successUrl: `${window.location.origin}/resumen?session_id={CHECKOUT_SESSION_ID}`,
         cancelUrl: `${window.location.origin}/cancel`,
     }
 
     const redirectToCheckout = async () => {
         setIsLoading(true);
-        console.log('redirectToCheckout');
-        console.log(process.env.REACT_APP_STRIPE_KEY);
+        // console.log('redirectToCheckout');
+        // console.log(process.env.REACT_APP_STRIPE_KEY);
         
         const stripe = await getStripe();
         const { error } = await stripe.redirectToCheckout(checkoutOptions);
@@ -63,7 +74,7 @@ const PurchaseDetails = () => {
 
     const [baseAmount, setBaseAmount] = useState(800);
 
-    const [surgeryAmount, setSurgeryAmount] = useState(3000);
+    // const [surgeryAmount, setSurgeryAmount] = useState(3000);
 
     const [userDataAppointments, setUserDataAppointments] = useState('');
 
@@ -75,7 +86,7 @@ const PurchaseDetails = () => {
 
     useEffect(() => {
 
-        verifySurgery(id_user);
+        // verifySurgery(id_user);
         verifyAppointments(id_user);
 
         // const script = document.createElement("script");
@@ -92,86 +103,105 @@ const PurchaseDetails = () => {
 
     }, []);
 
-    function verifySurgery(id_user) {
+    // function verifySurgery(id_user) {
 
-        let validateSurgery = {
-            "id_usuario":id_user
-        }
+    //     let validateSurgery = {
+    //         "id_usuario":id_user
+    //     }
 
-        fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/verifySurgery.controller.php", {
-        // fetch("http://localhost:8888/rinoexperts-api/controllers/verifySurgery.controller.php", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(validateSurgery)
-        })
-        .then(response => response.json())
-        .then((responseData) => {
-            if(responseData === false){
-                document.querySelector('.surgery-appointment-component').classList.remove('hidden');
-                document.querySelector('.surgery-details').classList.add('hidden');
-                setTotalAmount(baseAmount);
-            } else {
-                setTotalAmount(baseAmount + surgeryAmount);
-            }
-        })
-        .catch(console.error);
-    }
+    //     fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/verifySurgery.controller.php", {
+    //     // fetch("http://localhost:8888/rinoexperts-api/controllers/verifySurgery.controller.php", {
+    //         method: 'POST',
+    //         headers: {
+    //             'Content-Type': 'application/json',
+    //         },
+    //         body: JSON.stringify(validateSurgery)
+    //     })
+    //     .then(response => response.json())
+    //     .then((responseData) => {
+    //         if(responseData === false){
+    //             document.querySelector('.surgery-appointment-component').classList.remove('hidden');
+    //             document.querySelector('.surgery-details').classList.add('hidden');
+    //             setTotalAmount(baseAmount);
+    //         } else {
+    //             setTotalAmount(baseAmount + surgeryAmount);
+    //         }
+    //     })
+    //     .catch(console.error);
+    // }
 
     function verifyAppointments(id_user) {
 
-        let validateAppoinments = {
-            "id_usuario":id_user
-        }
+        let formData = new FormData();
 
-        fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/verifyAppointments.controller.php", {
-        // fetch("http://localhost:8888/rinoexperts-api/controllers/verifyAppointments.controller.php", {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(validateAppoinments)
-        })
-        .then(response => response.json())
-        .then((responseData) => {
-            if(responseData != false){
+        formData.append('id_usuario', id_user);
 
-                // console.log(responseData);
-                setUserDataAppointments(responseData);
-                
+        getAppointmentDetail(formData)
+        .then((response) => {
+            let _respuesta = JSON.parse(response);
+            if(_respuesta.response === 'success'){
+                setUserDataAppointments(_respuesta.data);
             }
+            console.log(userDataAppointments);
+
         })
-        .catch(console.error);
+        .catch((error) => {
+            console.log(error);
+            
+        });  
+
+        // let validateAppoinments = {
+        //     "id_usuario":id_user
+        // }
+
+        // fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/verifyAppointments.controller.php", {
+        // // fetch("http://localhost:8888/rinoexperts-api/controllers/verifyAppointments.controller.php", {
+        //     method: 'POST',
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify(validateAppoinments)
+        // })
+        // .then(response => response.json())
+        // .then((responseData) => {
+        //     if(responseData !== false){
+
+        //         // console.log(responseData);
+        //         setUserDataAppointments(responseData);
+                
+        //     }
+        // })
+        // .catch(console.error);
+
     }
 
     const recomendations = (appointmentType) => {
-        console.log(appointmentType);
+
         switch(appointmentType){
             case 'cita-online':
-                // Swal.fire({
-                //     text: 'Para la consulta online te contactaremos vía WhatsApp para enviarte el enlace correpsondiente para realizar la videoconsulta.'
-                // })
+                Swal.fire({
+                    text: 'Para la consulta online te contactaremos vía WhatsApp para enviarte el enlace correpsondiente para realizar la videoconsulta.'
+                })
                 break;
            
             case 'cita-presencial':
-                // Swal.fire({
-                //     text: 'Para la consulta presencial debes presentarte 15 minutos antes de la hora para evitar contratiempos.'
-                // })
+                Swal.fire({
+                    text: 'Para la consulta presencial debes presentarte 15 minutos antes de la hora para evitar contratiempos.'
+                })
                 break;
            
             case 'cita-cirugia':
-                // Swal.fire({
-                //     text: 'Los requerimientos se hablarán en la cita presencial, posteriormente te enviaremos nuevamente mediante WhatsApp la lista de requerimientos.',
-                //     // buttonsStyling: false
-                // })
+                Swal.fire({
+                    text: 'Los requerimientos se hablarán en la cita presencial, posteriormente te enviaremos nuevamente mediante WhatsApp la lista de requerimientos.',
+                    // buttonsStyling: false
+                })
                 break;
 
             default:
-                // Swal.fire({
-                //     icon: 'error',
-                //     title: 'Ha ocurrido un error al cargar tus imágenes, inténtalo nuevamente',
-                // })
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Ha ocurrido un error al cargar tus imágenes, inténtalo nuevamente',
+                })
                 break;
         }
     }
@@ -225,96 +255,100 @@ const PurchaseDetails = () => {
             // body: JSON.stringify(paymentType)
         })
         .then(response => response.json())
-        // .then((responseData) => {
-        //     if(responseData === false){
-        //         // document.querySelector('.surgery-appointment-component').classList.remove('hidden');
-        //         // document.querySelector('.surgery-details').classList.add('hidden');
-        //         // setTotalAmount({baseAmount});
-        //         // window.location.href = "#total-details";
-        //     }
-        //     // window.location.reload();
-        // })
+        .then((responseData) => {
+            if(responseData === false){
+                // document.querySelector('.surgery-appointment-component').classList.remove('hidden');
+                // document.querySelector('.surgery-details').classList.add('hidden');
+                // setTotalAmount({baseAmount});
+                // window.location.href = "#total-details";
+            }
+            // window.location.reload();
+        })
         .catch(console.error);
     }
 
   return (
-
-    <div className="container">
-        <div className="row">
-            <div className="col-12">
-                <LogoHeader />
-            </div>
-            <div className="col-12 name-container">
-                <h3><span className="text-aqua-color">{nombre}</span>&nbsp; {apellidos}</h3>
-                <p className="my-3">¡Estás a punto de confirmar tus citas!</p>
-            </div>
-            
-            <div className="col-12 py-4 my-sm-0 hidden surgery-appointment-component">
-                <SurgeryAppointment onChange={ verifySurgery(id_user) }/>
-            </div>
-
-            <div className="col-12 my-sm-0 my-md-2 my-lg-5 my-xl-5">
-                <div className="row d-flex justify-content-evenly gy-xs-5 gy-sm-5">
-                    {Object.values(userDataAppointments).map(
-                        (item) => (
-                            <div key={item.id_cita} className="cardDetail p-4 my-2 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex justify-content-center">
-                                <div className="col-8">
-                                    <h4 className="my-3 text-aqua-color">{`Cita ${item.tipo}`}</h4>
-                                    <p>{`Fecha: ${item.fecha_completa}`}</p>
-                                    <p>{`Hora: ${item.hora_inicio}`}</p>
-                                </div>
-                                <div id={'cita-'+(item.tipo).toLowerCase()} className="col-4 d-flex align-items-center justify-content-center">
-                                    <FiAlertCircle className="fs-3 alert-icon-details" onClick={() => recomendations('cita-'+(item.tipo).toLowerCase())}/>
-                                </div>
-                            </div>
-                        )
-                        )}
+    (!userDataAppointments) ? <div className="container py-4">Por favor recarga la página...</div>
+    :
+    <div className="black-background pt-3 pb-4">
+        <div className="container text-white-color">
+            <div className="row">
+                <div className="col-12">
+                    <LogoHeader />
                 </div>
-            </div>
-
-            <div className="total-container py-2">
-                <div className="col-12 d-flex py-4">
-                    <div className="col-5 d-flex justify-content-start align-items-center">
-                        <p className="font-semibold text-aqua-color">Consulta online y presencial</p> </div>
-                    <div className="col-6 d-flex justify-content-center align-items-center">
-                        <p>{`$ ${baseAmount}.00 MXN`}</p>
-                    </div>
-                    <div className="col-1 d-flex justify-content-center">
-
-                    </div>
+                <div className="col-12 name-container">
+                    <h3><span className="text-aqua-color">{nombre}</span>&nbsp; {apellidos}</h3>
+                    <p className="my-3">¡Estás a punto de confirmar tus citas!</p>
                 </div>
                 
-                <div className="col-12 d-flex surgery-details">
-                    <div className="col-5 d-flex justify-content-start align-items-center">
-                        <p className="font-semibold text-aqua-color">Cirugía*</p>
-                    </div>
-                    <div className="col-6 d-flex justify-content-center align-items-center">
-                        <p className="">{`$ ${surgeryAmount}.00 MXN`}</p>
-                    </div>
+                {/* <div className="col-12 py-4 my-sm-0 hidden surgery-appointment-component">
+                    <SurgeryAppointment onChange={ verifySurgery(id_user) }/>
+                </div> */}
 
-                    <div className="col-1 d-flex justify-content-center" onClick={ handleCancellSurgery }>
-                        <span className="align-items-center cancell-surgery">
-                            <ImCancelCircle className="fs-4 text-red-color"/>
-                        </span>
+                <div className="col-12 my-sm-0 my-md-2 my-lg-5 my-xl-5">
+                    <div className="row d-flex justify-content-evenly py-xs-5 py-sm-5 p-3">
+                        {Object.values(userDataAppointments).map(
+                            (item) => (
+                                <div key={item.id_cita} className="cardDetail my-2 col-xs-12 col-sm-12 col-md-12 col-lg-3 col-xl-3 d-flex justify-content-center">
+                                    <div className="col-8">
+                                        <h4 className="my-3 text-aqua-color font-bold">{`Cita ${item.tipo}`}</h4>
+                                        <p>{`Fecha: ${item.fecha_completa}`}</p>
+                                        <p>{`Hora: ${item.hora_inicio}`}</p>
+                                    </div>
+                                    <div id={'cita-'+(item.tipo).toLowerCase()} className="col-4 d-flex align-items-center justify-content-center">
+                                        <FiAlertCircle className="fs-3 alert-icon-details" onClick={() => recomendations('cita-'+(item.tipo).toLowerCase())}/>
+                                    </div>
+                                </div>
+                            )
+                        )}
                     </div>
                 </div>
 
-                <div className="col-12 d-flex total-details py-2" id="total-details">
-                    <div className="col-5 d-flex justify-content-start align-items-center">
-                        <p className="font-semibold text-aqua-color">Total</p>
-                    </div>
+                <div className="total-container py-2">
+                    <div className="col-12 d-flex py-4">
+                        <div className="col-5 d-flex justify-content-start align-items-center">
+                            <p className="font-semibold text-aqua-color">Consulta online y presencial</p> </div>
+                        <div className="col-6 d-flex justify-content-center align-items-center">
+                            <p>{`$ ${baseAmount}.00 MXN`}</p>
+                        </div>
+                        <div className="col-1 d-flex justify-content-center">
 
-                    <div className="col-6 d-flex justify-content-center align-items-center">
-                        <p className="">{`$ ${totalAmount}.00 MXN`}</p>
+                        </div>
+                    </div>
+                    
+                    {/* <div className="col-12 d-flex surgery-details">
+                        <div className="col-5 d-flex justify-content-start align-items-center">
+                            <p className="font-semibold text-aqua-color">Cirugía*</p>
+                        </div>
+                        <div className="col-6 d-flex justify-content-center align-items-center">
+                            <p className="">{`$ ${surgeryAmount}.00 MXN`}</p>
+                        </div>
+
+                        <div className="col-1 d-flex justify-content-center" onClick={ handleCancellSurgery }>
+                            <span className="align-items-center cancell-surgery">
+                                <ImCancelCircle className="fs-4 text-red-color"/>
+                            </span>
+                        </div>
+                    </div> */}
+
+                    <div className="col-12 d-flex total-details py-2" id="total-details">
+                        <div className="col-5 d-flex justify-content-start align-items-center">
+                            <p className="font-semibold text-aqua-color">Total</p>
+                        </div>
+
+                        <div className="col-6 d-flex justify-content-center align-items-center">
+                            <p className="">{`$ ${baseAmount}.00 MXN`}</p>
+                        </div>
+                    </div>
+                    <div className="col-12 text-center mb-4">
+                        <button type="button" className="presentation-next-button font-regular mt-3"></button>
+                        {/* <button type="button" onClick={ redirectToCheckout } disabled={ isLoading } className="presentation-next-button font-regular mt-3">{ isLoading ? "Cargando..." : "Pagar ahora"} <FaLongArrowAltRight /></button> */}
                     </div>
                 </div>
-                <div className="col-12 text-center">
-                    <button type="button" onClick={ redirectToCheckout } disabled={ isLoading } className="presentation-next-button font-regular mt-3">{ isLoading ? "Cargando..." : "Pagar ahora"} <FaLongArrowAltRight /></button>
-                </div>
-            </div>
 
-            <div>
-                <p className="pricing-warning">El costo del concepto de "Cirugía" es únicamente para realizar el APARTADO de la misma, el resto se deberá pagar posteriormente.</p>
+                <div>
+                    <p className="pricing-warning">*Nuestros precios incluyen IVA.</p>
+                </div>
             </div>
         </div>
     </div>

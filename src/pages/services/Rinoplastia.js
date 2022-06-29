@@ -10,6 +10,8 @@ import MedicalEq from '../../assets/icons/equipo-medico.svg';
 import MedicalInform from '../../assets/icons/informe-medico.svg';
 import Machine from '../../assets/icons/machine.svg';
 
+import { Link } from "react-router-dom";
+
 const Rinoplastia = () => {
   return (
     <div className="container-fluid rinoplastia-container black-background">
@@ -89,7 +91,9 @@ const Rinoplastia = () => {
                     <img src={BenefRinoex} className="img-fluid img-after-title" alt="Rinoplastia" />
                     <div class="centered">
                       <h2 className="font-bold">¡Agenda una cita ahora mismo!</h2>
-                      <button className="video-button">Agendar cita</button>
+                      <Link to="/presentacion">
+                        <button className="video-button">Agendar cita</button>
+                      </Link>
                     </div>
                 </div>
             </div>
