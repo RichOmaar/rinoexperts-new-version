@@ -130,7 +130,7 @@ const Schedule = () => {
                 icon: 'warning',
                 title: 'Recuerda que la consulta presencial debe ser posterior a la consulta online.',
             })
-            onChangeDate2(new Date());
+            onChangeDate2(changeDate1);
         } else if(today <= date){
 
             let formData = new FormData();
@@ -162,7 +162,7 @@ const Schedule = () => {
                 icon: 'warning',
                 title: 'Por favor selecciona una fecha posterior.',
             })
-            onChangeDate2(new Date());
+            onChangeDate2(changeDate1);
         }
 
     }
