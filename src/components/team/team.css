@@ -1,0 +1,22 @@
+.team-image-container {
+    background-color: var(--green-color);
+}
+
+.team-image {
+    border-radius: 50%;
+    background-color: var(--green-color);
+    border: 3px double var(--pink-color);
+}
+
+.team-specialty {
+    font-size: 12px;
+    color: var(--gray-color);
+}
+
+.team-info-container {
+    border-style: none none none solid;
+    border-width: 3px;
+    border-color: var(--pink-light-color);
+    border-radius: 30px;
+    margin-top: 10px;
+}

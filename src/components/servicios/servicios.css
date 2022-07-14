@@ -30,8 +30,8 @@
 }
 
 .accordion-button:not(.collapsed) {
-    background-color: var(--pink-color)!important;
-    color: var(--orange-color);
+    background-color: var(--pink-light-color)!important;
+    color: var(--white-color);
     border-radius: 0px!important;
 }
 

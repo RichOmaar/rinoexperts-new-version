@@ -2,6 +2,7 @@ import React from "react";
 import "../../components/servicios/servicios.css";
 
 import TopServices from "../../components/topServices/TopServices";
+import Simulador from "../../components/simulator/Simulator";
 
 import { FiPlus } from "react-icons/fi";
 
@@ -478,6 +479,9 @@ const Servicios = () => {
           </div>
         </div>
         <div className="col-1 col-xl-1 col-lg-1 col-md-0 hide-on-mobile"></div>
+
+        <Simulador />
+        
       </div>
     </div>
   );

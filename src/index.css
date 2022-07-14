@@ -8,6 +8,9 @@ body {
   line-height: 28px;
   /* overflow-x: hidden; */
 }
+a {
+  text-decoration: none;
+}
 
 @keyframes fadeInAnimation {
   0% {
@@ -16,6 +19,19 @@ body {
   100% {
     opacity: 1;
   }
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 8px); }
+  100%   { transform: translate(0, -0px); }   
 }
 
 .col-xl-0 {
@@ -99,11 +115,6 @@ body {
   color: var(--gray-color);
 }
 
-.text-red-color {
-  color: var(--red-color);
-  font-size: 35px;
-}
-
 .text-pink-color {
   color: var(--pink-color);
 }
@@ -130,6 +141,10 @@ body {
   overflow: clip;
 }
 
+.green-background {
+  background-color: var(--green-color);
+  overflow: clip;
+}
 .form-control-plaintext {
   color: var(--gray-color);
 }
@@ -144,13 +159,12 @@ body {
 
 :root {
   --white-color: #fefefe;
-  /* --red-color: #8F0031; */
-  --gray-color: #7F8790;
+  --gray-color: #6B6B6B;
+  --gray-light-color: #DDDDDD;
   --aqua-color: #7FD1B9;
-  /* --black-color: #1c2022; */
+  --green-color: #BFE2D7;
   --pink-color: #CA527B;
+  --pink-medium-color: #C47493;
+  --pink-light-color: #EABECE;
   --true-black-color: #020202;
-  /* --orange-color: #F79B19; */
-  /* --purple-color: #91198E; */
-  --sweet-pink-color: #F4D6CC;
 }

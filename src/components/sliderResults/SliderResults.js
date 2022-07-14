@@ -63,7 +63,7 @@ const SliderResults = () => {
                 <h4>Itzel Estrella</h4>
                 <p>México</p>
               </div>
-              <div className="col-12">
+              <div className="col-12 review-content">
                 <p className="font-regular"><em>"Gracias, son los mejores. Si me cambiaron cañon"</em></p>
                 <small className="font-light">28/04/2022</small>
               </div>
@@ -79,7 +79,7 @@ const SliderResults = () => {
                 <h4>Ele Ross</h4>
                 <p>México</p>
               </div>
-              <div className="col-12">
+              <div className="col-12 review-content">
                 <p className="font-regular"><em>"@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi nariz"</em></p>
                 <small className="font-light">30/05/2022</small>
               </div>
@@ -95,7 +95,7 @@ const SliderResults = () => {
                 <h4>Belem</h4>
                 <p>México</p>
               </div>
-              <div className="col-12">
+              <div className="col-12 review-content">
                 <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
                 <small className="font-light">08/06/2022</small>
               </div>
@@ -111,7 +111,7 @@ const SliderResults = () => {
                 <h4>Belem</h4>
                 <p>México</p>
               </div>
-              <div className="col-12">
+              <div className="col-12 review-content">
                 <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
                 <small className="font-light">08/06/2022</small>
               </div>
@@ -127,7 +127,7 @@ const SliderResults = () => {
                 <h4>Belem</h4>
                 <p>México</p>
               </div>
-              <div className="col-12">
+              <div className="col-12 review-content">
                 <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
                 <small className="font-light">08/06/2022</small>
               </div>

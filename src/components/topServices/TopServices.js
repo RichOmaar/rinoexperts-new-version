@@ -48,7 +48,7 @@ const TopServices = () => {
               <h2 className="font-bold text-white-color fs-1">RINOPLASTIA</h2>
               <h3 className="text-white-color">
                 <Link to="/servicios/rinoplastia">
-                  <span className="top-services-btn">Ver más</span>
+                  <span className="top-services-btn fs-6">Ver más</span>
                 </Link>
               </h3>
             </div>
@@ -62,7 +62,7 @@ const TopServices = () => {
               <h2 className="font-bold text-white-color fs-1">BICHECTOMIA</h2>
               <h3 className="text-white-color">
                 <Link to="/servicios/rinoplastia">
-                  <span className="top-services-btn">Ver más</span>
+                  <span className="top-services-btn fs-6">Ver más</span>
                 </Link>
               </h3>
             </div>
@@ -76,7 +76,7 @@ const TopServices = () => {
               <h2 className="font-bold text-white-color fs-1">MENTOPLASTIA</h2>
               <h3 className="text-white-color">
                 <Link to="/servicios/rinoplastia">
-                  <span className="top-services-btn">Ver más</span>
+                  <span className="top-services-btn fs-6">Ver más</span>
                 </Link>
               </h3>
             </div>

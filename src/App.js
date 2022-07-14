@@ -16,6 +16,7 @@ import Appointment from "./pages/Appointment";
 import Schedule from "./pages/Schedule";
 import PurchaseDetails from "./pages/PurchaseDetails";
 import Summary from "./pages/Summary";
+import Team from "./pages/Team";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route path="/agendar-citas" element={<Schedule />} />
         <Route path="/detalles-citas" element={<PurchaseDetails />} />
         <Route path="/resumen-citas" element={<Summary />} />
+        <Route path="/equipo" element={<Team />} />
       </Routes>
 
       <Footer />

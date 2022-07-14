@@ -1,0 +1,13 @@
+.see-more-button-pink {
+    background-color: var(--pink-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    padding: 10px 8px;
+    font-size: 13px;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-color: var(--pink-color);
+}

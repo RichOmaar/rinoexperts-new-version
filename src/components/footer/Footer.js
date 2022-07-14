@@ -34,13 +34,13 @@ const Footer = () => {
                                 <Link to='/'><span>Nosotros</span></Link>
                             </li>
                             <li>
-                                <Link to='/'><span>Servicios</span></Link>
+                                <Link to='/servicios'><span>Servicios</span></Link>
                             </li>
                             <li>
                                 <Link to='/'><span>Citas</span></Link>
                             </li>
                             <li>
-                                <Link to='/'><span>Equipo</span></Link>
+                                <Link to='/equipo'><span>Equipo</span></Link>
                             </li>
                         </ul>
                     </div>
@@ -48,7 +48,7 @@ const Footer = () => {
                         <h3 className="font-bold">Nuestros servicios</h3>
                         <ul className="quick-links p-0">
                             <li>
-                                <Link to='/'><span>Rinoplastia</span></Link>
+                                <Link to='/servicios/rinoplastia'><span>Rinoplastia</span></Link>
                             </li>
                             <li>
                                 <Link to='/'><span>Bichectomia</span></Link>
@@ -57,15 +57,15 @@ const Footer = () => {
                                 <Link to='/'><span>Mentoplastia</span></Link>
                             </li>
                             <li>
-                                <Link to='/'><span>Ver más</span></Link>
+                                <Link to='/servicios'><span>Ver más</span></Link>
                             </li>
                         </ul>
                     </div>
                     <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <h3 className="font-bold">Redes sociales</h3>
                         <div className="social-icons">
-                            <a href="https://www.facebook.com/" target="_blank" className="facebook-icon mx-3"><FiFacebook /></a>
-                            <a href="https://www.instagram.com/rinoexperts/" target="_blank" className="instagram-icon mx-3"><BsInstagram /></a>
+                            <a href="https://www.facebook.com/" rel="noreferrer" target="_blank" className="facebook-icon mx-3"><FiFacebook /></a>
+                            <a href="https://www.instagram.com/rinoexperts/" rel="noreferrer" target="_blank" className="instagram-icon mx-3"><BsInstagram /></a>
                         </div>
                     </div>
                 </div>
