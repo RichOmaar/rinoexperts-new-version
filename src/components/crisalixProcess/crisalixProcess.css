@@ -1,0 +1,52 @@
+.stepper .line {
+    width: 2px;
+    background-color: lightgrey !important;
+}
+
+.stepper .lead {
+    font-size: 1.1rem;
+}
+
+.crisalix-process-icon {
+    height: 140px;
+}
+
+.process-circle {
+    background-color: var(--pink-light-color);
+    border-radius: 50px;
+}
+
+.responsive-widh {
+    min-width: 0px;
+}
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .responsive-widh {
+        min-width: 910px;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
+  

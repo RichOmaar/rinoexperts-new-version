@@ -1,0 +1,20 @@
+.crisalix-phone {
+    width: 60%!important;
+}
+
+.crisalix-discover-button {
+    display: block;
+    margin: auto;
+
+    border: 1px solid var(--black-color);
+    border-radius: 8px;
+    background-color: var(--pink-color);
+    box-shadow: 0px 1px 18px 0px rgba(2,2,2,0.69);
+    -webkit-box-shadow: 0px 1px 18px 0px rgba(2,2,2,0.69);
+    -moz-box-shadow: 0px 1px 18px 0px rgba(2,2,2,0.69);
+    color: var(--white-color);
+    padding: 8px;
+    cursor: pointer;
+
+    transition: 0.3s;
+}

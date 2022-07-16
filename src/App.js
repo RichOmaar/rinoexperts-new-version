@@ -17,12 +17,13 @@ import Schedule from "./pages/Schedule";
 import PurchaseDetails from "./pages/PurchaseDetails";
 import Summary from "./pages/Summary";
 import Team from "./pages/Team";
+import Crisalix from "./pages/Crisalix";
 
 function App() {
   return (
     <div>
       <Navbar />
-
+      {/* https://mockuphone.com/ */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Servicios />} />
@@ -37,6 +38,7 @@ function App() {
         <Route path="/detalles-citas" element={<PurchaseDetails />} />
         <Route path="/resumen-citas" element={<Summary />} />
         <Route path="/equipo" element={<Team />} />
+        <Route path="/visualizar-imagen" element={<Crisalix />} />
       </Routes>
 
       <Footer />

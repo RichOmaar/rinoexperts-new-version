@@ -36,7 +36,7 @@ const Narvbar = () => {
     //     </div>
     //   </div>
     // </nav>
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg navbar-light bg-light" id="main-nav-bar">
       <div className="container-fluid">
         <Link to="/" className="navbar-brand p-3">
           <img src={RinoexpertsLogo} className="img-logo-navbar" alt="Rinoexperts" />
