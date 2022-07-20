@@ -53,7 +53,7 @@ const Narvbar = () => {
               <Link to="/servicios" className="nav-link" href="#">Servicios</Link>
             </li>
             <li className="nav-item">
-              <Link to="preguntas-frecuentes" className="nav-link" href="#">FAQ</Link>
+              <Link to="preguntas-frecuentes" className="nav-link">FAQ</Link>
             </li>
           </ul>
         </div>

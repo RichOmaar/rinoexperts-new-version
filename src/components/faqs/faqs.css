@@ -1,0 +1,43 @@
+.faq-container {
+    padding: 20px 0px;
+    border: 2px solid var(--aqua-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faq-container:hover {
+    background-color: var(--aqua-color);
+    color: var(--white-color);
+    transition: 0.3s;
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+   .faq-container {
+    margin: 0px 30px;
+   }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .faq-container {
+        margin: 0px 15px;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+
+}
+  

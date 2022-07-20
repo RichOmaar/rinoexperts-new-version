@@ -18,6 +18,7 @@ import PurchaseDetails from "./pages/PurchaseDetails";
 import Summary from "./pages/Summary";
 import Team from "./pages/Team";
 import Crisalix from "./pages/Crisalix";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
@@ -39,6 +40,8 @@ function App() {
         <Route path="/resumen-citas" element={<Summary />} />
         <Route path="/equipo" element={<Team />} />
         <Route path="/visualizar-imagen" element={<Crisalix />} />
+        <Route path="/preguntas-frecuentes" element={<FAQ />} />
+
       </Routes>
 
       <Footer />
