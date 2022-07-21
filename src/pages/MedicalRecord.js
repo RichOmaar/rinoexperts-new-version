@@ -50,6 +50,7 @@ const MedicalRecord = () => {
     const [login, setLogin] = useState(null);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         const isLogged = JSON.parse(sessionStorage.getItem('token'));
 
         // if(!isLogged) {

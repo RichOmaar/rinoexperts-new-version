@@ -51,7 +51,8 @@ const Schedule = () => {
     // const [showSurgery, setShowSurgery] = useState(false);
 
     useEffect(() => {
-
+        window.scrollTo(0, 0);
+        
         verifyOnlineAvailability(changeDate1);
         verifyFaceToFaceAvailability(changeDate2);
         // verifySurgeryAvailability(changeDate3);

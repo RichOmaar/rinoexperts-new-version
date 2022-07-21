@@ -36,6 +36,7 @@ const Appointment = () => {
     let responseThree = '';
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         const isLogged = JSON.parse(sessionStorage.getItem('token'));
 
         // if(!isLogged) {

@@ -31,6 +31,7 @@ const NosePreference = () => {
     const id_user = JSON.parse(localStorage.getItem('id_usuario'));
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         // let url = config.urlApi+'controllers/getNosePreferences.controller.php';
         // fetch(url)
         // .then(response => response.json())

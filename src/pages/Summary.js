@@ -40,6 +40,7 @@ const Summary = () => {
     }
 
     useEffect(() => {
+        window.scrollTo(0, 0);
         // let response = retrieveSessionStripe(session_id);
         let response = retrieveSessionStripe('cs_test_a1NZdmsFYVNVRPPZIvxGAf4JJJGDcjU1Vmxgw6Nq1gswEcZec8hq0rgRUx');
         console.log(response);

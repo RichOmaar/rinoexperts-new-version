@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../components/personalData/personalData.css';
 import ProgressTop from '../components/progressTop/ProgressTop';
 import InitialModal from '../components/initialModal/InitialModal';
@@ -18,6 +18,10 @@ import LogoHeader from '../components/logoHeader/LogoHeader';
 
 
 const PersonalData = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     const navigate = useNavigate();
 

@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../components/otoplastia/otoplastia.css";
 
 import SliderResults from '../../components/sliderResults/SliderResults';
 import OtoplastiaImg from "../../assets/img/servicios//otoplastia/otoplastia.jpg";
 
 const Otoplastia = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="container-fluid black-background">
       <div className="container otoplastia-container py-3">

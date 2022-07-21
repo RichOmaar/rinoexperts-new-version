@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../../components/servicios/servicios.css";
 
 import TopServices from "../../components/topServices/TopServices";
@@ -6,7 +6,13 @@ import Simulador from "../../components/simulator/Simulator";
 
 import { FiPlus } from "react-icons/fi";
 
+
 const Servicios = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+  
   return (
     <div className="container-fluid black-background servicios-main-container">
       <div className="row">

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../components/presentation/presentations.css';
 import { Link } from 'react-router-dom';
 
@@ -8,7 +8,11 @@ import InitialModal from '../components/initialModal/InitialModal';
 
 import LogoHeader from '../components/logoHeader/LogoHeader';
 
-const presentation = () => {
+const Presentation = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
   return (
     <div className="presentation-container black-background pt-3 pb-4">
@@ -40,4 +44,4 @@ const presentation = () => {
   )
 }
 
-export default presentation;
+export default Presentation;

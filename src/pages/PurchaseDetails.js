@@ -85,7 +85,7 @@ const PurchaseDetails = () => {
     const apellidos = JSON.parse(localStorage.getItem('apellidos'));
 
     useEffect(() => {
-
+        window.scrollTo(0, 0);
         // verifySurgery(id_user);
         verifyAppointments(id_user);
 

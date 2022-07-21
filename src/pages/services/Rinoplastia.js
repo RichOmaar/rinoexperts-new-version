@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../components/rinoplastia/rinoplastia.css';
 
 import RinoplastiaMain from '../../assets/img/servicios/rinoplastia/rinoplastia-main.jpg';
@@ -13,6 +13,11 @@ import Machine from '../../assets/icons/machine.svg';
 import { Link } from "react-router-dom";
 
 const Rinoplastia = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
+
   return (
     <div className="container-fluid rinoplastia-container black-background">
         <div className='col-12'>

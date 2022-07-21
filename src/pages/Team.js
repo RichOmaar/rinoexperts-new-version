@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../components/team/team.css';
 
 import config from '../config';
@@ -6,6 +6,10 @@ import config from '../config';
 import { IoIosArrowUp } from 'react-icons/io';
 
 const Team = () => {
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     function loadMoreMembers(e) {
         e.preventDefault();
