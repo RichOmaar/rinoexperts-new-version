@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
@@ -19,6 +19,7 @@ import Summary from "./pages/Summary";
 import Team from "./pages/Team";
 import Crisalix from "./pages/Crisalix";
 import FAQ from "./pages/FAQ";
+import TopFAQ from "./components/topFAQ/TopFAQ";
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
         <Route path="/equipo" element={<Team />} />
         <Route path="/visualizar-imagen" element={<Crisalix />} />
         <Route path="/preguntas-frecuentes" element={<FAQ />} />
+        <Route path="/top-faqs" element={<TopFAQ />} />
 
       </Routes>
 

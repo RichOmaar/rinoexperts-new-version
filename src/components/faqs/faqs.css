@@ -1,8 +1,13 @@
 .faq-container {
+    display: block;
     padding: 20px 0px;
+    width: 100%;
+    background: transparent;
     border: 2px solid var(--aqua-color);
     border-radius: 5px;
     cursor: pointer;
+    text-align: center;
+    color: var(--aqua-color);
     transition: 0.3s;
 }
 
@@ -24,15 +29,13 @@
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-   .faq-container {
-    margin: 0px 30px;
-   }
+
 }
 
 /* // X-Large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-    .faq-container {
-        margin: 0px 15px;
+    .faq-list {
+        padding: 0px 300px;
     }
 }
 

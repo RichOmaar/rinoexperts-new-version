@@ -36,7 +36,9 @@ const Presentation = () => {
                 </div>
                 <InitialModal />
                 <div className="col-12 text-center">
-                    <Link to="/informacion-personal" className="no-text-decoration"><button type="button" className="video-button font-regular mt-3">Continuar</button></Link>
+                    <Link to="/informacion-personal" className="no-text-decoration">
+                        <button type="button" className="video-button font-regular mt-3">Continuar</button>
+                    </Link>
                 </div>
             </div>
         </div>

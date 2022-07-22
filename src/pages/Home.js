@@ -5,6 +5,7 @@ import MainVideo from "../components/mainVideo/MainVideo";
 import MainResume from '../components/mainResume/MainResume';
 import SliderResults from '../components/sliderResults/SliderResults';
 import Location from '../components/location/Location';
+import Simulator from '../components/simulator/Simulator';
 
 const Home = () => {
   
@@ -17,6 +18,7 @@ const Home = () => {
       <MainVideo />
       <MainResume />
       <SliderResults />
+      <Simulator />
       <Location />
     </div>
   );
