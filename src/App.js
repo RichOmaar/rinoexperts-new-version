@@ -20,6 +20,7 @@ import Team from "./pages/Team";
 import Crisalix from "./pages/Crisalix";
 import FAQ from "./pages/FAQ";
 import TopFAQ from "./components/topFAQ/TopFAQ";
+import ContactUs from "./pages/ContactUs";
 
 function App() {
   return (
@@ -43,6 +44,8 @@ function App() {
         <Route path="/visualizar-imagen" element={<Crisalix />} />
         <Route path="/preguntas-frecuentes" element={<FAQ />} />
         <Route path="/top-faqs" element={<TopFAQ />} />
+        <Route path="/contacto" element={<ContactUs />} />
+        
 
       </Routes>
 

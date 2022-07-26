@@ -12,6 +12,8 @@ import Machine from '../../assets/icons/machine.svg';
 
 import { Link } from "react-router-dom";
 
+import { RiArrowRightCircleLine } from 'react-icons/ri';
+
 const Rinoplastia = () => {
 
   useEffect(() => {
@@ -19,7 +21,7 @@ const Rinoplastia = () => {
   }, [])
 
   return (
-    <div className="container-fluid rinoplastia-container black-background">
+    <div className="container-fluid rinoplastia-container black-background p-0">
         <div className='col-12'>
             <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
@@ -107,11 +109,12 @@ const Rinoplastia = () => {
             <div className="col-12 text-center py-3">
               <h2 className="font-bold text-white-color">¿Qué incluye?</h2>
               <p className="text-white-color">A continuación te desglozamos todos los beneficios excluivos de RINOEXPERTS</p>
+              <p className="text-gray-color">Es muy importante seguir un buen preoperatorio, pues esto va a permitir al paciente afrontar la operación con las máximas garantías físicas y, sobretodo, psicológicas.</p>
             </div>
             <ul className="nav nav-pills mb-3 d-flex justify-content-evenly" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className="nav-link"
                   id="pills-pre-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-pre"
@@ -120,7 +123,7 @@ const Rinoplastia = () => {
                   aria-controls="pills-pre"
                   aria-selected="true"
                 >
-                  Pre
+                  Básico
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -134,12 +137,12 @@ const Rinoplastia = () => {
                   aria-controls="pills-procedimiento"
                   aria-selected="false"
                 >
-                  Procedimiento
+                  Strandard
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className="nav-link active"
                   id="pills-rehabilitacion-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#pills-rehabilitacion"
@@ -148,27 +151,38 @@ const Rinoplastia = () => {
                   aria-controls="pills-rehabilitacion"
                   aria-selected="false"
                 >
-                  Rehabilitación
+                  Premium
                 </button>
               </li>
             </ul>
             <div className="tab-content text-white-color" id="pills-tabContent">
               <div
-                className="tab-pane fade show active"
+                className="tab-pane fade"
                 id="pills-pre"
                 role="tabpanel"
                 aria-labelledby="pills-pre-tab"
               >
-                <p>Es muy importante seguir un buen preoperatorio, pues esto va a permitir al paciente afrontar la operación con las máximas garantías físicas y, sobretodo, psicológicas.</p>
-                <ul>
-                  <li>Comer de forma equilibrada como las proteínas no grasas, frutas y verduras).</li>
-                  <li>Beber agua abudante.</li>
-                  <li>Incrementar el consumo de alimentos con hierro como el hígado, las legumbres, el tofu o la carne y de zumos naturales con vitamina C que ayudan a absorber el hierro.</li>
-                  <li>Evitar las bebidas con cafeína que bloquean la absorción de hierro y el alcohol.</li>
-                  <li>Practicar ejercicio moderado (andar) media hora al día.</li>
-                  <li>Tomar algún complejo vitamínico con minerales y dormir 8 horas diarias.</li>
-                  <li>Dejar de fumar.</li>
-                  <li>Quitar el esmalte de uñas y uñas artificiales.</li>
+                <ul class="noBull">
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Consulta de valoración.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Cirugía.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Medicamentos durante la cirugía.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Rehabilitación.</p>
+                  </li>
                 </ul>
               </div>
               <div
@@ -177,25 +191,111 @@ const Rinoplastia = () => {
                 role="tabpanel"
                 aria-labelledby="pills-procedimiento-tab"
               >
-                <p>Durante la cirugía contamos con:</p>
-                <ul>
-                  <li>Quirófano con los más altos estándares de seguridad.</li>
-                  <li>Equipo de última tecnología.</li>
-                  <li>Ambiente controlado.</li>
-                  <li>Atención de primer nivel.</li>
+                <ul class="noBull">
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Consulta de valoración.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Cirugía.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Medicamentos durante y después de la cirugía.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Cambio de vendajes.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Hidratación de tu piel.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Radiografías.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Rehabilitación.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Ozono.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Pulido de rostro.</p>
+                  </li>
                 </ul>
               </div>
               <div
-                className="tab-pane fade"
+                className="tab-pane fade show active"
                 id="pills-rehabilitacion"
                 role="tabpanel"
                 aria-labelledby="pills-rehabilitacion-tab"
               >
-                <p>Una ves que ha concluido la cirugía sigue el periodo de rehabilitación, el cual consiste en:</p>
-                <ul>
-                  <li>Conculstas de seguimiento por 2 meses.</li>
-                  <li>Pulido de rostro.</li>
-                  <li>Cambios de vendaje.</li>
+                <ul class="noBull">
+                <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Consulta de valoración.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Estudios preoperatorios.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Cirugía.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Medicamentos durante y después de la cirugía.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Cambio de vendajes.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Hidratación de tu piel.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Radiografías.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Rehabilitación.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Ozono.</p>
+                  </li>
+                  <li className="d-flex align-items-center">
+                    <RiArrowRightCircleLine className="fs-4 text-aqua-color" />
+                    &nbsp;
+                    <p className="m-0">Pulido de rostro.</p>
+                  </li>
                 </ul>
               </div>
             </div>

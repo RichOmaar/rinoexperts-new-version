@@ -26,7 +26,7 @@ const FAQs = () => {
             </Link>
           </div>
           <div className="col-12 mt-4">
-            <Link to="/">
+            <Link to="/contacto">
               <button className="faq-container font-bold">Contáctanos</button>
             </Link>
           </div>

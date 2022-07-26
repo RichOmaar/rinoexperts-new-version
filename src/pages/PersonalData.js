@@ -283,20 +283,20 @@ const PersonalData = () => {
                         <h4 className="text-center pt-3 font-semibold">Fecha de nacimiento</h4>
 
                         <label className="font-regular form-label pt-2">Fecha de nacimiento:</label>
-                        <input id="birthday" type="date" className="form-control-plaintext date" value={ birthday } onChange={ onChangeBirthday }required/>
+                        <input id="birthday" type="date" className="form-control-plaintext date" value={ birthday } onChange={ onChangeBirthday } required/>
                         
                         <h4 className="text-center pt-3 font-semibold">Dirección</h4>
 
                         <label className="font-regular form-label pt-2">Código postal:</label>
                         <input id="postalCode" type="text" className="form-control-plaintext phone" placeholder="Código postal" value={ postalCode } onChange={ onChangePostalCode } required/>                    
                         <label className="font-regular form-label pt-2">Estado:</label>
-                        <input id="state" type="text" className="form-control-plaintext state" placeholder="Estado" value={ state } onChange={ onChangeState }required/>
+                        <input id="state" type="text" className="form-control-plaintext state" placeholder="Estado" value={ state } onChange={ onChangeState } required/>
                         
                         <label className="font-regular form-label pt-2">Municipio:</label>
-                        <input id="municipality" type="text" className="form-control-plaintext state" placeholder="Municipio" value={ municipality } onChange={ onChangeMunicipality }required/>
+                        <input id="municipality" type="text" className="form-control-plaintext state" placeholder="Municipio" value={ municipality } onChange={ onChangeMunicipality } required/>
                         
                         <label className="font-regular form-label pt-2">Colonia:</label>
-                        <input id="suburb" type="text" className="form-control-plaintext state" placeholder="Colonia" value={ suburb } onChange={ onChangeSuburb }required/>
+                        <input id="suburb" type="text" className="form-control-plaintext state" placeholder="Colonia" value={ suburb } onChange={ onChangeSuburb } required/>
                         
                         <p className="text-center pt-3">Introduzca una clave de 4 números. Esta clave te permitirá continuar con tu consulta más adelante, es importante que la recuerdes.</p>
 

@@ -1,0 +1,106 @@
+.contact-form > input {
+    /* width: 100%; */
+    padding: 10px;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    background-color: transparent;
+    margin-bottom: 10px;
+    /* font-size: 1.2rem; */
+    font-weight: 400;
+    color: var(--white-color)!important;
+}
+
+.contact-form > textarea {
+    /* width: 100%; */
+    padding: 10px;
+    border: 1px solid var(--gray-color);
+    border-radius: 5px;
+    background-color: transparent;
+    margin-bottom: 10px;
+    /* font-size: 1.2rem; */
+    font-weight: 400;
+    color: var(--white-color)!important;
+}
+
+.see-more-button-green {
+    display: block;
+    width: 100%;
+    background-color: var(--green-color);
+    color: var(--white-color);
+    border-radius: 5px;
+    padding: 10px 8px;
+    font-size: 13px;
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-color: var(--green-color); 
+}
+
+.see-more-button-green:hover {
+    background-color: transparent;
+    color: var(--green-color);
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    border-color: var(--green-color); 
+}
+
+.contact-form > input::placeholder {
+    color: var(--gray-color);
+}
+
+.contact-form > textarea::placeholder {
+    color: var(--gray-color);
+}
+
+.contact-form > input:focus {
+    background-color: transparent;
+    outline: 0;
+    border-color: var(--green-color);
+    box-shadow: 0 0 0 .5rem #bfe2d73c;
+}
+
+.contact-form > textarea:focus {
+    background-color: transparent;
+    outline: 0;
+    border-color: var(--green-color);
+    box-shadow: 0 0 0 .5rem #bfe2d73c;
+}
+
+.hr-contact-form {
+    border: 1px solid var(--gray-light-color);
+}
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .contact-form {
+        padding: 0 150px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .contact-form {
+        padding: 0 250px;
+    }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .contact-form {
+        padding: 0 300px;
+    }
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+    .contact-form {
+        padding: 0 350px;
+    }
+}

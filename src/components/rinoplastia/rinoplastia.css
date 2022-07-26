@@ -39,19 +39,23 @@
 
 .rinoplastia-container .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   /* border-radius: 1px; */
-  background-color: var(--pink-color)!important;
+  background-color: var(--aqua-color)!important;
 }
 
 .rinoplastia-container .nav-pills .nav-link {
   /* border-radius: 0; */
   color: var(--white-color);
-  border: 0.05rem solid var(--pink-color);
+  border: 0.1rem solid var(--aqua-color);
   transition: 0.3s;
 }
 
 .rinoplastia-container .nav-link:focus, .nav-link:hover {
-  border: 0.1rem solid var(--pink-color);
+  border: 0.1rem solid var(--aqua-color);
   transition: 0.3s;
+}
+
+.noBull li {
+  margin-top: 5px;
 }
 /* XX-Large devices (larger desktops, 1400px and up) */
 @media (min-width: 1200px) {

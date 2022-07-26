@@ -105,6 +105,11 @@ a {
   display: none !important;
 }
 
+.noBull{
+  list-style-type: none;
+  padding: 0px;
+}
+
 /* Tipografías */
 * {
   font-family: "Questrial", sans-serif;
