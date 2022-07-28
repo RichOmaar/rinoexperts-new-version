@@ -258,7 +258,7 @@ const PersonalData = () => {
                 </div>
                 <div className="col-12 pt-3">
                     <form className="personal-data-form" id="personal-data-form" onSubmit={ personalData }>
-                        <label  className="font-regular form-label pt-2">Nombres(s):</label>
+                        <label  className="font-regular form-label pt-2">Nombre(s):</label>
                         <input id="userName" type="text" className="form-control-plaintext name" placeholder="Escribe tu nombre completo" value={ userName } onChange={ onChangeUserName } required/>
 
                         <label className="font-regular form-label pt-2">Apellidos:</label>
