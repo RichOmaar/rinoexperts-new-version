@@ -21,6 +21,8 @@ import Crisalix from "./pages/Crisalix";
 import FAQ from "./pages/FAQ";
 import TopFAQ from "./components/topFAQ/TopFAQ";
 import ContactUs from "./pages/ContactUs";
+import NewImageForm from "./pages/NewImageForm";
+import PersonalDataProposal from "./pages/PersonalDataProposal";
 
 function App() {
   return (
@@ -45,6 +47,8 @@ function App() {
         <Route path="/preguntas-frecuentes" element={<FAQ />} />
         <Route path="/top-faqs" element={<TopFAQ />} />
         <Route path="/contacto" element={<ContactUs />} />
+        <Route path="/formulario-nueva-imagen" element={<NewImageForm />} />
+        <Route path="/informacion-personal-previsualizacion" element={<PersonalDataProposal />} />
         
 
       </Routes>
