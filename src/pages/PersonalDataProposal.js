@@ -3,11 +3,15 @@ import "../components/personalDataProposal/personalDataProposal.css";
 
 import ProgressTop from "../components/progressTop/ProgressTop";
 import validatePhone from '../services/validatePhoneNumber';
+import addUser from '../services/addUser';
 import Swal from 'sweetalert2';
+import { useNavigate } from 'react-router-dom';
 
 const PersonalDataProposal = () => {
 
   const idStep = ".step-1";
+
+  const navigate = useNavigate();
 
   const [userName, setNombre] = useState("");
 
@@ -38,27 +42,27 @@ const PersonalDataProposal = () => {
   function onChangePhone(e) {
     if (!isNaN(e.target.value)) {
       setPhone(e.target.value);
-      if (e.target.value.length === 10) {
-        // let formData = new FormData();
+      // if (e.target.value.length === 10) {
+      //   let formData = new FormData();
 
-        // formData.append("phone", e.target.value);
+      //   formData.append("phone", e.target.value);
 
-        // validatePhone(formData)
-        // .then((response) => {
-        //   let _respuesta = JSON.parse(response);
+      //   validatePhone(formData)
+      //   .then((response) => {
+      //     let _respuesta = JSON.parse(response);
 
-        //   if (_respuesta.response === "error") {
-        //     Swal.fire({
-        //       icon: "error",
-        //       text: "Este número ya se encuentra registrado, por favor inicia sesión o verifica que tu número sea correcto",
-        //     });
-        //     setPhone("");
-        //   }
-        // })
-        // .catch((error) => {
-        //   console.log(error);
-        // });
-      }
+      //     if (_respuesta.response === "error") {
+      //       Swal.fire({
+      //         icon: "error",
+      //         text: "Este número ya se encuentra registrado, por favor inicia sesión o verifica que tu número sea correcto",
+      //       });
+      //       setPhone("");
+      //     }
+      //   })
+      //   .catch((error) => {
+      //     console.log(error);
+      //   });
+      // }
     } else {
       Swal.fire({
         icon: "error",
@@ -75,76 +79,62 @@ const PersonalDataProposal = () => {
   const personalData = (e) => {
     e.preventDefault();
 
-    // if (genre === "") {
-    //   Swal.fire({
-    //     icon: "error",
-    //     title: "Por favor selecciona un género",
-    //   });
-    // } else if (phone.length <= 9) {
-    //   Swal.fire({
-    //     icon: "error",
-    //     title: "Por favor ingresa un número de teléfono válido",
-    //   });
-    // } else if (postalCode.length <= 4) {
-    //   Swal.fire({
-    //     icon: "error",
-    //     title: "Por favor ingresa un código postal de 5 dígitos",
-    //   });
-    // } else if (verifyEmail(email)) {
-    //   let formData = new FormData();
+    if (genre === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Por favor selecciona un género",
+      });
+    } else if (phone.length <= 9) {
+      Swal.fire({
+        icon: "error",
+        title: "Por favor ingresa un número de teléfono válido",
+      });
+    } else {
 
-    //   formData.append("userName", userName);
-    //   formData.append("lastName", lastName);
-    //   formData.append("birthday", birthday);
-    //   formData.append("genre", genre);
-    //   formData.append("postalCode", postalCode);
-    //   formData.append("state", state);
-    //   formData.append("municipality", municipality);
-    //   formData.append("suburb", suburb);
-    //   formData.append("phone", phone);
-    //   formData.append("email", email);
-    //   formData.append("key", key);
+      let formData = new FormData();
 
-    //   addUser(formData)
-    //     .then((response) => {
-    //       let _respuesta = JSON.parse(response);
-    //       console.log(_respuesta);
-    //       if (_respuesta.response === "success") {
-    //         localStorage.setItem(
-    //           "id_usuario",
-    //           JSON.stringify(_respuesta.idUsuario)
-    //         );
-    //         localStorage.setItem("nombre", JSON.stringify(userName));
-    //         localStorage.setItem("apellidos", JSON.stringify(lastName));
-    //         sessionStorage.setItem(
-    //           "token",
-    //           JSON.stringify(_respuesta.idUsuario)
-    //         );
+      formData.append("userName", userName);
+      formData.append("lastName", lastName);
+      formData.append("birthday", birthday);
+      formData.append("genre", genre);
+      formData.append("phone", phone);
 
-    //         Swal.fire({
-    //           title: "Tus datos se han guardado con éxito",
-    //           icon: "success",
-    //           showConfirmButton: false,
-    //           timer: 2000,
-    //         });
+      addUser(formData)
+      .then((response) => {
+        let _respuesta = JSON.parse(response);
+        console.log('_respuesta:',_respuesta);
+        if (_respuesta.response === "success") {
+          localStorage.setItem(
+            "id_usuario",
+            JSON.stringify(_respuesta.idUsuario)
+          );
+          localStorage.setItem("nombre", JSON.stringify(userName));
+          localStorage.setItem("apellidos", JSON.stringify(lastName));
+          localStorage.setItem("form",JSON.stringify("short"));
+          sessionStorage.setItem(
+            "token",
+            JSON.stringify(_respuesta.idUsuario)
+          );
 
-    //         setTimeout(() => {
-    //           navigate("/historial-medico");
-    //         }, 2000);
-    //       }
-    //     })
-    //     .catch((error) => {
-    //       document
-    //         .querySelector("#sendPersonalData")
-    //         .removeAttribute("disabled");
-    //       console.log(error);
-    //     });
-    // } else {
-    //   Swal.fire({
-    //     icon: "error",
-    //     title: "Por favor ingresa un correo válido",
-    //   });
-    // }
+          Swal.fire({
+            title: "Tus datos se han guardado con éxito",
+            icon: "success",
+            showConfirmButton: false,
+            timer: 2000,
+          });
+
+          setTimeout(() => {
+            navigate("/historial-medico");
+          }, 2000);
+        }
+      })
+      .catch((error) => {
+        document
+          .querySelector("#sendPersonalData")
+          .removeAttribute("disabled");
+        console.log(error);
+      });
+    }
   };
 
   return (
@@ -154,9 +144,9 @@ const PersonalDataProposal = () => {
           {/* <div className="col-12">
             <LogoHeader />
           </div> */}
-          <div className="col-12 mt-3">
+          {/* <div className="col-12 mt-3">
             <ProgressTop idStep={idStep} />
-          </div>
+          </div> */}
           <div className="col-12 text-center">
             <h2 className="font-bold text-red-color">DATOS PERSONALES</h2>
           </div>

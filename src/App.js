@@ -24,6 +24,7 @@ import ContactUs from "./pages/ContactUs";
 import NewImageForm from "./pages/NewImageForm";
 import PersonalDataProposal from "./pages/PersonalDataProposal";
 import MedicalRecordProposal from "./pages/MedicalRecordProposal";
+import CrisalixReceipt from "./pages/CrisalixReceipt";
 
 function App() {
   return (
@@ -51,7 +52,7 @@ function App() {
         <Route path="/formulario-nueva-imagen" element={<NewImageForm />} />
         <Route path="/informacion-personal-previsualizacion" element={<PersonalDataProposal />} />
         <Route path="/historial-medico-previsualizacion" element={<MedicalRecordProposal />} />
-        
+        <Route path="/registro-exitoso" element={<CrisalixReceipt />} />
 
       </Routes>
 

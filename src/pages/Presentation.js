@@ -9,9 +9,10 @@ import InitialModal from '../components/initialModal/InitialModal';
 import LogoHeader from '../components/logoHeader/LogoHeader';
 
 const Presentation = () => {
+
     useEffect(() => {
         window.scrollTo(0, 0)
-    }, [])
+    }, []);
 
   return (
     <div className="presentation-container black-background pt-3 pb-4">

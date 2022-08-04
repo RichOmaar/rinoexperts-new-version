@@ -28,6 +28,8 @@ const Appointment = () => {
     const [imageThree, setImageThree] = useState('');
 
     const id_user = JSON.parse(localStorage.getItem('id_usuario'));
+
+    const form = JSON.parse(localStorage.getItem('form'));
     
     let responseOne = '';
 
@@ -38,11 +40,10 @@ const Appointment = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         const isLogged = JSON.parse(sessionStorage.getItem('token'));
-
         // if(!isLogged) {
         //     navigate('/');
         // }
-    })
+    }, [])
 
     function encodeImageFileAsURL(element) {
         var file = element;
@@ -161,7 +162,11 @@ const Appointment = () => {
                     })
     
                     setTimeout(() => {
-                        navigate('/agendar-citas');
+                        if(!form) {
+                            navigate('/agendar-citas');
+                        } else {
+                            navigate('/registro-exitoso');
+                        }
                     }, 2000);
                 }
             })
