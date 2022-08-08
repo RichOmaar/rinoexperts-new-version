@@ -5,6 +5,8 @@ import step1 from '../../assets/icons/contact-form.svg';
 import step2 from '../../assets/icons/upload-pictures.svg';
 import step3 from '../../assets/icons/enjoy-results.svg';
 
+import { Link } from 'react-router-dom';
+
 const CrisalixProcess = () => {
   return (
     <div className="container-fluid black-background">
@@ -53,7 +55,6 @@ const CrisalixProcess = () => {
                         <div class="process-circle py-2 px-3 mb-1">
                             3
                         </div>
-                        <div class="line h-100"></div>
                     </div>
                     <div className="row">
                         <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 px-4">
@@ -69,7 +70,9 @@ const CrisalixProcess = () => {
                 </div>
             </div>
             <div className="pb-4">
-                <button className="crisalix-discover-button">Ir al formulario</button>
+                <Link to="/formulario-nueva-imagen">
+                    <button className="crisalix-discover-button">Ir al formulario</button>
+                </Link>
             </div>
         </div>
     </div>
