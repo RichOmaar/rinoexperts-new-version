@@ -6,6 +6,7 @@ import Simulator from "../../components/simulator/Simulator";
 
 import { FiPlus } from "react-icons/fi";
 
+import { Link } from "react-router-dom";
 
 const Servicios = () => {
 
@@ -108,7 +109,7 @@ const Servicios = () => {
                     anestesia local.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                      <button className="see-more-button">Ver más</button>
                   </div>
                 </div>
               </div>
@@ -141,7 +142,9 @@ const Servicios = () => {
                     de bolsas.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <Link to="/servicios/blefaroplastia">
+                      <button className="see-more-button">Ver más</button>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -363,7 +366,9 @@ const Servicios = () => {
                     de bolsas.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <Link to="/servicios/blefaroplastia">
+                      <button className="see-more-button">Ver más</button>
+                    </Link>
                   </div>
                 </div>
               </div>

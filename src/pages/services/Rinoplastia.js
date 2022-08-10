@@ -5,10 +5,7 @@ import RinoplastiaMain from "../../assets/img/servicios/rinoplastia/rinoplastia-
 import SecondIMage from "../../assets/img/servicios/rinoplastia/rinoplastia-page-1.jpg";
 import BenefRinoex from "../../assets/img/servicios/rinoplastia/beneficios-rinoexperts.jpg";
 
-import Model3d from "../../assets/icons/3d-modeling.svg";
-import MedicalEq from "../../assets/icons/equipo-medico.svg";
-import MedicalInform from "../../assets/icons/informe-medico.svg";
-import Machine from "../../assets/icons/machine.svg";
+import RinoexpertsBenefits from "../../components/rinoexpertsBenefits/RinoexpertsBenefits";
 
 import { Link } from "react-router-dom";
 
@@ -82,64 +79,9 @@ const Rinoplastia = () => {
               necesidades de cada paciente.
             </p>
           </div>
-
+          
           <div className="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 px-4 order-xl-1 order-lg-1 order-md-1 order-sm-2 order-xs-2">
-            <div className="benefits-container">
-              <div className="col-12">
-                <h2 className="font-bold text-center">
-                  BENEFICIOS RINOEXPERTS
-                </h2>
-                <div className="py-2 d-flex" data-aos="fade-right">
-                  <div className="col-2 align-self-center text-center">
-                    <img src={Model3d} alt="Rinoexperts Modelo 3D" />
-                  </div>
-                  <div className="col-10 px-1">
-                    <h3>Simulador de resultados</h3>
-                    <p>
-                      Con <span className="text-aqua-color">CRISALIX</span>{" "}
-                      podrás visualizar tu nueva imágen antes del procedimiento.
-                    </p>
-                  </div>
-                </div>
-                <div className="py-2 d-flex" data-aos="fade-left">
-                  <div className="col-2 align-self-center text-center">
-                    <img src={MedicalEq} alt="Rinoexperts Equipo Médico" />
-                  </div>
-                  <div className="col-10 px-1">
-                    <h3>Personal certificado</h3>
-                    <p>
-                      El Dr. Ortiz y todo el equipo de rehabilitación están
-                      listos para darte el mejor servicio.
-                    </p>
-                  </div>
-                </div>
-                <div className="py-2 d-flex" data-aos="fade-right">
-                  <div className="col-2 align-self-center text-center">
-                    <img src={MedicalInform} alt="Rinoexperts Reporte Médico" />
-                  </div>
-                  <div className="col-10 px-1">
-                    <h3>Atención personalizada</h3>
-                    <p>
-                      El equipo de Rinoexperts te acompañará durante todo el
-                      proceso, desde la primer consulta hasta el final de tu
-                      rehabilitación.
-                    </p>
-                  </div>
-                </div>
-                <div className="py-2 d-flex" data-aos="fade-left">
-                  <div className="col-2 align-self-center text-center">
-                    <img src={Machine} alt="Rinoexperts maquinas" />
-                  </div>
-                  <div className="col-10 px-1">
-                    <h3>Tecnología e instalaciones modernas</h3>
-                    <p>
-                      Contamos con instalaciones seguras y equipadas con todo lo
-                      necesario para brindarte el mejor servicio.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <RinoexpertsBenefits/>
           </div>
           {/* <div className="col-12 col-xl-6 col-lg-12 col-md-12 col-sm-12 col-xs-12 p-0 order-xl-2 order-lg-2 order-md-2 order-sm-1 order-xs-1">
                     <img src={BenefRinoex} className="img-fluid img-after-title" alt="Rinoplastia" />

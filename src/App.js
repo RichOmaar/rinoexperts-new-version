@@ -28,6 +28,7 @@ import NewImageForm from "./pages/NewImageForm";
 import PersonalDataProposal from "./pages/PersonalDataProposal";
 import MedicalRecordProposal from "./pages/MedicalRecordProposal";
 import CrisalixReceipt from "./pages/CrisalixReceipt";
+import Blefaroplastia from "./pages/services/Blefaroplastia";
 
 function App() {
   
@@ -40,6 +41,7 @@ function App() {
         <Route path="/servicios" element={<Servicios />} />
         <Route path="/servicios/otoplastia" element={<Otoplastia />} />
         <Route path="/servicios/rinoplastia" element={<Rinoplastia />} />
+        <Route path="/servicios/blefaroplastia" element={<Blefaroplastia />} />
         <Route path="/presentacion" element={<Presentation />} />
         <Route path="/informacion-personal" element={<PersonalData />} />
         <Route path="/historial-medico" element={<MedicalRecord />} />

@@ -1,0 +1,41 @@
+.blefaro-small-devices {
+    padding: 0;
+}
+
+.blefaro-large-devices {
+    padding: 0;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) {
+    .blefaro-large-devices {
+        display: none;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 767px) and (min-width: 576px) {
+    .blefaro-large-devices {
+        display: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 991px) and (min-width: 768px) {
+    .blefaro-small-devices {
+        display: none;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1199px) and (min-width: 992px) {
+    .blefaro-small-devices {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px){
+    .blefaro-small-devices {
+        display: none;
+    }
+}
