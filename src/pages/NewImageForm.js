@@ -5,12 +5,16 @@ import { Link } from 'react-router-dom';
 import { AiFillCaretRight } from 'react-icons/ai';
 
 import LogoHeader from '../components/logoHeader/LogoHeader';
+import ProgressTop from '../components/progressTop/ProgressTop';
+
 
 const NewImageForm = () => {
 
+    const idStep = ".step-1";
+    
     useEffect(() => {
     window.scrollTo(0, 0)
-    }, [])
+    }, []);
 
   return (
     <div className="presentation-container black-background pt-3 pb-4">
@@ -18,6 +22,9 @@ const NewImageForm = () => {
             <div className="row">
                 <div className="col-12">
                     <LogoHeader />
+                </div>
+                <div className="col-12">
+                    <ProgressTop idStep={idStep}/>
                 </div>
                 <div className="col-12 pt-2">
                     <p>A través del siguiente formulario y fotografías recibirás una propuesta por parte Rinoexperts.</p>

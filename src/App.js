@@ -2,6 +2,9 @@ import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 
+// import Aos from 'aos';
+// import 'aos/dist/aos.css'
+
 import Navbar from "./components/navbar/Narvbar";
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
@@ -27,6 +30,7 @@ import MedicalRecordProposal from "./pages/MedicalRecordProposal";
 import CrisalixReceipt from "./pages/CrisalixReceipt";
 
 function App() {
+  
   return (
     <div>
       <Navbar />
