@@ -1,0 +1,54 @@
+.blackButton {
+  padding: 0.5em 2em;
+  font-size: 17px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: var(--white-color);
+  z-index: 1;
+}
+
+.blackButton::after,
+.blackButton::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all 0.4s;
+}
+
+.blackButton::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: var(--aqua-color);
+  border-radius: 50px;
+}
+
+.blackButton::after {
+  transform: translate(0px, 0px);
+  width: 10px;
+  height: 10px;
+  background: var(--pink-medium-color);
+  backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.blackButton:hover::before {
+  transform: translate(5%, 20%);
+  width: 10px;
+  height: 10px;
+}
+
+.blackButton:hover::after {
+  border-radius: 50px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.blackButton:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
