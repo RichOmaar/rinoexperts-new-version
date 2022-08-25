@@ -1,0 +1,25 @@
+.rinoexpertsPlans__title {
+  padding: 0px 200px;
+}
+
+.rinoexpertsPlans__ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+.rinoexpertsPlans__checkIconBasic {
+  color: var(--gray-color);
+}
+
+.rinoexpertsPlans__checkIconPremium {
+  color: var(--aqua-color);
+}
+
+.rinoexpertsPlans__bestSeller {
+    border: 1px solid var(--aqua-color);
+}
+
+.rinoexpertsPlans__bestSeller-title {
+  padding: 5px 0px;
+  background-color: var(--aqua-color);
+}

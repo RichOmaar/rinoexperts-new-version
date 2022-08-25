@@ -5,7 +5,7 @@ import OwlCarousel from "react-owl-carousel";
 
 import phone1 from '../../assets/img/phone.png';
 
-import { Link } from 'react-router-dom';
+import BlackButton from '../../components/blackButton/BlackButton';
 
 const CrisalixBanner = () => {
   return (
@@ -38,9 +38,7 @@ const CrisalixBanner = () => {
                     <div className="col-12">
                         <h2 className="font-bold">Visualiza tu <span className="text-pink-color">nueva imagen</span> antes del procedimiento</h2>
                         <p>Simplemente regístrate, envíanos 3 fotos y nosotros hacemos el resto</p>
-                        <Link to="/formulario-nueva-imagen">
-                            <button className="crisalix-discover-button floating">Descúbrelo ahora</button>
-                        </Link>
+                        <BlackButton url={'/formulario-nueva-imagen'} text={'Descúbrelo ahora'}/>
                     </div>
                 </div>
             </div>

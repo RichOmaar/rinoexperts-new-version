@@ -1,7 +1,7 @@
 import React from 'react';
 import './simulator.css';
 
-import { Link } from 'react-router-dom';
+import BlackButton from '../../components/blackButton/BlackButton';
 
 const Simulator = () => {
   return (
@@ -15,9 +15,7 @@ const Simulator = () => {
                 <div className="col-xl-4 col-lg-4 col-md-5 col-sm-12 col-xs-12">
                     <p className="fs-5 mt-4">Descubre tu nuevo yo de manera <strong>GRATUITA</strong>, llena el siguiente formulario y sigue los pasos para descubrirlo.</p>
                     <div className="d-flex justify-content-center justify-content-md-start">
-                        <Link to="/visualizar-imagen">
-                            <button className="see-more-button-pink">Ver más</button>
-                        </Link>
+                        <BlackButton url={'/visualizar-imagen'} text={'Ver más'}/>
                     </div>
                 </div>
                 <div className="col-xl-2 col-lg-2 col-md-1 col-sm-0 col-xs-0"></div>

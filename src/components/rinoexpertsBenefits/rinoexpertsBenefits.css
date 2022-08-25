@@ -1,0 +1,27 @@
+.benefits__card {
+  max-width: 260px;
+  /* height: 260px; */
+  padding: 10px;
+  border-radius: 6px;
+  background-color: #212121;
+  box-shadow: -10px 9px 42px 4px rgba(43, 43, 43, 0.75);
+  -webkit-box-shadow: -10px 9px 42px 4px rgba(43, 43, 43, 0.75);
+  -moz-box-shadow: -10px 9px 42px 4px rgba(43, 43, 43, 0.75);
+  transition: all 0.4s;
+}
+
+.benefits__card:hover {
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 50px;
+  transform: scale(1.05);
+  transition: all 0.4s;
+}
+
+.benefits__card img {
+    margin: 10px 0px;
+    width: 50%;
+}
+
+.benefits__card h3 {
+    margin-top: 10px;
+}
