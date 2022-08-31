@@ -32,7 +32,6 @@ import Blefaroplastia from "./pages/services/Blefaroplastia";
 import Bichectomia from "./pages/services/Bichectomia";
 
 function App() {
-  
   return (
     <div>
       <Navbar />
@@ -40,10 +39,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Servicios />} />
+
         <Route path="/servicios/otoplastia" element={<Otoplastia />} />
         <Route path="/servicios/rinoplastia" element={<Rinoplastia />} />
         <Route path="/servicios/blefaroplastia" element={<Blefaroplastia />} />
         <Route path="/servicios/bichectomia" element={<Bichectomia />} />
+        
         <Route path="/presentacion" element={<Presentation />} />
         <Route path="/informacion-personal" element={<PersonalData />} />
         <Route path="/historial-medico" element={<MedicalRecord />} />
@@ -61,7 +62,6 @@ function App() {
         <Route path="/informacion-personal-previsualizacion" element={<PersonalDataProposal />} />
         <Route path="/historial-medico-previsualizacion" element={<MedicalRecordProposal />} />
         <Route path="/registro-exitoso" element={<CrisalixReceipt />} />
-
       </Routes>
 
       <Footer />

@@ -4,6 +4,7 @@ import "./topServices.css";
 import { Link } from "react-router-dom";
 
 import OwlCarousel from "react-owl-carousel";
+import LightButton from "../lightButton/LightButton";
 
 const TopServices = () => {
   const responsive = {
@@ -47,9 +48,7 @@ const TopServices = () => {
             <div className="col-12 py-5">
               <h2 className="font-bold text-white-color fs-1">RINOPLASTIA</h2>
               <h3 className="text-white-color">
-                <Link to="/servicios/rinoplastia">
-                  <span className="top-services-btn fs-6">Ver más</span>
-                </Link>
+                <LightButton text={'Ver más'} url={'/servicios/rinoplastia'} />
               </h3>
             </div>
             <div className="col-12 text-center"></div>
@@ -61,9 +60,7 @@ const TopServices = () => {
             <div className="col-12 py-5">
               <h2 className="font-bold text-white-color fs-1">BICHECTOMIA</h2>
               <h3 className="text-white-color">
-                <Link to="/servicios/rinoplastia">
-                  <span className="top-services-btn fs-6">Ver más</span>
-                </Link>
+                <LightButton text={'Ver más'} url={'/servicios/bichectomia'} />
               </h3>
             </div>
             <div className="col-12 text-center"></div>
@@ -75,9 +72,7 @@ const TopServices = () => {
             <div className="col-12 py-5">
               <h2 className="font-bold text-white-color fs-1">MENTOPLASTIA</h2>
               <h3 className="text-white-color">
-                <Link to="/servicios/rinoplastia">
-                  <span className="top-services-btn fs-6">Ver más</span>
-                </Link>
+                <LightButton text={'Ver más'} url={'/servicios/mentoplastia'} />
               </h3>
             </div>
             <div className="col-12 text-center"></div>

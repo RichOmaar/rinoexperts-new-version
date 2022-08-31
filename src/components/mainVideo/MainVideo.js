@@ -3,6 +3,7 @@ import "./mainVideo.css";
 
 // import BackgroundVideo from '../../assets/video/opcion-1-rinexperts.mp4';
 import BackgroundVideo from '../../assets/video/opcion-2-rinoexperts.mp4';
+import BlackButton from "../blackButton/BlackButton";
 
 const MainVideo = () => {
   return (
@@ -28,7 +29,7 @@ const MainVideo = () => {
               Cirugía de nariz, rostro y cuello. Rinoplastia estética,
               funcional, reparadora y revisional
             </p>
-            <button className="video-button">AGENDAR CITA</button>
+            <BlackButton url={'/'} text={'AGENDAR CITA'} />
           </div>
         </div>
       </div>

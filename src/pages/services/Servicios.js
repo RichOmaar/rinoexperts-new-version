@@ -7,6 +7,7 @@ import Simulator from "../../components/simulator/Simulator";
 import { FiPlus } from "react-icons/fi";
 
 import { Link } from "react-router-dom";
+import BlackButton from "../../components/blackButton/BlackButton";
 
 const Servicios = () => {
 
@@ -42,10 +43,10 @@ const Servicios = () => {
         {/* Moviles */}
         <div className="col-12 text-white-color font-bold text-center top-services-tittle hide-not-mobile py-3">
           <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
+          <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button"
+                  class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -72,7 +73,7 @@ const Servicios = () => {
                     problemas respiratorios.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/rinoplastia'} />
                   </div>
                 </div>
               </div>
@@ -88,7 +89,7 @@ const Servicios = () => {
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  RINOMODELACIÓN
+                  POMULOPLASTIA
                 </button>
               </h2>
               <div
@@ -99,17 +100,10 @@ const Servicios = () => {
               >
                 <div class="accordion-body text-start">
                   <p className="font-regular">
-                    Consiste en un tratamiento que permite hacer una
-                    remodelación de la nariz sin la necesidad de realizar una
-                    cirugía o una rinoplastia mínimamente invasiva.
-                    <br />
-                    <br />
-                    El proceso de la rinomodelación no dura más de media o tres
-                    cuartos de hora, no requiere hospitalización y necesita
-                    anestesia local.
+                    La cirugía estética de pómulos ( o pomuloplastia), consiste en el aumento de pómulos, mediante la introducción de material sintético (silicona sólida, Gore-tex, etc…)o con osteotomías, con la inyeccion de grasa propia, o con la extraer la grasa bucal o bola de Bichat, lo cual ocasiona un descenso de la mejilla y, por lo tanto, una acentuación del pómulo.
                   </p>
                   <div className="text-center py-3">
-                      <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/pomuloplastia'} />
                   </div>
                 </div>
               </div>
@@ -142,9 +136,7 @@ const Servicios = () => {
                     de bolsas.
                   </p>
                   <div className="text-center py-3">
-                    <Link to="/servicios/blefaroplastia">
-                      <button className="see-more-button">Ver más</button>
-                    </Link>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/blefaroplastia'} />
                   </div>
                 </div>
               </div>
@@ -160,7 +152,7 @@ const Servicios = () => {
                   aria-expanded="false"
                   aria-controls="collapseFour"
                 >
-                  BICHECTOMIA
+                  RITIDECTOMIA
                 </button>
               </h2>
               <div
@@ -171,14 +163,13 @@ const Servicios = () => {
               >
                 <div class="accordion-body text-start">
                   <p className="font-regular">
-                    Es una cirugía en donde se hace una incisión aproximadamente
-                    de 1 cm por dentro de la boca, se busca el tejido graso
-                    encapsulado (bolsas de Bichat) y se retiran para mejorar los
-                    rasgos faciales. Creando una ilusión óptica de tener una
-                    cara más alargada y delgada mejorando el aspecto estético.
+                    Es un procedimiento quirúrgico para mejorar los signos visibles de envejecimiento de la cara y el cuello.
+                    <br />
+                    <br />
+                    Conforme el individuo envejece, la piel, la grasa y los músculos faciales, que se encuentran fijos a los huesos de la cara a través de ligamentos, tienden a descender por efecto de la gravedad debido a una disminución en el tono de los mismos.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/blefaroplastia'} />
                   </div>
                 </div>
               </div>
@@ -194,13 +185,80 @@ const Servicios = () => {
                   aria-expanded="false"
                   aria-controls="collapseFive"
                 >
-                  MENTOPLASTIA
+                  LEVANTAMIENTO DE CEJAS
                 </button>
               </h2>
               <div
                 id="collapseFive"
                 class="accordion-collapse collapse"
                 aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-start">
+                  <p className="font-regular">
+                    La ritidoplastia frontal levanta tejido blando y la piel de la frente y el ceño, y mejora la apariencia de estos y de la zona alrededor de los ojos.
+                    <br />
+                    <br />
+                    Se puede realizar solo la ritidoplastia frontal o junto con otros procedimientos para el rostro, como una cirugía de párpado (ritidoplastia de párpado) o un estiramiento facial.
+                  </p>
+                  <div className="text-center py-3">
+                    <BlackButton text={'VER MÁS'} url={'/servicios/levantamiento-de-cejas'} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  BICHECTOMIA
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-start">
+                  <p className="font-regular">
+                    Es una cirugía en donde se hace una incisión aproximadamente
+                    de 1 cm por dentro de la boca, se busca el tejido graso
+                    encapsulado (bolsas de Bichat) y se retiran para mejorar los
+                    rasgos faciales. Creando una ilusión óptica de tener una
+                    cara más alargada y delgada mejorando el aspecto estético.
+                  </p>
+                  <div className="text-center py-3">
+                    <BlackButton text={'VER MÁS'} url={'/servicios/bichectomia'} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  MENTOPLASTIA
+                </button>
+              </h2>
+              <div
+                id="collapseSeven"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSeven"
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body text-start">
@@ -222,29 +280,29 @@ const Servicios = () => {
                     </li>
                   </ul>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/mentoplastia'} />
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
+              <h2 class="accordion-header" id="headingEight">
                 <button
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix"
+                  data-bs-target="#collapseEight"
                   aria-expanded="false"
-                  aria-controls="collapseSix"
+                  aria-controls="collapseEight"
                 >
                   LIPOPAPADA
                 </button>
               </h2>
               <div
-                id="collapseSix"
+                id="collapseEight"
                 class="accordion-collapse collapse"
-                aria-labelledby="headingSix"
+                aria-labelledby="headingEight"
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body text-start">
@@ -255,11 +313,72 @@ const Servicios = () => {
                     localizada del cuello remodelando la zona.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lipopapada'} />
                   </div>
                 </div>
               </div>
             </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine"
+                  aria-expanded="false"
+                  aria-controls="collapseNine"
+                >
+                  LIFT DE LABIOS
+                </button>
+              </h2>
+              <div
+                id="collapseNine"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingNine"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-start">
+                  <p className="font-regular">
+                  Consiste en acortar la longitud vertical del labio superior y elevar el labio subnasal mediante la eliminación de tejido. Adicionalmente, la paciente puede potenciar el arco de Cupido.
+                  </p>
+                  <div className="text-center py-3">
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-de-labios'} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen"
+                  aria-expanded="false"
+                  aria-controls="collapseTen"
+                >
+                  LIFT DE CUELLO
+                </button>
+              </h2>
+              <div
+                id="collapseTen"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTen"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-start">
+                  <p className="font-regular">
+                  El estiramiento de cuello es un procedimiento estético que elimina el exceso de piel y grasa alrededor de la línea de la mandíbula para crear un cuello más definido y con aspecto más joven. Los resultados pueden ser a largo plazo, pero la cirugía de estiramiento de cuello no puede detener el proceso de envejecimiento.
+                  </p>
+                  <div className="text-center py-3">
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-de-cuello'} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
         {/* Desktop */}
@@ -269,7 +388,7 @@ const Servicios = () => {
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button"
+                  class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -296,7 +415,7 @@ const Servicios = () => {
                     problemas respiratorios.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/rinoplastia'} />
                   </div>
                 </div>
               </div>
@@ -312,7 +431,7 @@ const Servicios = () => {
                   aria-expanded="false"
                   aria-controls="collapseTwo"
                 >
-                  RINOMODELACIÓN
+                  POMULOPLASTIA
                 </button>
               </h2>
               <div
@@ -323,17 +442,10 @@ const Servicios = () => {
               >
                 <div class="accordion-body text-start">
                   <p className="font-regular">
-                    Consiste en un tratamiento que permite hacer una
-                    remodelación de la nariz sin la necesidad de realizar una
-                    cirugía o una rinoplastia mínimamente invasiva.
-                    <br />
-                    <br />
-                    El proceso de la rinomodelación no dura más de media o tres
-                    cuartos de hora, no requiere hospitalización y necesita
-                    anestesia local.
+                    La cirugía estética de pómulos ( o pomuloplastia), consiste en el aumento de pómulos, mediante la introducción de material sintético (silicona sólida, Gore-tex, etc…)o con osteotomías, con la inyeccion de grasa propia, o con la extraer la grasa bucal o bola de Bichat, lo cual ocasiona un descenso de la mejilla y, por lo tanto, una acentuación del pómulo.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/pomuloplastia'} />
                   </div>
                 </div>
               </div>
@@ -366,17 +478,12 @@ const Servicios = () => {
                     de bolsas.
                   </p>
                   <div className="text-center py-3">
-                    <Link to="/servicios/blefaroplastia">
-                      <button className="see-more-button">Ver más</button>
-                    </Link>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/blefaroplastia'} />
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="col-5 col-xl-5 col-lg-5 col-md-6 text-white-color font-bold text-center top-services-tittle hide-on-mobile py-3">
-          <div class="accordion" id="accordionExample">
+
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingFour">
                 <button
@@ -387,7 +494,7 @@ const Servicios = () => {
                   aria-expanded="false"
                   aria-controls="collapseFour"
                 >
-                  BICHECTOMIA
+                  RITIDECTOMIA
                 </button>
               </h2>
               <div
@@ -398,14 +505,13 @@ const Servicios = () => {
               >
                 <div class="accordion-body text-start">
                   <p className="font-regular">
-                    Es una cirugía en donde se hace una incisión aproximadamente
-                    de 1 cm por dentro de la boca, se busca el tejido graso
-                    encapsulado (bolsas de Bichat) y se retiran para mejorar los
-                    rasgos faciales. Creando una ilusión óptica de tener una
-                    cara más alargada y delgada mejorando el aspecto estético.
+                    Es un procedimiento quirúrgico para mejorar los signos visibles de envejecimiento de la cara y el cuello.
+                    <br />
+                    <br />
+                    Conforme el individuo envejece, la piel, la grasa y los músculos faciales, que se encuentran fijos a los huesos de la cara a través de ligamentos, tienden a descender por efecto de la gravedad debido a una disminución en el tono de los mismos.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/blefaroplastia'} />
                   </div>
                 </div>
               </div>
@@ -421,13 +527,83 @@ const Servicios = () => {
                   aria-expanded="false"
                   aria-controls="collapseFive"
                 >
-                  MENTOPLASTIA
+                  LEVANTAMIENTO DE CEJAS
                 </button>
               </h2>
               <div
                 id="collapseFive"
                 class="accordion-collapse collapse"
                 aria-labelledby="headingFive"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-start">
+                  <p className="font-regular">
+                    La ritidoplastia frontal levanta tejido blando y la piel de la frente y el ceño, y mejora la apariencia de estos y de la zona alrededor de los ojos.
+                    <br />
+                    <br />
+                    Se puede realizar solo la ritidoplastia frontal o junto con otros procedimientos para el rostro, como una cirugía de párpado (ritidoplastia de párpado) o un estiramiento facial.
+                  </p>
+                  <div className="text-center py-3">
+                    <BlackButton text={'VER MÁS'} url={'/servicios/levantamiento-de-cejas'} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-5 col-xl-5 col-lg-5 col-md-6 text-white-color font-bold text-center top-services-tittle hide-on-mobile py-3">
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSix">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSix"
+                  aria-expanded="false"
+                  aria-controls="collapseSix"
+                >
+                  BICHECTOMIA
+                </button>
+              </h2>
+              <div
+                id="collapseSix"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSix"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-start">
+                  <p className="font-regular">
+                    Es una cirugía en donde se hace una incisión aproximadamente
+                    de 1 cm por dentro de la boca, se busca el tejido graso
+                    encapsulado (bolsas de Bichat) y se retiran para mejorar los
+                    rasgos faciales. Creando una ilusión óptica de tener una
+                    cara más alargada y delgada mejorando el aspecto estético.
+                  </p>
+                  <div className="text-center py-3">
+                    <BlackButton text={'VER MÁS'} url={'/servicios/bichectomia'} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingSeven">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseSeven"
+                  aria-expanded="false"
+                  aria-controls="collapseSeven"
+                >
+                  MENTOPLASTIA
+                </button>
+              </h2>
+              <div
+                id="collapseSeven"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingSeven"
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body text-start">
@@ -449,29 +625,29 @@ const Servicios = () => {
                     </li>
                   </ul>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/mentoplastia'} />
                   </div>
                 </div>
               </div>
             </div>
 
             <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
+              <h2 class="accordion-header" id="headingEight">
                 <button
                   class="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
-                  data-bs-target="#collapseSix"
+                  data-bs-target="#collapseEight"
                   aria-expanded="false"
-                  aria-controls="collapseSix"
+                  aria-controls="collapseEight"
                 >
                   LIPOPAPADA
                 </button>
               </h2>
               <div
-                id="collapseSix"
+                id="collapseEight"
                 class="accordion-collapse collapse"
-                aria-labelledby="headingSix"
+                aria-labelledby="headingEight"
                 data-bs-parent="#accordionExample"
               >
                 <div class="accordion-body text-start">
@@ -482,7 +658,67 @@ const Servicios = () => {
                     localizada del cuello remodelando la zona.
                   </p>
                   <div className="text-center py-3">
-                    <button className="see-more-button">Ver más</button>
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lipopapada'} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingNine">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseNine"
+                  aria-expanded="false"
+                  aria-controls="collapseNine"
+                >
+                  LIFT DE LABIOS
+                </button>
+              </h2>
+              <div
+                id="collapseNine"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingNine"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-start">
+                  <p className="font-regular">
+                  Consiste en acortar la longitud vertical del labio superior y elevar el labio subnasal mediante la eliminación de tejido. Adicionalmente, la paciente puede potenciar el arco de Cupido.
+                  </p>
+                  <div className="text-center py-3">
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-de-labios'} />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTen">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTen"
+                  aria-expanded="false"
+                  aria-controls="collapseTen"
+                >
+                  LIFT DE CUELLO
+                </button>
+              </h2>
+              <div
+                id="collapseTen"
+                class="accordion-collapse collapse"
+                aria-labelledby="headingTen"
+                data-bs-parent="#accordionExample"
+              >
+                <div class="accordion-body text-start">
+                  <p className="font-regular">
+                  El estiramiento de cuello es un procedimiento estético que elimina el exceso de piel y grasa alrededor de la línea de la mandíbula para crear un cuello más definido y con aspecto más joven. Los resultados pueden ser a largo plazo, pero la cirugía de estiramiento de cuello no puede detener el proceso de envejecimiento.
+                  </p>
+                  <div className="text-center py-3">
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-de-cuello'} />
                   </div>
                 </div>
               </div>
