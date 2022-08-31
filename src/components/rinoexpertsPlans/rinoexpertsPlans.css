@@ -1,3 +1,7 @@
+.rinoexpertsPlans {
+  padding: 50px 0px;
+}
+
 .rinoexpertsPlans__title {
   padding: 0px 200px;
 }
@@ -16,10 +20,60 @@
 }
 
 .rinoexpertsPlans__bestSeller {
-    border: 1px solid var(--aqua-color);
+  border: 1px solid var(--aqua-color);
+  transition: all .3s ease-in-out;
+}
+  
+.rinoexpertsPlans__bestSeller:hover {
+  transform: scale(1.03);
+  transition: .3s;
 }
 
 .rinoexpertsPlans__bestSeller-title {
   padding: 5px 0px;
   background-color: var(--aqua-color);
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) {
+  .rinoexpertsPlans__title {
+    padding: 0px;
+  }
+  .rinoexpertsPlans__hidePlans {
+    display: none;
+  }
+  .rinoexpertsPlans__displayedPlans {
+    margin: 20px 0px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 767px) and (min-width: 576px) {
+  .rinoexpertsPlans__title {
+    padding: 0px;
+  }
+  .rinoexpertsPlans__hidePlans {
+    display: none;
+  }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 991px) and (min-width: 768px) {
+  .rinoexpertsPlans__title {
+    padding: 0px 50px;
+  }
+
+  .rinoexpertsPlans__hidePlans {
+    display: none;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1199px) and (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px){
+
 }

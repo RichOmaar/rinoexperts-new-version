@@ -8,9 +8,13 @@ import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Narvbar";
 import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
+
 import Servicios from "./pages/services/Servicios";
 import Otoplastia from "./pages/services/Otoplastia";
 import Rinoplastia from "./pages/services/Rinoplastia";
+import Blefaroplastia from "./pages/services/Blefaroplastia";
+import Bichectomia from "./pages/services/Bichectomia";
+
 import Presentation from "./pages/Presentation";
 import PersonalData from "./pages/PersonalData";
 import MedicalRecord from "./pages/MedicalRecord";
@@ -28,8 +32,6 @@ import NewImageForm from "./pages/NewImageForm";
 import PersonalDataProposal from "./pages/PersonalDataProposal";
 import MedicalRecordProposal from "./pages/MedicalRecordProposal";
 import CrisalixReceipt from "./pages/CrisalixReceipt";
-import Blefaroplastia from "./pages/services/Blefaroplastia";
-import Bichectomia from "./pages/services/Bichectomia";
 
 function App() {
   return (

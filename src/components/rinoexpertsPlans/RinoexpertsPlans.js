@@ -7,7 +7,7 @@ import BlackButton from "../blackButton/BlackButton";
 const RinoexpertsPlans = () => {
   return (
     <div className="container-fluid black-background rinoexpertsPlans">
-      <div className="container py-5">
+      <div className="container">
         <div className="text-center rinoexpertsPlans__title">
           <h2>PLANES RINOEXPERTS</h2>
           <p>
@@ -16,9 +16,9 @@ const RinoexpertsPlans = () => {
             físicas y, sobretodo, psicológicas.
           </p>
         </div>
-        <div className="row my-5">
-            <div className="col-2"></div>
-          <div className="col-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-sx-12 align-self-center">
+        <div className="row">
+          <div className="col-2 rinoexpertsPlans__hidePlans p-0"></div>
+          <div className="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-sx-12 align-self-center rinoexpertsPlans__displayedPlans p-0">
             <h3 className="text-center">Básico</h3>
             <ul className="rinoexpertsPlans__ul">
               <li>
@@ -54,8 +54,8 @@ const RinoexpertsPlans = () => {
             {/* <div classname="d-flex justify-content-center">
                     </div> */}
           </div>
-          <div className="col-2"></div>
-          <div className="col-3 col-xl-3 col-lg-3 col-md-12 col-sm-12 col-sx-12 rinoexpertsPlans__bestSeller p-0">
+          <div className="col-2 rinoexpertsPlans__hidePlans p-0"></div>
+          <div className="col-12 col-xl-3 col-lg-3 col-md-6 col-sm-12 col-sx-12 rinoexpertsPlans__bestSeller p-0 rinoexpertsPlans__displayedPlans p-0">
             <div className="rinoexpertsPlans__bestSeller-title text-center">
               <span>MÁS VENDIDO</span>
             </div>
@@ -136,7 +136,7 @@ const RinoexpertsPlans = () => {
               <BlackButton url={"/"} text={"Agendar ahora"} />
             </div>
           </div>
-          <div className="col-2"></div>
+          <div className="col-2 rinoexpertsPlans__hidePlans p-0"></div>
         </div>
       </div>
     </div>

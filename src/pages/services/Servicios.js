@@ -6,7 +6,6 @@ import Simulator from "../../components/simulator/Simulator";
 
 import { FiPlus } from "react-icons/fi";
 
-import { Link } from "react-router-dom";
 import BlackButton from "../../components/blackButton/BlackButton";
 
 const Servicios = () => {
@@ -58,7 +57,7 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseOne"
-                class="accordion-collapse collapse show"
+                class="accordion-collapse collapse"
                 aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample"
               >
@@ -400,7 +399,7 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseOne"
-                class="accordion-collapse collapse show"
+                class="accordion-collapse collapse"
                 aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample"
               >

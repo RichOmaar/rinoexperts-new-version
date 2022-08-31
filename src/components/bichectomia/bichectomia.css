@@ -1,11 +1,11 @@
 .bichectomia__ul {
-    list-style: none;
+  list-style: none;
 }
 
 .bichectomia__ul svg {
-    color: var(--green-color);
+  color: var(--green-color);
 }
 
 .bichectomia__img {
-    width: 400px;
+  width: 400px;
 }
