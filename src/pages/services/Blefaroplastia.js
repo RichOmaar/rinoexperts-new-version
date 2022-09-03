@@ -67,88 +67,101 @@ const Blefaroplastia = () => {
         </div>
       </div>
       <Simulator />
-      <RinoexpertsPlans />
-      {/* <div className="container">
-        <div className="text-center industries__medium">
-          <h2 className="title-light green-strong-text-color">INDUSTRIAS</h2>
+      <div className="container">
+        <RinoexpertsPlans />
+      </div>
+      <div className="py-4">
+        <div className="blefaroplastia">
+          <h2 className="title-light green-strong-text-color text-center">
+            DETALLES DEL PROCEDIMIENTO
+          </h2>
           <div className="my-4 row d-flex align-items-center">
-            <div className="col-6 industries__card" data-aos="fade-up">
+            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 blefaroplastia__card" data-aos="fade-up">
               <img
-                src="https://via.placeholder.com/720"
+                src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
-            <div className="col-6 px-3" data-aos="fade-up">
-              <h3>Agricultura</h3>
+            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
+              <h3>Antes del procedimiento</h3>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Pretium fusce id velit ut tortor pretium viverra suspendisse
-                potenti. Interdum velit laoreet id donec ultrices tincidunt arcu
-                non sodales.
+                La blefaroplastia se suele realizar de forma ambulatoria. Es
+                posible que te den medicamentos, tales como inyecciones en los
+                párpados para entumecerlos y medicamentos por vía intravenosa
+                para ayudar a relajarte.
               </p>
             </div>
-            <div className="col-6 px-3" data-aos="fade-up">
-              <h3>Tratamiento de aguas</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Pretium fusce id velit ut tortor pretium viverra suspendisse
-                potenti. Interdum velit laoreet id donec ultrices tincidunt arcu
-                non sodales.
-              </p>
-            </div>
-            <div className="col-6 industries__card" data-aos="fade-up">
+            <div className="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 blefaroplastia__card blefaroplastia__card--specialAlignmentTop" data-aos="fade-up">
               <img
-                src="https://via.placeholder.com/720"
+                src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
-            <div className="col-6 industries__card" data-aos="fade-up">
+            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
+              <h3>Durante el procedimiento</h3>
+              <p>
+                En los párpados superiores, el cirujano corta a lo largo del
+                pliegue del párpado. Retira algunos excesos de piel, músculo y
+                posiblemente grasa, y después cierra el corte.
+              </p>
+              <p>
+                En el párpado inferior, el cirujano hace un corte justo debajo
+                de las pestañas en el pliegue natural del ojo o dentro del
+                párpado inferior. Luego, retira o redistribuye el exceso de
+                grasa, músculo y piel flácida, y después cierra el corte.
+              </p>
+              <p>
+                Si tu párpado superior cae cerca de la pupila, el cirujano puede
+                hacer una blefaroplastia combinada con un procedimiento
+                denominado ptosis palpebral. La ptosis palpebral está diseñada
+                para levantar el párpado y retirar el exceso de piel.
+              </p>
+            </div>
+            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 blefaroplastia__card blefaroplastia__card--specialAlignmentBottom" data-aos="fade-up">
               <img
-                src="https://via.placeholder.com/720"
+                src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
-            <div className="col-6 px-3" data-aos="fade-up">
-              <h3>Hotelería</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Pretium fusce id velit ut tortor pretium viverra suspendisse
-                potenti. Interdum velit laoreet id donec ultrices tincidunt arcu
-                non sodales.
-              </p>
-            </div>
-            <div className="col-6 px-3" data-aos="fade-up">
-              <h3>Energía</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Pretium fusce id velit ut tortor pretium viverra suspendisse
-                potenti. Interdum velit laoreet id donec ultrices tincidunt arcu
-                non sodales.
-              </p>
-            </div>
-            <div className="col-6 industries__card" data-aos="fade-up">
+            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 blefaroplastia__card" data-aos="fade-up">
               <img
-                src="https://via.placeholder.com/720"
+                src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
+            </div>
+            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
+              <h3>Después del procedimiento</h3>
+              <p>
+                Después de la cirugía, pasarás un tiempo en la sala de
+                recuperación, donde los miembros del personal te controlarán por
+                si surge alguna complicación. Se te dará el alta más tarde el
+                mismo día para que puedas recuperarte en tu hogar.
+              </p>
+              <p>
+                Después de la cirugía, podrías tener por un tiempo:
+              </p>
+              <ul>
+                <li>Visión borrosa debido al ungüento lubricante que se te aplicó en los ojos</li>
+                <li>Ojos llorosos</li>
+                <li>Sensibilidad a la luz</li>
+                <li>Visión doble</li>
+                <li>Párpados entumecidos, hinchados </li>
+                <li>Hinchazón y moretones similares a tener un "ojo negro"</li>
+                <li>Dolor o molestia</li>
+              </ul>
             </div>
             <div
               className="d-flex justify-content-center mt-4"
-              data-aos="fade-up"
             >
-              <BlackButton text={"Ver más"} url={"/"} />
+              <BlackButton text={"Agendar ahora"} url={"/"} />
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
