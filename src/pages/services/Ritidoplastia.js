@@ -73,7 +73,7 @@ const Ritidoplastia = () => {
             DETALLES DEL PROCEDIMIENTO
           </h2>
           <div className="my-4 row d-flex align-items-center">
-            <div
+            {/* <div
               className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card"
               data-aos="fade-up"
             >
@@ -94,7 +94,7 @@ const Ritidoplastia = () => {
                 párpados para entumecerlos y medicamentos por vía intravenosa
                 para ayudar a relajarte.
               </p>
-            </div>
+            </div> */}
             <div
               className="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 globalService__card globalService__card--specialAlignmentTop"
               data-aos="fade-up"
@@ -111,22 +111,27 @@ const Ritidoplastia = () => {
             >
               <h3>Durante el procedimiento</h3>
               <p>
-                En los párpados superiores, el cirujano corta a lo largo del
-                pliegue del párpado. Retira algunos excesos de piel, músculo y
-                posiblemente grasa, y después cierra el corte.
+                Las técnicas de la ritidoplastia frontal varían dependiendo de
+                los resultados que deseas. La técnica específica que el médico
+                elija determinará la zona de las incisiones y las cicatrices que
+                resulten de ellas.
               </p>
               <p>
-                En el párpado inferior, el cirujano hace un corte justo debajo
-                de las pestañas en el pliegue natural del ojo o dentro del
-                párpado inferior. Luego, retira o redistribuye el exceso de
-                grasa, músculo y piel flácida, y después cierra el corte.
+                Es posible que el médico utilice una de las siguientes técnicas:
               </p>
-              <p>
-                Si tu párpado superior cae cerca de la pupila, el cirujano puede
-                hacer una blefaroplastia combinada con un procedimiento
-                denominado ptosis palpebral. La ptosis palpebral está diseñada
-                para levantar el párpado y retirar el exceso de piel.
-              </p>
+              <ul className="globalService__ul">
+                <li>
+                  <FaArrowAltCircleRight /> Ritidoplastia frontal por
+                  endoscopia.
+                </li>
+                <li>
+                  <FaArrowAltCircleRight /> Ritidoplastia frontal coronal.
+                </li>
+                <li>
+                  <FaArrowAltCircleRight /> Ritidoplastia frontal en la línea de
+                  nacimiento del cabello.
+                </li>
+              </ul>
             </div>
             <div
               className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card globalService__card--specialAlignmentBottom"
@@ -154,24 +159,19 @@ const Ritidoplastia = () => {
             >
               <h3>Después del procedimiento</h3>
               <p>
-                Después de la cirugía, pasarás un tiempo en la sala de
-                recuperación, donde los miembros del personal te controlarán por
-                si surge alguna complicación. Se te dará el alta más tarde el
-                mismo día para que puedas recuperarte en tu hogar.
+                Después de una ritidoplastia frontal, podrían envolverte
+                holgadamente la cabeza para minimizar la hinchazón. Es posible
+                que te coloquen un pequeño tubo en el lugar de la incisión para
+                drenar cualquier exceso de sangre o líquido.
               </p>
-              <p>Después de la cirugía, podrías tener por un tiempo:</p>
-              <ul>
-                <li>
-                  Visión borrosa debido al ungüento lubricante que se te aplicó
-                  en los ojos
-                </li>
-                <li>Ojos llorosos</li>
-                <li>Sensibilidad a la luz</li>
-                <li>Visión doble</li>
-                <li>Párpados entumecidos, hinchados </li>
-                <li>Hinchazón y moretones similares a tener un "ojo negro"</li>
-                <li>Dolor o molestia</li>
-              </ul>
+              <p>
+                A medida que cicatricen las incisiones, podrías presentar
+                picazón y entumecimiento, que probablemente disminuirán con el
+                tiempo. Si las incisiones están cubiertas con vendas, es
+                probable que el médico las retire en uno a tres días. Por lo
+                general, las suturas se retirarán entre siete y 10 días después
+                de la cirugía.
+              </p>
             </div>
             <div className="d-flex justify-content-center mt-4">
               <BlackButton text={"Agendar ahora"} url={"/"} />

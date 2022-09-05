@@ -35,6 +35,7 @@ import CrisalixReceipt from "./pages/CrisalixReceipt";
 import Pomuloplastia from "./pages/services/Pomuloplastia";
 import Ritidectomia from "./pages/services/Ritidectomia";
 import Ritidoplastia from "./pages/services/Ritidoplastia";
+import Mentoplastia from "./pages/services/Mentoplastia";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
         <Route path="/servicios/pomuloplastia" element={<Pomuloplastia />} />
         <Route path="/servicios/estiramiento-facial" element={<Ritidectomia />} />
         <Route path="/servicios/levantamiento-cejas" element={<Ritidoplastia />} />
+        <Route path="/servicios/mentoplastia" element={<Mentoplastia />} />
         
         <Route path="/presentacion" element={<Presentation />} />
         <Route path="/informacion-personal" element={<PersonalData />} />

@@ -1,20 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "../../components/globalServices/globalServices.css";
 
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 import BlackButton from "../../components/blackButton/BlackButton";
-import Procedure from "../../assets/img/servicios/blefaroplastia/blefaroplastia.png";
+import Procedure from "../../assets/img/servicios/mentoplastia/mentoplastia.png";
 import RinoexpertsBenefits from "../../components/rinoexpertsBenefits/RinoexpertsBenefits";
 import Simulator from "../../components/simulator/Simulator";
 import RinoexpertsPlans from "../../components/rinoexpertsPlans/RinoexpertsPlans";
 
-const Blefaroplastia = () => {
-  
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
+const Mentoplastia = () => {
   return (
     <div className="container-fluid globalService black-background text-white-color p-0">
       <div className="container py-4">
@@ -22,20 +17,24 @@ const Blefaroplastia = () => {
           <div className="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
             <img
               src={Procedure}
-              alt="Blefaroplastia"
+              alt="Ritidoplastia"
               className="img-fluid globalService__img"
             />
           </div>
           <div className="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="text-center">
-              <h1>Blefaroplastia</h1>
+              <h1>Mentoplastia</h1>
               <p>
-                La blefaroplastia es un tipo de cirugía que extirpa el exceso de
-                piel de los párpados. A medida que envejeces, los párpados se
-                estiran y los músculos que los sostienen se debilitan. En
-                consecuencia, se puede acumular un exceso de grasa arriba y
-                abajo de los párpados. Esto provoca cejas flácidas, párpados
-                superiores caídos y bolsas debajo de los ojos.
+                Es una cirugía para reformar o mejorar el tamaño de la barbilla.
+                Se puede realizar ya sea insertando un implante o moviendo o
+                reformando los huesos de la mandíbula.
+              </p>
+              <p>
+                El aumento del mentón se realiza principalmente para equilibrar
+                la apariencia de la cara, haciendo el mentón más largo o más
+                grande comparado con la nariz. Los mejores candidatos para el
+                aumento del mentón son las personas con barbillas pequeñas o
+                retraídas (microgenia).
               </p>
             </div>
             <div className="row mt-4">
@@ -77,14 +76,20 @@ const Blefaroplastia = () => {
             DETALLES DEL PROCEDIMIENTO
           </h2>
           <div className="my-4 row d-flex align-items-center">
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card" data-aos="fade-up">
+            {/* <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card"
+              data-aos="fade-up"
+            >
               <img
                 src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5"
+              data-aos="fade-up"
+            >
               <h3>Antes del procedimiento</h3>
               <p>
                 La blefaroplastia se suele realizar de forma ambulatoria. Es
@@ -92,72 +97,86 @@ const Blefaroplastia = () => {
                 párpados para entumecerlos y medicamentos por vía intravenosa
                 para ayudar a relajarte.
               </p>
-            </div>
-            <div className="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 globalService__card globalService__card--specialAlignmentTop" data-aos="fade-up">
+            </div> */}
+            <div
+              className="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 globalService__card globalService__card--specialAlignmentTop"
+              data-aos="fade-up"
+            >
               <img
                 src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
-            </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
-              <h3>Durante el procedimiento</h3>
-              <p>
-                En los párpados superiores, el cirujano corta a lo largo del
-                pliegue del párpado. Retira algunos excesos de piel, músculo y
-                posiblemente grasa, y después cierra el corte.
-              </p>
-              <p>
-                En el párpado inferior, el cirujano hace un corte justo debajo
-                de las pestañas en el pliegue natural del ojo o dentro del
-                párpado inferior. Luego, retira o redistribuye el exceso de
-                grasa, músculo y piel flácida, y después cierra el corte.
-              </p>
-              <p>
-                Si tu párpado superior cae cerca de la pupila, el cirujano puede
-                hacer una blefaroplastia combinada con un procedimiento
-                denominado ptosis palpebral. La ptosis palpebral está diseñada
-                para levantar el párpado y retirar el exceso de piel.
-              </p>
-            </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card globalService__card--specialAlignmentBottom" data-aos="fade-up">
-              <img
-                src="https://via.placeholder.com/720x360"
-                alt="Agricultura"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card" data-aos="fade-up">
-              <img
-                src="https://via.placeholder.com/720x360"
-                alt="Agricultura"
-                className="img-fluid"
-              />
-            </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
-              <h3>Después del procedimiento</h3>
-              <p>
-                Después de la cirugía, pasarás un tiempo en la sala de
-                recuperación, donde los miembros del personal te controlarán por
-                si surge alguna complicación. Se te dará el alta más tarde el
-                mismo día para que puedas recuperarte en tu hogar.
-              </p>
-              <p>
-                Después de la cirugía, podrías tener por un tiempo:
-              </p>
-              <ul>
-                <li>Visión borrosa debido al ungüento lubricante que se te aplicó en los ojos</li>
-                <li>Ojos llorosos</li>
-                <li>Sensibilidad a la luz</li>
-                <li>Visión doble</li>
-                <li>Párpados entumecidos, hinchados </li>
-                <li>Hinchazón y moretones similares a tener un "ojo negro"</li>
-                <li>Dolor o molestia</li>
-              </ul>
             </div>
             <div
-              className="d-flex justify-content-center mt-4"
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5"
+              data-aos="fade-up"
             >
+              <h3>Durante el procedimiento</h3>
+              <p>
+                La cirugía se puede llevar a cabo en el consultorio del
+                cirujano, en un hospital o en un centro médico de atención
+                ambulatoria. Es probable que a usted le tomen radiografías de la
+                cara y el mentón. El cirujano las utilizará para determinar qué
+                parte del mentón se va a operar.
+              </p>
+              {/* <p>
+                Es posible que el médico utilice una de las siguientes técnicas:
+              </p>
+              <ul className="globalService__ul">
+                <li>
+                  <FaArrowAltCircleRight /> Ritidoplastia frontal por
+                  endoscopia.
+                </li>
+                <li>
+                  <FaArrowAltCircleRight /> Ritidoplastia frontal coronal.
+                </li>
+                <li>
+                  <FaArrowAltCircleRight /> Ritidoplastia frontal en la línea de
+                  nacimiento del cabello.
+                </li>
+              </ul> */}
+            </div>
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card globalService__card--specialAlignmentBottom"
+              data-aos="fade-up"
+            >
+              <img
+                src="https://via.placeholder.com/720x360"
+                alt="Agricultura"
+                className="img-fluid"
+              />
+            </div>
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card"
+              data-aos="fade-up"
+            >
+              <img
+                src="https://via.placeholder.com/720x360"
+                alt="Agricultura"
+                className="img-fluid"
+              />
+            </div>
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5"
+              data-aos="fade-up"
+            >
+              <h3>Después del procedimiento</h3>
+              <p>
+                Puede sentir algo de entumecimiento en el mentón hasta por 3
+                meses y una sensación de estiramiento alrededor de la barbilla
+                durante 1 semana. La mayor parte de la hinchazón habrá
+                desaparecido hacia las 6 semanas, según el tipo de procedimiento
+                que haya tenido.
+              </p>
+              <p>
+                Probablemente se retirará el vendaje externo al cabo de una
+                semana después de la cirugía. Le solicitaremos igualmente que
+                lleve puesto un dispositivo ortopédico mientras esté durmiendo
+                durante 4 a 6 semanas.
+              </p>
+            </div>
+            <div className="d-flex justify-content-center mt-4">
               <BlackButton text={"Agendar ahora"} url={"/"} />
             </div>
           </div>
@@ -167,4 +186,4 @@ const Blefaroplastia = () => {
   );
 };
 
-export default Blefaroplastia;
+export default Mentoplastia;
