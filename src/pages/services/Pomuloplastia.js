@@ -4,16 +4,15 @@ import "../../components/globalServices/globalServices.css";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
 import BlackButton from "../../components/blackButton/BlackButton";
-import Procedure from "../../assets/img/servicios/blefaroplastia/blefaroplastia.png";
+import Procedure from "../../assets/img/servicios/pomuloplastia/pomuloplastia.png";
 import RinoexpertsBenefits from "../../components/rinoexpertsBenefits/RinoexpertsBenefits";
 import Simulator from "../../components/simulator/Simulator";
 import RinoexpertsPlans from "../../components/rinoexpertsPlans/RinoexpertsPlans";
 
-const Blefaroplastia = () => {
+const Pomuloplastia = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <div className="container-fluid globalService black-background text-white-color p-0">
       <div className="container py-4">
@@ -21,20 +20,18 @@ const Blefaroplastia = () => {
           <div className="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 text-center">
             <img
               src={Procedure}
-              alt="Blefaroplastia"
+              alt="Pomuloplastia"
               className="img-fluid globalService__img"
             />
           </div>
           <div className="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12">
             <div className="text-center">
-              <h1>Blefaroplastia</h1>
+              <h1>Pomuloplastia</h1>
               <p>
-                La blefaroplastia es un tipo de cirugía que extirpa el exceso de
-                piel de los párpados. A medida que envejeces, los párpados se
-                estiran y los músculos que los sostienen se debilitan. En
-                consecuencia, se puede acumular un exceso de grasa arriba y
-                abajo de los párpados. Esto provoca cejas flácidas, párpados
-                superiores caídos y bolsas debajo de los ojos.
+              El aumento de pómulos es capaz de darle un giro de 180 grados al aspecto de un rostro, dejándolo con una imagen más fresca, rejuvenecida y firme.
+              </p>
+              <p>
+              Cuando te sometes a un aumento de pómulos consigues un rejuvenecimiento muy significativo de tu rostro. Pues se recupera mucha firmeza al tensar la piel que ha perdido elasticidad y volumen con el paso de los años.
               </p>
             </div>
             <div className="row mt-4">
@@ -70,20 +67,26 @@ const Blefaroplastia = () => {
       <div className="container">
         <RinoexpertsPlans />
       </div>
-      <div className="py-4">
+      {/* <div className="py-4">
         <div className="globalService">
           <h2 className="title-light green-strong-text-color text-center">
             DETALLES DEL PROCEDIMIENTO
           </h2>
           <div className="my-4 row d-flex align-items-center">
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card" data-aos="fade-up">
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card"
+              data-aos="fade-up"
+            >
               <img
                 src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5"
+              data-aos="fade-up"
+            >
               <h3>Antes del procedimiento</h3>
               <p>
                 La blefaroplastia se suele realizar de forma ambulatoria. Es
@@ -92,14 +95,20 @@ const Blefaroplastia = () => {
                 para ayudar a relajarte.
               </p>
             </div>
-            <div className="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 globalService__card globalService__card--specialAlignmentTop" data-aos="fade-up">
+            <div
+              className="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 globalService__card globalService__card--specialAlignmentTop"
+              data-aos="fade-up"
+            >
               <img
                 src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5"
+              data-aos="fade-up"
+            >
               <h3>Durante el procedimiento</h3>
               <p>
                 En los párpados superiores, el cirujano corta a lo largo del
@@ -119,21 +128,30 @@ const Blefaroplastia = () => {
                 para levantar el párpado y retirar el exceso de piel.
               </p>
             </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card globalService__card--specialAlignmentBottom" data-aos="fade-up">
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card globalService__card--specialAlignmentBottom"
+              data-aos="fade-up"
+            >
               <img
                 src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card" data-aos="fade-up">
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card"
+              data-aos="fade-up"
+            >
               <img
                 src="https://via.placeholder.com/720x360"
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
-            <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5" data-aos="fade-up">
+            <div
+              className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 px-3 my-5"
+              data-aos="fade-up"
+            >
               <h3>Después del procedimiento</h3>
               <p>
                 Después de la cirugía, pasarás un tiempo en la sala de
@@ -141,11 +159,12 @@ const Blefaroplastia = () => {
                 si surge alguna complicación. Se te dará el alta más tarde el
                 mismo día para que puedas recuperarte en tu hogar.
               </p>
-              <p>
-                Después de la cirugía, podrías tener por un tiempo:
-              </p>
+              <p>Después de la cirugía, podrías tener por un tiempo:</p>
               <ul>
-                <li>Visión borrosa debido al ungüento lubricante que se te aplicó en los ojos</li>
+                <li>
+                  Visión borrosa debido al ungüento lubricante que se te aplicó
+                  en los ojos
+                </li>
                 <li>Ojos llorosos</li>
                 <li>Sensibilidad a la luz</li>
                 <li>Visión doble</li>
@@ -154,16 +173,14 @@ const Blefaroplastia = () => {
                 <li>Dolor o molestia</li>
               </ul>
             </div>
-            <div
-              className="d-flex justify-content-center mt-4"
-            >
+            <div className="d-flex justify-content-center mt-4">
               <BlackButton text={"Agendar ahora"} url={"/"} />
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };
 
-export default Blefaroplastia;
+export default Pomuloplastia;

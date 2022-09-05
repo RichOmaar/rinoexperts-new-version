@@ -32,6 +32,9 @@ import NewImageForm from "./pages/NewImageForm";
 import PersonalDataProposal from "./pages/PersonalDataProposal";
 import MedicalRecordProposal from "./pages/MedicalRecordProposal";
 import CrisalixReceipt from "./pages/CrisalixReceipt";
+import Pomuloplastia from "./pages/services/Pomuloplastia";
+import Ritidectomia from "./pages/services/Ritidectomia";
+import Ritidoplastia from "./pages/services/Ritidoplastia";
 
 function App() {
   return (
@@ -46,6 +49,9 @@ function App() {
         <Route path="/servicios/rinoplastia" element={<Rinoplastia />} />
         <Route path="/servicios/blefaroplastia" element={<Blefaroplastia />} />
         <Route path="/servicios/bichectomia" element={<Bichectomia />} />
+        <Route path="/servicios/pomuloplastia" element={<Pomuloplastia />} />
+        <Route path="/servicios/estiramiento-facial" element={<Ritidectomia />} />
+        <Route path="/servicios/levantamiento-cejas" element={<Ritidoplastia />} />
         
         <Route path="/presentacion" element={<Presentation />} />
         <Route path="/informacion-personal" element={<PersonalData />} />
