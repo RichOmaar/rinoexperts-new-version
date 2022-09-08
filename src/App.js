@@ -36,6 +36,9 @@ import Pomuloplastia from "./pages/services/Pomuloplastia";
 import Ritidectomia from "./pages/services/Ritidectomia";
 import Ritidoplastia from "./pages/services/Ritidoplastia";
 import Mentoplastia from "./pages/services/Mentoplastia";
+import Lipopapada from "./pages/services/Lipopapada";
+import LiftLabios from "./pages/services/LiftLabios";
+import LiftCuello from "./pages/services/LiftCuello";
 
 function App() {
   return (
@@ -54,6 +57,9 @@ function App() {
         <Route path="/servicios/estiramiento-facial" element={<Ritidectomia />} />
         <Route path="/servicios/levantamiento-cejas" element={<Ritidoplastia />} />
         <Route path="/servicios/mentoplastia" element={<Mentoplastia />} />
+        <Route path="/servicios/lipopapada" element={<Lipopapada />} />
+        <Route path="/servicios/lifting-labios" element={<LiftLabios />} />
+        <Route path="/servicios/lifting-cuello" element={<LiftCuello />} />
         
         <Route path="/presentacion" element={<Presentation />} />
         <Route path="/informacion-personal" element={<PersonalData />} />

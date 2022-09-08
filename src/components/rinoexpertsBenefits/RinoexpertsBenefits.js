@@ -1,10 +1,10 @@
 import React from "react";
 import "./rinoexpertsBenefits.css";
 
-import Model3d from "../../assets/icons/3d-modeling.svg";
-import MedicalEq from "../../assets/icons/equipo-medico.svg";
-import MedicalInform from "../../assets/icons/informe-medico.svg";
-import Machine from "../../assets/icons/machine.svg";
+import Model3d from "../../assets/icons/3d-modeling.png";
+import MedicalEq from "../../assets/icons/equipo-medico.png";
+import MedicalInform from "../../assets/icons/informe-medico.png";
+import Machine from "../../assets/icons/machine.png";
 
 // import OwlCarousel from "react-owl-carousel";
 
