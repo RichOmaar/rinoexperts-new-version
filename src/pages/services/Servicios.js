@@ -168,7 +168,7 @@ const Servicios = () => {
                     Conforme el individuo envejece, la piel, la grasa y los músculos faciales, que se encuentran fijos a los huesos de la cara a través de ligamentos, tienden a descender por efecto de la gravedad debido a una disminución en el tono de los mismos.
                   </p>
                   <div className="text-center py-3">
-                    <BlackButton text={'VER MÁS'} url={'/servicios/blefaroplastia'} />
+                    <BlackButton text={'VER MÁS'} url={'/servicios/estiramiento-facial'} />
                   </div>
                 </div>
               </div>
@@ -201,7 +201,7 @@ const Servicios = () => {
                     Se puede realizar solo la ritidoplastia frontal o junto con otros procedimientos para el rostro, como una cirugía de párpado (ritidoplastia de párpado) o un estiramiento facial.
                   </p>
                   <div className="text-center py-3">
-                    <BlackButton text={'VER MÁS'} url={'/servicios/levantamiento-de-cejas'} />
+                    <BlackButton text={'VER MÁS'} url={'/servicios/levantamiento-cejas'} />
                   </div>
                 </div>
               </div>
@@ -342,7 +342,7 @@ const Servicios = () => {
                   Consiste en acortar la longitud vertical del labio superior y elevar el labio subnasal mediante la eliminación de tejido. Adicionalmente, la paciente puede potenciar el arco de Cupido.
                   </p>
                   <div className="text-center py-3">
-                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-de-labios'} />
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-labios'} />
                   </div>
                 </div>
               </div>
@@ -372,7 +372,7 @@ const Servicios = () => {
                   El estiramiento de cuello es un procedimiento estético que elimina el exceso de piel y grasa alrededor de la línea de la mandíbula para crear un cuello más definido y con aspecto más joven. Los resultados pueden ser a largo plazo, pero la cirugía de estiramiento de cuello no puede detener el proceso de envejecimiento.
                   </p>
                   <div className="text-center py-3">
-                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-de-cuello'} />
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-cuello'} />
                   </div>
                 </div>
               </div>
@@ -510,7 +510,7 @@ const Servicios = () => {
                     Conforme el individuo envejece, la piel, la grasa y los músculos faciales, que se encuentran fijos a los huesos de la cara a través de ligamentos, tienden a descender por efecto de la gravedad debido a una disminución en el tono de los mismos.
                   </p>
                   <div className="text-center py-3">
-                    <BlackButton text={'VER MÁS'} url={'/servicios/blefaroplastia'} />
+                    <BlackButton text={'VER MÁS'} url={'/servicios/estiramiento-facial'} />
                   </div>
                 </div>
               </div>
@@ -543,7 +543,7 @@ const Servicios = () => {
                     Se puede realizar solo la ritidoplastia frontal o junto con otros procedimientos para el rostro, como una cirugía de párpado (ritidoplastia de párpado) o un estiramiento facial.
                   </p>
                   <div className="text-center py-3">
-                    <BlackButton text={'VER MÁS'} url={'/servicios/levantamiento-de-cejas'} />
+                    <BlackButton text={'VER MÁS'} url={'/servicios/levantamiento-cejas'} />
                   </div>
                 </div>
               </div>
@@ -687,7 +687,7 @@ const Servicios = () => {
                   Consiste en acortar la longitud vertical del labio superior y elevar el labio subnasal mediante la eliminación de tejido. Adicionalmente, la paciente puede potenciar el arco de Cupido.
                   </p>
                   <div className="text-center py-3">
-                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-de-labios'} />
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-labios'} />
                   </div>
                 </div>
               </div>
@@ -717,7 +717,7 @@ const Servicios = () => {
                   El estiramiento de cuello es un procedimiento estético que elimina el exceso de piel y grasa alrededor de la línea de la mandíbula para crear un cuello más definido y con aspecto más joven. Los resultados pueden ser a largo plazo, pero la cirugía de estiramiento de cuello no puede detener el proceso de envejecimiento.
                   </p>
                   <div className="text-center py-3">
-                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-de-cuello'} />
+                    <BlackButton text={'VER MÁS'} url={'/servicios/lift-cuello'} />
                   </div>
                 </div>
               </div>

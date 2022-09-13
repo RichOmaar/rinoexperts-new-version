@@ -8,6 +8,9 @@ import Procedure from "../../assets/img/servicios/blefaroplastia/blefaroplastia.
 import RinoexpertsBenefits from "../../components/rinoexpertsBenefits/RinoexpertsBenefits";
 import Simulator from "../../components/simulator/Simulator";
 import RinoexpertsPlans from "../../components/rinoexpertsPlans/RinoexpertsPlans";
+import Before from '../../assets/icons/before.png';
+import During from "../../assets/icons/during.png";
+import After from "../../assets/icons/after.png";
 
 const Blefaroplastia = () => {
   
@@ -79,7 +82,7 @@ const Blefaroplastia = () => {
           <div className="my-4 row d-flex align-items-center">
             <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card" data-aos="fade-up">
               <img
-                src="https://via.placeholder.com/720x360"
+                src={Before}
                 alt="Agricultura"
                 className="img-fluid"
               />
@@ -95,7 +98,7 @@ const Blefaroplastia = () => {
             </div>
             <div className="col-12 col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xl-12 globalService__card globalService__card--specialAlignmentTop" data-aos="fade-up">
               <img
-                src="https://via.placeholder.com/720x360"
+                src={During}
                 alt="Agricultura"
                 className="img-fluid"
               />
@@ -122,14 +125,14 @@ const Blefaroplastia = () => {
             </div>
             <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card globalService__card--specialAlignmentBottom" data-aos="fade-up">
               <img
-                src="https://via.placeholder.com/720x360"
+                src={During}
                 alt="Agricultura"
                 className="img-fluid"
               />
             </div>
             <div className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xl-6 globalService__card" data-aos="fade-up">
               <img
-                src="https://via.placeholder.com/720x360"
+                src={After}
                 alt="Agricultura"
                 className="img-fluid"
               />

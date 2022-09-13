@@ -78,10 +78,12 @@ const CrisalixProcess = () => {
             </div>
           </div>
         </div>
-        <BlackButton
-          url={"/formulario-nueva-imagen"}
-          text={"Ir al formulario"}
-        />
+        <div className="pb-5">
+          <BlackButton
+            url={"/formulario-nueva-imagen"}
+            text={"Ir al formulario"}
+          />
+        </div>
       </div>
     </div>
   );

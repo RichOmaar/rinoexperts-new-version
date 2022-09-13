@@ -49,7 +49,6 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Servicios />} />
 
-        <Route path="/servicios/otoplastia" element={<Otoplastia />} />
         <Route path="/servicios/rinoplastia" element={<Rinoplastia />} />
         <Route path="/servicios/blefaroplastia" element={<Blefaroplastia />} />
         <Route path="/servicios/bichectomia" element={<Bichectomia />} />

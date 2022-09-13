@@ -8,6 +8,9 @@ import Procedure from "../../assets/img/servicios/liftingLabios/liftingLabios.pn
 import RinoexpertsBenefits from "../../components/rinoexpertsBenefits/RinoexpertsBenefits";
 import Simulator from "../../components/simulator/Simulator";
 import RinoexpertsPlans from "../../components/rinoexpertsPlans/RinoexpertsPlans";
+import Before from '../../assets/icons/before.png';
+import During from "../../assets/icons/during.png";
+import After from "../../assets/icons/after.png";
 
 const LiftLabios = () => {
   return (
@@ -80,7 +83,7 @@ const LiftLabios = () => {
               data-aos="fade-up"
             >
               <img
-                src="https://via.placeholder.com/720x360"
+                src={Before}
                 alt="Agricultura"
                 className="img-fluid"
               />
@@ -100,7 +103,7 @@ const LiftLabios = () => {
               data-aos="fade-up"
             >
               <img
-                src="https://via.placeholder.com/720x360"
+                src={During}
                 alt="Agricultura"
                 className="img-fluid"
               />
@@ -133,7 +136,7 @@ const LiftLabios = () => {
               data-aos="fade-up"
             >
               <img
-                src="https://via.placeholder.com/720x360"
+                src={During}
                 alt="Agricultura"
                 className="img-fluid"
               />
@@ -143,7 +146,7 @@ const LiftLabios = () => {
               data-aos="fade-up"
             >
               <img
-                src="https://via.placeholder.com/720x360"
+                src={After}
                 alt="Agricultura"
                 className="img-fluid"
               />
