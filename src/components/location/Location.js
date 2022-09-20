@@ -3,7 +3,7 @@ import "./location.css";
 
 const Location = () => {
   return (
-    <div className="container visit-us-main-container text-white-color mt-4">
+    <div className="container visit-us-main-container text-white-color mt-4" data-aos="fade-up">
       <div className="row">
         <div className="col-4 col-xl-4 col-lg-4 col-md-12 col-sm-12 visit-us-container">
           <h3 className="font-bold">Visítanos</h3>

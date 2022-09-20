@@ -39,6 +39,7 @@ import Mentoplastia from "./pages/services/Mentoplastia";
 import Lipopapada from "./pages/services/Lipopapada";
 import LiftLabios from "./pages/services/LiftLabios";
 import LiftCuello from "./pages/services/LiftCuello";
+import AboutUs from "./pages/AboutUs";
 
 function App() {
   return (
@@ -77,6 +78,8 @@ function App() {
         <Route path="/informacion-personal-previsualizacion" element={<PersonalDataProposal />} />
         <Route path="/historial-medico-previsualizacion" element={<MedicalRecordProposal />} />
         <Route path="/registro-exitoso" element={<CrisalixReceipt />} />
+        <Route path="/rinoexperts" element={<AboutUs />} />
+        
       </Routes>
 
       <Footer />

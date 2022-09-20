@@ -1,0 +1,117 @@
+.aboutUs__hr {
+    width: 85%;
+    margin: auto;
+}
+
+.aboutUs__quote {
+    padding: 0px 250px;
+}
+
+.aboutUs__results--numbers {
+    font-size: 66px;
+    font-weight: 700;
+}
+
+.aboutUs__questions {
+    background-color: var(--green-primary);
+}
+
+.aboutUs__questions .aboutUs__paddingContent {
+    margin: 50px 0px;
+}
+
+.aboutUs__questions--title {
+    font-size: 45px;
+}
+
+.aboutUs__icon {
+    padding: 0px 50px;
+}
+
+.aboutUs a {
+    color: var(--green-tertiary);
+}
+
+.aboutUs__paddingContent {
+    padding: 0px 50px!important;
+}
+
+.aboutUs__contact {
+    display: flex;
+}
+
+.aboutUs__contact p {
+    margin: 0px 35px;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) {
+    .aboutUs__paddingContent {
+        padding: 0px!important;
+    }
+    .aboutUs__paddingContent--partTitle {
+        display: none;
+    }
+    .aboutUs__quote {
+        padding: 0px 10px;
+    }
+    .aboutUs__results--numbers {
+        font-size: 40px;
+        font-weight: 700;
+    }
+    .aboutUs__contact {
+        display: block;
+        text-align: center;
+    }
+    
+    .aboutUs__contact p {
+        margin: 0px 8px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 767px) and (min-width: 576px) {
+    .aboutUs__paddingContent--fullTitle {
+        display: none;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 991px) and (min-width: 768px) {
+    .aboutUs__quote {
+        padding: 0px 80px;
+    }
+
+    .aboutUs__icon {
+        width: 75%;
+        padding: 0px;
+    }
+    .aboutUs__paddingContent {
+        padding: 0px!important;
+    }
+    .aboutUs__paddingContent--fullTitle {
+        display: none;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1199px) and (min-width: 992px) {
+    .aboutUs__quote {
+        padding: 0px 180px;
+    }
+    .aboutUs__paddingContent {
+        padding: 0px!important;
+    }
+    .aboutUs__paddingContent--fullTitle {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .aboutUs__quote {
+        padding: 0px 200px;
+    }
+    .aboutUs__paddingContent--fullTitle {
+        display: none;
+    }
+}
