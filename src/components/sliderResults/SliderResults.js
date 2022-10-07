@@ -17,153 +17,129 @@ const SliderResults = () => {
   const state= {
       responsive:{
           0: {
-              items: 2,
+              items: 1,
           },
           576: {
-              items: 3,
+              items: 1,
           },
           768: {
-              items: 3,
+              items: 1,
           },
           992: {
-              items: 5,
+              items: 1,
           },
           1200: {
-              items: 5,
+              items: 2,
           },
       },
   }
 
   return (
-    <div className="slider-result-container">
-        <h2 className="d-block text-white-color text-center py-4">Nuestros pacientes</h2>
-        
-        <OwlCarousel
-          className="owl-theme"
-          items="5"
-          margin={18}
-          autoplay={true}
-          loop
-          dots={true}
-          animateIn={true}
-          responsive={state.responsive}
-          center={true}
-          // navText={[
-          //     '<div className="carruselInfoMaterial_arrowIcon1"><i className="fa fa-angle-left"></i></div>',
-          //     '<div className="carruselInfoMaterial_arrowIcon2"><i className="fa fa-angle-right"></i></div>'
-          // ]}
-          //
-        >
-          <div className="item">
-            <div className="row">
-              <div className="col-4">
-                <img alt="img1" src={Review1} />
-              </div>
-              <div className="col-8">
-                <h4>Itzel Estrella</h4>
-                <p>México</p>
-              </div>
-              <div className="col-12 review-content">
-                <p className="font-regular"><em>"Gracias, son los mejores. Si me cambiaron cañon"</em></p>
-                <small className="font-light">28/04/2022</small>
+    <div className="slider-result-container py-5">
+      <div className="row">
+        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
+          <h2 className="d-block text-white-color text-center py-4">Nuestros pacientes</h2>
+        </div>
+        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 px-5 slider-result-container__imgBack text-white-color">
+          <OwlCarousel
+            className="owl-theme"
+            items="3"
+            margin={18}
+            autoplay={true}
+            loop
+            // dots={true}
+            animateIn={true}
+            responsive={state.responsive}
+            center={true}
+          >
+            <div className="item__green">
+              <div className="row">
+                <div className="col-4">
+                  <img alt="img1" src={Review1} />
+                </div>
+                <div className="col-8">
+                  <h4>Itzel Estrella</h4>
+                  <p>México</p>
+                </div>
+                <div className="col-12 review-content">
+                  <p className="font-regular"><em>"Gracias, son los mejores. Si me cambiaron cañon"</em></p>
+                  <small className="font-light">28/04/2022</small>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="item">
-            <div className="row">
-              <div className="col-4">
-                <img alt="img1" src={Review2} />
-              </div>
-              <div className="col-8">
-                <h4>Ele Ross</h4>
-                <p>México</p>
-              </div>
-              <div className="col-12 review-content">
-                <p className="font-regular"><em>"@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi nariz"</em></p>
-                <small className="font-light">30/05/2022</small>
+            <div className="item__green">
+              <div className="row">
+                <div className="col-4">
+                  <img alt="img1" src={Review2} />
+                </div>
+                <div className="col-8">
+                  <h4>Ele Ross</h4>
+                  <p>México</p>
+                </div>
+                <div className="col-12 review-content">
+                  <p className="font-regular"><em>"@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi nariz"</em></p>
+                  <small className="font-light">30/05/2022</small>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="item">
-            <div className="row">
-              <div className="col-4">
-                <img alt="img1" src={Review3} />
-              </div>
-              <div className="col-8">
-                <h4>Belem</h4>
-                <p>México</p>
-              </div>
-              <div className="col-12 review-content">
-                <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
-                <small className="font-light">08/06/2022</small>
+            <div className="item__green">
+              <div className="row">
+                <div className="col-4">
+                  <img alt="img1" src={Review3} />
+                </div>
+                <div className="col-8">
+                  <h4>Belem</h4>
+                  <p>México</p>
+                </div>
+                <div className="col-12 review-content">
+                  <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
+                  <small className="font-light">08/06/2022</small>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="item">
-            <div className="row">
-              <div className="col-4">
-                <img alt="img1" src={Review4} />
-              </div>
-              <div className="col-8">
-                <h4>Belem</h4>
-                <p>México</p>
-              </div>
-              <div className="col-12 review-content">
-                <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
-                <small className="font-light">08/06/2022</small>
+            <div className="item__green">
+              <div className="row">
+                <div className="col-4">
+                  <img alt="img1" src={Review4} />
+                </div>
+                <div className="col-8">
+                  <h4>Belem</h4>
+                  <p>México</p>
+                </div>
+                <div className="col-12 review-content">
+                  <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
+                  <small className="font-light">08/06/2022</small>
+                </div>
               </div>
             </div>
-          </div>
 
-          <div className="item">
-            <div className="row">
-              <div className="col-4">
-                <img alt="img1" src={Review5} />
-              </div>
-              <div className="col-8">
-                <h4>Belem</h4>
-                <p>México</p>
-              </div>
-              <div className="col-12 review-content">
-                <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
-                <small className="font-light">08/06/2022</small>
-              </div>
-            </div>
-          </div>
-          {/* <div className="item">
-            <div className="row">
-              <div className="col-12">
-                <img alt="img2" src={Result2} />
-              </div>
-              <div className="col-12 py-3 px-4">
-                <h3>Ele Ross</h3>
-                <p>México</p>
-                <h5>@rinoexperts me hizo mi rinoplastia!!! Corran con él, amo mi nariz</h5>
+            <div className="item__green">
+              <div className="row">
+                <div className="col-4">
+                  <img alt="img1" src={Review5} />
+                </div>
+                <div className="col-8">
+                  <h4>Belem</h4>
+                  <p>México</p>
+                </div>
+                <div className="col-12 review-content">
+                  <p className="font-regular"><em>"Se ve súper diferente, me gustó mil"</em></p>
+                  <small className="font-light">08/06/2022</small>
+                </div>
               </div>
             </div>
-          </div>
-          
-          <div className="item">
-            <div className="row">
-              <div className="col-12">
-                <img alt="img3" src={Result3} />
-              </div>
-              <div className="col-12 text-white-color py-3 px-4">
-                <h3>Belem</h3>
-                <p>México</p>
-                <h5>Se ve súper diferente, me gustó mil</h5>
-              </div>
-            </div>
-          </div> */}
-          {/* {imagenesMaterial.map(mat => (
-                        <div key={mat.id_imagenProducto} className="item">
-                            <img className="carruselInfoMaterial_img" src={mat.ruta} alt="ImagenProducto" />
-                        </div>
-                    ))} */}
-        </OwlCarousel>
+            
+            {/* {imagenesMaterial.map(mat => (
+                          <div key={mat.id_imagenProducto} className="item">
+                              <img className="carruselInfoMaterial_img" src={mat.ruta} alt="ImagenProducto" />
+                          </div>
+                      ))} */}
+          </OwlCarousel>
+        </div>
+      </div>
     </div>
   );
 };
