@@ -47,10 +47,13 @@ const Narvbar = () => {
         <div className="collapse navbar-collapse justify-content-end mx-3" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item">
-              <Link to="/" className="nav-link active" aria-current="page" href="#">Inicio</Link>
+              <Link to="/" className="nav-link active" aria-current="page">Inicio</Link>
             </li>
-            <li class="nav-item">
-              <Link to="/servicios" className="nav-link" href="#">Servicios</Link>
+            <li className="nav-item">
+              <Link to="/servicios" className="nav-link">Servicios</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/rinoexperts" className="nav-link">Nosotros</Link>
             </li>
             <li className="nav-item">
               <Link to="preguntas-frecuentes" className="nav-link">FAQ</Link>

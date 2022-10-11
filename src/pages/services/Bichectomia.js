@@ -43,7 +43,7 @@ const Bichectomia = () => {
             </div>
             <div className="row mt-4">
               <div className="col-6">
-                <ul className="specificService__ul p-0">
+                <ul className="globalService__ul p-0">
                   <li>
                     <FaArrowAltCircleRight className="mx-2" />
                     Resultados permanentes
@@ -63,7 +63,8 @@ const Bichectomia = () => {
                 </ul>
               </div>
               <div className="col-6 align-self-center text-center">
-                <BlackButton url={"/"} text={"Agendar cita"} />
+                {/* <BlackButton url={"/"} text={"Agendar cita"}/> */}
+                <a href="https://wa.me/+5215532118512?text=Hola,%20deseo%20agendar%20una%20cita" className="blackButton">AGENDAR CITA</a>
               </div>
             </div>
           </div>

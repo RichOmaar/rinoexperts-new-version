@@ -197,7 +197,7 @@ const Appointment = () => {
                         <h4 className="font-regular mt-4 d-block">Foto frontal</h4>
                         <p className="mt-3 text-gray-color font-light">Debes mantenerte de frente en donde se aprecie tu rostro.</p>
 
-                        <img src={`${config.urlApi}assets/images/noseType/nose-1.png`} className="adapt-user-image" id="photo-appoinment-1" width="250" height="250" alt="nose-1"/>
+                        <img src={`${config.urlApi}assets/images/noseType/nose-1.jpg`} className="adapt-user-image" id="photo-appoinment-1" width="250" height="250" alt="nose-1"/>
 
                         <div className="input-group mb-3 mt-3">
                             <input htmlFor="userImagesForm" type="file" onChange={(e) => previewImage(e, 'photo-appoinment-1')} className="form-control" id="inputGroupFile01" />
@@ -206,7 +206,7 @@ const Appointment = () => {
                         <h4 className="font-regular mt-4">Foto de perfil</h4>
                         <p className="mt-3 text-gray-color font-light">Gira el rostro en donde se aprecie la parte izquierda o derecha.</p>
 
-                        <img src={`${config.urlApi}assets/images/noseType/nose-2.png`} className="adapt-user-image" id="photo-appoinment-2" width="250" height="250" alt="nose-2"/>
+                        <img src={`${config.urlApi}assets/images/noseType/nose-2.jpg`} className="adapt-user-image" id="photo-appoinment-2" width="250" height="250" alt="nose-2"/>
 
                         <div className="input-group mb-3 mt-3">
                             <input htmlFor="userImagesForm" type="file" onChange={(e) => previewImage(e, 'photo-appoinment-2')} className="form-control" id="inputGroupFile01" />
@@ -215,7 +215,7 @@ const Appointment = () => {
                         <h4 className="font-regular mt-4">Foto frontal</h4>
                         <p className="mt-3 text-gray-color font-light">Debe inclinar hacia arriba el rostro en donde puedan verse las fosas nasales.</p>
 
-                        <img src={`${config.urlApi}assets/images/noseType/nose-3.png`} className="adapt-user-image" id="photo-appoinment-3" width="250" height="250" alt="nose-3"/>
+                        <img src={`${config.urlApi}assets/images/noseType/nose-3.jpg`} className="adapt-user-image" id="photo-appoinment-3" width="250" height="250" alt="nose-3"/>
 
                         <div className="col-2 input-group  mt-3">
                             <input htmlFor="userImagesForm" type="file" onChange={(e) => previewImage(e, 'photo-appoinment-3')} className="form-control" id="inputGroupFile01" />

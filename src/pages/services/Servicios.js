@@ -41,11 +41,11 @@ const Servicios = () => {
         </div>
         {/* Moviles */}
         <div className="col-12 text-white-color font-bold text-center top-services-tittle hide-not-mobile py-3">
-          <div class="accordion" id="accordionExample">
-          <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
+          <div className="accordion" id="accordionExample">
+          <div className="accordion-item">
+              <h2 className="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -57,11 +57,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseOne"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La rinoplastia es la cirugía que modifica la forma de la
                     nariz, y es uno de los procedimientos quirúrgicos más
@@ -78,10 +78,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTwo">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
@@ -93,11 +93,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseTwo"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La cirugía estética de pómulos ( o pomuloplastia), consiste en el aumento de pómulos, mediante la introducción de material sintético (silicona sólida, Gore-tex, etc…)o con osteotomías, con la inyeccion de grasa propia, o con la extraer la grasa bucal o bola de Bichat, lo cual ocasiona un descenso de la mejilla y, por lo tanto, una acentuación del pómulo.
                   </p>
@@ -108,10 +108,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingThree">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseThree"
@@ -123,11 +123,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseThree"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La blefaroplastia, o cirugía de ojeras, es un procedimiento
                     quirúrgico destinado a corregir los defectos de los
@@ -141,10 +141,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingFour">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFour"
@@ -156,11 +156,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseFour"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingFour"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     Es un procedimiento quirúrgico para mejorar los signos visibles de envejecimiento de la cara y el cuello.
                     <br />
@@ -174,10 +174,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingFive">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFive"
@@ -189,11 +189,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseFive"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingFive"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La ritidoplastia frontal levanta tejido blando y la piel de la frente y el ceño, y mejora la apariencia de estos y de la zona alrededor de los ojos.
                     <br />
@@ -207,10 +207,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingSix">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSix"
@@ -222,11 +222,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseSix"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingSix"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     Es una cirugía en donde se hace una incisión aproximadamente
                     de 1 cm por dentro de la boca, se busca el tejido graso
@@ -241,10 +241,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSeven">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingSeven">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSeven"
@@ -256,11 +256,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseSeven"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingSeven"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La mentoplastia, aumento del mentón o genioplastia es una
                     intervención quirúrgica que tiene como objetivo modificar el
@@ -285,10 +285,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingEight">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingEight">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseEight"
@@ -300,11 +300,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseEight"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingEight"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La liposucción de papada es la operación de cirugía estética
                     facial elegida para la reducción de papada y consiste en
@@ -318,10 +318,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingNine">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingNine">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseNine"
@@ -333,11 +333,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseNine"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingNine"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                   Consiste en acortar la longitud vertical del labio superior y elevar el labio subnasal mediante la eliminación de tejido. Adicionalmente, la paciente puede potenciar el arco de Cupido.
                   </p>
@@ -348,10 +348,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTen">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTen">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTen"
@@ -363,11 +363,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseTen"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingTen"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                   El estiramiento de cuello es un procedimiento estético que elimina el exceso de piel y grasa alrededor de la línea de la mandíbula para crear un cuello más definido y con aspecto más joven. Los resultados pueden ser a largo plazo, pero la cirugía de estiramiento de cuello no puede detener el proceso de envejecimiento.
                   </p>
@@ -383,11 +383,11 @@ const Servicios = () => {
         {/* Desktop */}
         <div className="col-1 col-xl-1 col-lg-1 col-md-0 hide-on-mobile"></div>
         <div className="col-5 col-xl-5 col-lg-5 col-md-6 text-white-color font-bold text-center top-services-tittle hide-on-mobile py-3">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
+          <div className="accordion" id="accordionExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingOne">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseOne"
@@ -399,11 +399,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseOne"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingOne"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La rinoplastia es la cirugía que modifica la forma de la
                     nariz, y es uno de los procedimientos quirúrgicos más
@@ -420,10 +420,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTwo">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTwo"
@@ -435,11 +435,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseTwo"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingTwo"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La cirugía estética de pómulos ( o pomuloplastia), consiste en el aumento de pómulos, mediante la introducción de material sintético (silicona sólida, Gore-tex, etc…)o con osteotomías, con la inyeccion de grasa propia, o con la extraer la grasa bucal o bola de Bichat, lo cual ocasiona un descenso de la mejilla y, por lo tanto, una acentuación del pómulo.
                   </p>
@@ -450,10 +450,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingThree">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingThree">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseThree"
@@ -465,11 +465,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseThree"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingThree"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La blefaroplastia, o cirugía de ojeras, es un procedimiento
                     quirúrgico destinado a corregir los defectos de los
@@ -483,10 +483,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFour">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingFour">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFour"
@@ -498,11 +498,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseFour"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingFour"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     Es un procedimiento quirúrgico para mejorar los signos visibles de envejecimiento de la cara y el cuello.
                     <br />
@@ -516,10 +516,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingFive">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingFive">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseFive"
@@ -531,11 +531,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseFive"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingFive"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La ritidoplastia frontal levanta tejido blando y la piel de la frente y el ceño, y mejora la apariencia de estos y de la zona alrededor de los ojos.
                     <br />
@@ -551,11 +551,11 @@ const Servicios = () => {
           </div>
         </div>
         <div className="col-5 col-xl-5 col-lg-5 col-md-6 text-white-color font-bold text-center top-services-tittle hide-on-mobile py-3">
-          <div class="accordion" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSix">
+          <div className="accordion" id="accordionExample">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingSix">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSix"
@@ -567,11 +567,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseSix"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingSix"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     Es una cirugía en donde se hace una incisión aproximadamente
                     de 1 cm por dentro de la boca, se busca el tejido graso
@@ -586,10 +586,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingSeven">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingSeven">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseSeven"
@@ -601,11 +601,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseSeven"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingSeven"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La mentoplastia, aumento del mentón o genioplastia es una
                     intervención quirúrgica que tiene como objetivo modificar el
@@ -630,10 +630,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingEight">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingEight">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseEight"
@@ -645,11 +645,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseEight"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingEight"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                     La liposucción de papada es la operación de cirugía estética
                     facial elegida para la reducción de papada y consiste en
@@ -663,10 +663,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingNine">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingNine">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseNine"
@@ -678,11 +678,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseNine"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingNine"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                   Consiste en acortar la longitud vertical del labio superior y elevar el labio subnasal mediante la eliminación de tejido. Adicionalmente, la paciente puede potenciar el arco de Cupido.
                   </p>
@@ -693,10 +693,10 @@ const Servicios = () => {
               </div>
             </div>
 
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTen">
+            <div className="accordion-item">
+              <h2 className="accordion-header" id="headingTen">
                 <button
-                  class="accordion-button collapsed"
+                  className="accordion-button collapsed"
                   type="button"
                   data-bs-toggle="collapse"
                   data-bs-target="#collapseTen"
@@ -708,11 +708,11 @@ const Servicios = () => {
               </h2>
               <div
                 id="collapseTen"
-                class="accordion-collapse collapse"
+                className="accordion-collapse collapse"
                 aria-labelledby="headingTen"
                 data-bs-parent="#accordionExample"
               >
-                <div class="accordion-body text-start">
+                <div className="accordion-body text-start">
                   <p className="font-regular">
                   El estiramiento de cuello es un procedimiento estético que elimina el exceso de piel y grasa alrededor de la línea de la mandíbula para crear un cuello más definido y con aspecto más joven. Los resultados pueden ser a largo plazo, pero la cirugía de estiramiento de cuello no puede detener el proceso de envejecimiento.
                   </p>

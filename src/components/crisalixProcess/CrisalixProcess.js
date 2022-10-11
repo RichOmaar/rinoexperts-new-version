@@ -11,16 +11,16 @@ const CrisalixProcess = () => {
   return (
     <div className="container-fluid black-background">
       <div className="container text-white-color">
-        <div class="stepper d-flex flex-column pt-5 pb-4">
-          <div class="d-flex mb-1">
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="process-circle py-2 px-3 mb-1">1</div>
-              <div class="line h-100"></div>
+        <div className="stepper d-flex flex-column pt-5 pb-4">
+          <div className="d-flex mb-1">
+            <div className="d-flex flex-column pr-4 align-items-center">
+              <div className="process-circle py-2 px-3 mb-1">1</div>
+              <div className="line h-100"></div>
             </div>
             <div className="row">
               <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 px-4">
-                <h5 class="">Registra tus datos</h5>
-                <p class="lead text-muted pb-3 responsive-widh">
+                <h5 className="">Registra tus datos</h5>
+                <p className="lead text-muted pb-3 responsive-widh">
                   Completa un sencillo formulario que nos servirá para conocerte
                   y conocer tus necesidades.
                 </p>
@@ -34,15 +34,15 @@ const CrisalixProcess = () => {
               </div>
             </div>
           </div>
-          <div class="d-flex mb-1">
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="process-circle py-2 px-3 mb-1">2</div>
-              <div class="line h-100"></div>
+          <div className="d-flex mb-1">
+            <div className="d-flex flex-column pr-4 align-items-center">
+              <div className="process-circle py-2 px-3 mb-1">2</div>
+              <div className="line h-100"></div>
             </div>
             <div className="row">
               <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 px-4">
-                <h5 class="">Comparte 3 fotos</h5>
-                <p class="lead text-muted pb-3">
+                <h5 className="">Comparte 3 fotos</h5>
+                <p className="lead text-muted pb-3">
                   Tómate 3 fotos en diferentes ángulos. En el formulario
                   encontrarás más información sobre la posición de las fotos.
                 </p>
@@ -56,14 +56,14 @@ const CrisalixProcess = () => {
               </div>
             </div>
           </div>
-          <div class="d-flex mb-1">
-            <div class="d-flex flex-column pr-4 align-items-center">
-              <div class="process-circle py-2 px-3 mb-1">3</div>
+          <div className="d-flex mb-1">
+            <div className="d-flex flex-column pr-4 align-items-center">
+              <div className="process-circle py-2 px-3 mb-1">3</div>
             </div>
             <div className="row">
               <div className="col-xl-9 col-lg-9 col-md-9 col-sm-12 col-xs-12 px-4">
-                <h5 class="">Visualiza los resultados</h5>
-                <p class="lead text-muted pb-3">
+                <h5 className="">Visualiza los resultados</h5>
+                <p className="lead text-muted pb-3">
                   Te mostraremos la opción perfecta para tí con base en tus
                   datos proporcionados y el diseño de nuestros expertos.
                 </p>

@@ -4,7 +4,7 @@
   background: transparent;
   border: none;
   position: relative;
-  color: var(--white-color);
+  color: var(--white-color)!important;
   z-index: 1;
 }
 

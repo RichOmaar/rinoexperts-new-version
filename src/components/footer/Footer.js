@@ -16,14 +16,14 @@ const Footer = () => {
                 <div className="row">
                     <div className="col-xl-3 col-lg-3 col-md-6 col-sm-12 rinoexperts-info">
                         <img src={RinoexpertsLogo} className="img-fluid" alt="Rinoexperts Logo" />
-                        <p className="short-text">Lorem ipsum is dolor sit amet, csectetur adipiscing elit, dolore smod tempor incididunt ut labore et.</p>
+                        <p className="short-text">Cirugía de nariz, rostro y cuello. Rinoplastia estética, funcional, reparadora y revisional.</p>
                         <div className="row">
                             <div className="col-2 d-flex align-items-center justify-content-start">
                                 <ImWhatsapp className="whatsapp-icon"/>
                             </div>
                             <div className="col-10 contact-us-footer">
                                 <h3 className="p-0 m-0">Contáctanos</h3>
-                                <a href="tel:5534080969"><p className="m-0">+525512436587</p></a>
+                                <a href="https://wa.me/+5215532118512?text=Hola%2C%20deseo%20conocer%20m%C3%A1s%20acerca%20de%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F">+52 (55) 1243 6587</a>
                             </div>
                         </div>
                     </div>
@@ -31,13 +31,13 @@ const Footer = () => {
                         <h3 className="font-bold">Enlaces rápidos</h3>
                         <ul className="quick-links p-0">
                             <li>
-                                <Link to='/'><span>Nosotros</span></Link>
+                                <Link to='/rinoexperts'><span>Nosotros</span></Link>
                             </li>
                             <li>
                                 <Link to='/servicios'><span>Servicios</span></Link>
                             </li>
                             <li>
-                                <Link to='/'><span>Citas</span></Link>
+                                <a href="https://wa.me/+5215532118512?text=Hola%2C%20deseo%20conocer%20m%C3%A1s%20acerca%20de%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F">Citas</a>
                             </li>
                             <li>
                                 <Link to='/equipo'><span>Equipo</span></Link>
@@ -51,10 +51,10 @@ const Footer = () => {
                                 <Link to='/servicios/rinoplastia'><span>Rinoplastia</span></Link>
                             </li>
                             <li>
-                                <Link to='/'><span>Bichectomia</span></Link>
+                                <Link to='/servicios/bichectomia'><span>Bichectomia</span></Link>
                             </li>
                             <li>
-                                <Link to='/'><span>Mentoplastia</span></Link>
+                                <Link to='/servicios/mentoplastia'><span>Mentoplastia</span></Link>
                             </li>
                             <li>
                                 <Link to='/servicios'><span>Ver más</span></Link>

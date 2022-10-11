@@ -7,6 +7,7 @@ import Location from "../components/location/Location";
 
 const AboutUs = () => {
   useEffect(() => {
+    window.scrollTo(0,0);
     const obj1 = document.getElementById("valueClients");
     animateValue(obj1, 0, 10, 1200);
     const obj2 = document.getElementById("valueCoverage");
@@ -180,11 +181,7 @@ const AboutUs = () => {
                 ayudarte.
               </p>
               <div className="mt-5 aboutUs__contact" data-aos="fade-up">
-                <BlackButton text={"Contáctanos"} url={"/contacto"} />
-                <p className="mb-0 mt-3">
-                  O envíanos un WhatsApp al{" "}
-                  <a href="tel:5534080960">+525512436587</a>
-                </p>
+                <a href="https://wa.me/+5215532118512?text=Hola%2C%20deseo%20conocer%20m%C3%A1s%20acerca%20de%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" className="blackButton">Contáctanos</a>
               </div>
             </div>
             <div className="col-12 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-xs-12 order-0 order-xl-1 order-lg-1 order-md-0 order-sm-0 order-xs-0 align-self-center text-center aboutUs__paddingContent">

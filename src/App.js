@@ -74,10 +74,12 @@ function App() {
         <Route path="/preguntas-frecuentes" element={<FAQ />} />
         <Route path="/top-faqs" element={<TopFAQ />} />
         <Route path="/contacto" element={<ContactUs />} />
+        {/* Formulario apra previsualización de crisalix */}
         <Route path="/formulario-nueva-imagen" element={<NewImageForm />} />
         <Route path="/informacion-personal-previsualizacion" element={<PersonalDataProposal />} />
         <Route path="/historial-medico-previsualizacion" element={<MedicalRecordProposal />} />
         <Route path="/registro-exitoso" element={<CrisalixReceipt />} />
+        {/* Formulario apra previsualización de crisalix */}
         <Route path="/rinoexperts" element={<AboutUs />} />
         
       </Routes>

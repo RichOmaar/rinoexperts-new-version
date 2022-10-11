@@ -50,7 +50,8 @@ const RinoexpertsPlans = () => {
                 Rehabilitación.
               </li>
             </ul>
-            <LightButton url={"/"} text={"Agendar ahora"} />
+            {/* <LightButton url={"/"} text={"Agendar ahora"} /> */}
+            <a href="https://wa.me/+5215532118512?text=Hola,%20deseo%20agendar%20una%20cita" className="blackButton">AGENDAR CITA</a>
             {/* <div classname="d-flex justify-content-center">
                     </div> */}
           </div>
@@ -133,7 +134,8 @@ const RinoexpertsPlans = () => {
                   Pulido de rostro..
                 </li>
               </ul>
-              <BlackButton url={"/"} text={"Agendar ahora"} />
+              {/* <BlackButton url={"/"} text={"Agendar ahora"} /> */}
+              <a href="https://wa.me/+5215532118512?text=Hola,%20deseo%20agendar%20una%20cita" className="blackButton">AGENDAR CITA</a>
             </div>
           </div>
           <div className="col-2 rinoexpertsPlans__hidePlans p-0"></div>

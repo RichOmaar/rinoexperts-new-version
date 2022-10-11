@@ -15,9 +15,9 @@ const Location = () => {
             </p>
             <h4 className="fs-5">Horario</h4>
             <p>Lunes a Sábado de 9:00 AM a 18:00 PM</p>
-            <h4 className="fs-5">Teléfono</h4>
+            <h4 className="fs-5">WhatsApp</h4>
             <p>
-              <a href="tel:5543360298">+52 (55) 4336 0298</a>
+              <a href="https://wa.me/+5215532118512?text=Hola%2C%20deseo%20conocer%20m%C3%A1s%20acerca%20de%20sus%20servicios.%20%C2%BFMe%20pueden%20ayudar%3F" className="blackButton">+52 (55) 3211 8512</a>
             </p>
           </div>
         </div>

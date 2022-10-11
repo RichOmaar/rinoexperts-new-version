@@ -29,7 +29,8 @@ const MainVideo = () => {
               Cirugía de nariz, rostro y cuello. Rinoplastia estética,
               funcional, reparadora y revisional
             </p>
-            <BlackButton url={'/'} text={'AGENDAR CITA'} />
+            {/* <BlackButton url={'/'} text={'AGENDAR CITA'}/> */}
+            <a href="https://wa.me/+5215532118512?text=Hola,%20deseo%20agendar%20una%20cita" className="blackButton">AGENDAR CITA</a>
           </div>
         </div>
       </div>
