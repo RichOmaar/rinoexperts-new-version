@@ -49,7 +49,7 @@ const PurchaseDetails = () => {
     const checkoutOptions = {
         lineItems: [item],
         mode: 'payment',
-        successUrl: `${window.location.origin}/resumen?session_id={CHECKOUT_SESSION_ID}`,
+        successUrl: `${window.location.origin}/resumen-compra?session_id={CHECKOUT_SESSION_ID}`,
         cancelUrl: `${window.location.origin}/cancel`,
     }
 
@@ -88,7 +88,7 @@ const PurchaseDetails = () => {
         window.scrollTo(0, 0);
         // verifySurgery(id_user);
         verifyAppointments(id_user);
-
+        
         // const script = document.createElement("script");
 
         // script.src = "https://polyfill.io/v3/polyfill.min.js?version=3.52.1&features=fetch";
@@ -142,7 +142,7 @@ const PurchaseDetails = () => {
             if(_respuesta.response === 'success'){
                 setUserDataAppointments(_respuesta.data);
             }
-            console.log(userDataAppointments);
+            console.log(_respuesta);
 
         })
         .catch((error) => {
@@ -341,8 +341,7 @@ const PurchaseDetails = () => {
                         </div>
                     </div>
                     <div className="col-12 text-center mb-4">
-                        <button type="button" className="presentation-next-button font-regular mt-3"></button>
-                        {/* <button type="button" onClick={ redirectToCheckout } disabled={ isLoading } className="presentation-next-button font-regular mt-3">{ isLoading ? "Cargando..." : "Pagar ahora"} <FaLongArrowAltRight /></button> */}
+                        <button type="button" onClick={ redirectToCheckout } disabled={ isLoading } className="presentation-next-button font-regular mt-3">{ isLoading ? "Cargando..." : "Pagar ahora"} <FaLongArrowAltRight /></button>
                     </div>
                 </div>
 

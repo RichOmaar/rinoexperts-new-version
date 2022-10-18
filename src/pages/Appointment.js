@@ -30,7 +30,7 @@ const Appointment = () => {
     const id_user = JSON.parse(localStorage.getItem('id_usuario'));
 
     const form = JSON.parse(localStorage.getItem('form'));
-    
+
     let responseOne = '';
 
     let responseTwo = '';
@@ -162,10 +162,10 @@ const Appointment = () => {
                     })
     
                     setTimeout(() => {
-                        if(!form) {
-                            navigate('/agendar-citas');
-                        } else {
+                        if(form === 'short') {
                             navigate('/registro-exitoso');
+                        } else {
+                            navigate('/agendar-citas');
                         }
                     }, 2000);
                 }

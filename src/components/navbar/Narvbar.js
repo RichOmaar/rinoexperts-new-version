@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect }from "react";
 import "./navbar.css";
 
 import RinoexpertsLogo from '../../assets/img/logo.png';
+import { FaUserAlt } from 'react-icons/fa';
 
 import { Link } from 'react-router-dom';
 
 const Narvbar = () => {
+
   return (
     // <nav className="navbar navbar-expand-lg navbar-light bg-light">
     //   <Link to="/" className="navbar-brand p-3">
@@ -57,6 +59,9 @@ const Narvbar = () => {
             </li>
             <li className="nav-item">
               <Link to="preguntas-frecuentes" className="nav-link">FAQ</Link>
+            </li>
+            <li className="nav-item">
+              <Link to="login-citas" className="nav-link"><FaUserAlt /></Link>
             </li>
           </ul>
         </div>
