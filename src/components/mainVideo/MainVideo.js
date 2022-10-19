@@ -3,7 +3,7 @@ import "./mainVideo.css";
 
 // import BackgroundVideo from '../../assets/video/opcion-1-rinexperts.mp4';
 import BackgroundVideo from '../../assets/video/opcion-2-rinoexperts.mp4';
-import BlackButton from "../blackButton/BlackButton";
+
 
 const MainVideo = () => {
   return (

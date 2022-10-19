@@ -1,4 +1,4 @@
-import React, { useEffect }from "react";
+import React from "react";
 import "./navbar.css";
 
 import RinoexpertsLogo from '../../assets/img/logo.png';
