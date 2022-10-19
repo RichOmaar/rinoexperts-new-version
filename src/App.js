@@ -10,7 +10,6 @@ import Home from "./pages/Home";
 import Footer from "./components/footer/Footer";
 
 import Servicios from "./pages/services/Servicios";
-import Otoplastia from "./pages/services/Otoplastia";
 import Rinoplastia from "./pages/services/Rinoplastia";
 import Blefaroplastia from "./pages/services/Blefaroplastia";
 import Bichectomia from "./pages/services/Bichectomia";
@@ -40,6 +39,10 @@ import Lipopapada from "./pages/services/Lipopapada";
 import LiftLabios from "./pages/services/LiftLabios";
 import LiftCuello from "./pages/services/LiftCuello";
 import AboutUs from "./pages/AboutUs";
+import PurchaseResume from "./pages/PurchaseResume";
+import AddPassword from "./pages/AddPassword";
+import LoginNav from "./pages/LoginNav";
+import UserDashboard from "./pages/UserDashboard";
 
 function App() {
   return (
@@ -69,6 +72,7 @@ function App() {
         <Route path="/agendar-citas" element={<Schedule />} />
         <Route path="/detalles-citas" element={<PurchaseDetails />} />
         <Route path="/resumen-citas" element={<Summary />} />
+        <Route path="/resumen" element={<PurchaseResume />} />
         <Route path="/equipo" element={<Team />} />
         <Route path="/visualizar-imagen" element={<Crisalix />} />
         <Route path="/preguntas-frecuentes" element={<FAQ />} />
@@ -81,6 +85,9 @@ function App() {
         <Route path="/registro-exitoso" element={<CrisalixReceipt />} />
         {/* Formulario apra previsualización de crisalix */}
         <Route path="/rinoexperts" element={<AboutUs />} />
+        <Route path="/completar-perifl" element={<AddPassword />} />
+        <Route path="/login-citas" element={<LoginNav />} />
+        <Route path="/mis-citas" element={<UserDashboard />} />
         
       </Routes>
 

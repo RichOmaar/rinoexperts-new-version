@@ -65,7 +65,7 @@ const Rinoplastia = () => {
                 </ul>
               </div>
               <div className="col-6 align-self-center text-center">
-                <BlackButton url={"/informacion-personal"} text={"Agendar cita"} />
+                <BlackButton url={"/presentacion"} text={"Agendar cita"} />
                 {/* <a href="https://wa.me/+5215532118512?text=Hola,%20deseo%20agendar%20una%20cita" className="blackButton">AGENDAR CITA</a> */}
               </div>
             </div>

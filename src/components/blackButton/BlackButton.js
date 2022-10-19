@@ -4,15 +4,14 @@ import { Link } from 'react-router-dom';
 import Modal from 'react-modal';
 import addUser from '../../services/addUser';
 import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
 
 const BlackButton = ({url,text,modal}) => {
 
   Modal.setAppElement(document.getElementById('appointmentButton'));
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
-  let subtitle;
+  // let subtitle;
 
   const [modalIsOpen, setIsOpen] = useState(false);
   const [userName, setNombre] = useState("");

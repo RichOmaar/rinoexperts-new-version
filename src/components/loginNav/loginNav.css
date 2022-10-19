@@ -1,0 +1,7 @@
+.loginNav__form form label{
+    color: var(--white-color);
+}
+
+.loginNav .loginNav__form .show-password-icon-modal {
+    color: var(--white-color);
+}

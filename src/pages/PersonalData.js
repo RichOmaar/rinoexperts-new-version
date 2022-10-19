@@ -74,6 +74,7 @@ const PersonalData = () => {
    
     function onChangeEmail(e) {
         setEmail(e.target.value);
+
     }
    
     function onChangePhone(e) {
@@ -209,7 +210,7 @@ const PersonalData = () => {
             addUser(formData)
             .then((response) => {
                 let _respuesta = JSON.parse(response);
-                console.log(_respuesta);
+
                 if(_respuesta.response === 'success') {
                     localStorage.setItem("id_usuario",JSON.stringify(_respuesta.idUsuario));
                     localStorage.setItem("nombre",JSON.stringify(userName));
@@ -226,6 +227,12 @@ const PersonalData = () => {
                     setTimeout(() => {
                         navigate('/historial-medico');
                     }, 2000);
+                } else if (_respuesta.response === 'no_password') {
+                    Swal.fire({
+                        title: 'Parece que ya te has registrado',
+                        text: 'Vamos a terminar tu perfil, por favor llena el siguiente formulario',
+                        icon: 'warning'
+                    })
                 }
             })
             .catch((error) => {
