@@ -64,9 +64,8 @@
     border-style: dashed;
     border-width: 2px;
 }
-.alert-icon-details {
-    color: var(--red-color);
-    cursor: pointer;
+.alert-icon-details svg path{
+    color: var(--white-color);
 }
 
 .swal2-styled.swal2-confirm {

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import {Elements} from '@stripe/react-stripe-js';
 import {loadStripe} from '@stripe/stripe-js';
 
-
 import '../components/purchaseDetails/purchaseDetails.css';
 
 // import SurgeryAppointment from '../components/surgeryAppointment/SurgeryAppointment';
@@ -49,8 +48,8 @@ const PurchaseDetails = () => {
     const checkoutOptions = {
         lineItems: [item],
         mode: 'payment',
-        successUrl: `${window.location.origin}/resumen-compra?session_id={CHECKOUT_SESSION_ID}`,
-        cancelUrl: `${window.location.origin}/cancel`,
+        successUrl: `${window.location.origin}/registro-exitoso?session_id={CHECKOUT_SESSION_ID}`,
+        cancelUrl: `${window.location.origin}/cita-canleada`,
     }
 
     const redirectToCheckout = async () => {
@@ -87,7 +86,7 @@ const PurchaseDetails = () => {
     useEffect(() => {
         window.scrollTo(0, 0);
         // verifySurgery(id_user);
-        verifyAppointments(id_user);
+        // verifyAppointments(id_user);
         
         // const script = document.createElement("script");
 
@@ -130,50 +129,50 @@ const PurchaseDetails = () => {
     //     .catch(console.error);
     // }
 
-    function verifyAppointments(id_user) {
+    // function verifyAppointments(id_user) {
 
-        let formData = new FormData();
+    //     let formData = new FormData();
 
-        formData.append('id_usuario', id_user);
+    //     formData.append('id_usuario', id_user);
 
-        getAppointmentDetail(formData)
-        .then((response) => {
-            let _respuesta = JSON.parse(response);
-            if(_respuesta.response === 'success'){
-                setUserDataAppointments(_respuesta.data);
-            }
-            console.log(_respuesta);
+    //     getAppointmentDetail(formData)
+    //     .then((response) => {
+    //         let _respuesta = JSON.parse(response);
+    //         if(_respuesta.response === 'success'){
+    //             setUserDataAppointments(_respuesta.data);
+    //         }
+    //         console.log(_respuesta);
 
-        })
-        .catch((error) => {
-            console.log(error);
+    //     })
+    //     .catch((error) => {
+    //         console.log(error);
             
-        });  
+    //     });  
 
-        // let validateAppoinments = {
-        //     "id_usuario":id_user
-        // }
+    //     // let validateAppoinments = {
+    //     //     "id_usuario":id_user
+    //     // }
 
-        // fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/verifyAppointments.controller.php", {
-        // // fetch("http://localhost:8888/rinoexperts-api/controllers/verifyAppointments.controller.php", {
-        //     method: 'POST',
-        //     headers: {
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify(validateAppoinments)
-        // })
-        // .then(response => response.json())
-        // .then((responseData) => {
-        //     if(responseData !== false){
+    //     // fetch("http://localhost:8888/GitHub/rinoexperts-api/controllers/verifyAppointments.controller.php", {
+    //     // // fetch("http://localhost:8888/rinoexperts-api/controllers/verifyAppointments.controller.php", {
+    //     //     method: 'POST',
+    //     //     headers: {
+    //     //         'Content-Type': 'application/json',
+    //     //     },
+    //     //     body: JSON.stringify(validateAppoinments)
+    //     // })
+    //     // .then(response => response.json())
+    //     // .then((responseData) => {
+    //     //     if(responseData !== false){
 
-        //         // console.log(responseData);
-        //         setUserDataAppointments(responseData);
+    //     //         // console.log(responseData);
+    //     //         setUserDataAppointments(responseData);
                 
-        //     }
-        // })
-        // .catch(console.error);
+    //     //     }
+    //     // })
+    //     // .catch(console.error);
 
-    }
+    // }
 
     const recomendations = (appointmentType) => {
 
@@ -268,8 +267,8 @@ const PurchaseDetails = () => {
     }
 
   return (
-    (!userDataAppointments) ? <div className="container py-4">Por favor recarga la página...</div>
-    :
+    // (!userDataAppointments) ? <div className="container py-4">Por favor recarga la página...</div>
+    // :
     <div className="black-background pt-3 pb-4">
         <div className="container text-white-color">
             <div className="row">
@@ -279,13 +278,14 @@ const PurchaseDetails = () => {
                 <div className="col-12 name-container">
                     <h3><span className="text-aqua-color">{nombre}</span>&nbsp; {apellidos}</h3>
                     <p className="my-3">¡Estás a punto de confirmar tus citas!</p>
+                    <p className="my-3 text-muted"><FiAlertCircle className="alert-icon-details fs-4" style={{ color: 'var(--aqua-color)' }}/> Una vez aprobado el pago nos pondremos en contacto contigo mediante WhatsApp para definir los detalles de las consultas</p>
                 </div>
                 
                 {/* <div className="col-12 py-4 my-sm-0 hidden surgery-appointment-component">
                     <SurgeryAppointment onChange={ verifySurgery(id_user) }/>
                 </div> */}
 
-                <div className="col-12 my-sm-0 my-md-2 my-lg-5 my-xl-5">
+                {/* <div className="col-12 my-sm-0 my-md-2 my-lg-5 my-xl-5">
                     <div className="row d-flex justify-content-evenly py-xs-5 py-sm-5 p-3">
                         {Object.values(userDataAppointments).map(
                             (item) => (
@@ -302,7 +302,7 @@ const PurchaseDetails = () => {
                             )
                         )}
                     </div>
-                </div>
+                </div> */}
 
                 <div className="total-container py-2">
                     <div className="col-12 d-flex py-4">

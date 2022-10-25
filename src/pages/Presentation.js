@@ -34,7 +34,7 @@ const Presentation = () => {
                 <div className="col-12 pt-2">
                     <p className=""><span className="font-semibold text-red-color fs-4">ADVERTENCIA: </span>Al realizar el proceso de la consulta en línea contarás un plazo de siete días para concretar la misma, posterior a esto deberás realizar el cuestionario nuevamente.</p>
                 </div>
-                <InitialModal />
+                {/* <InitialModal /> */}
                 <div className="col-12 text-center">
                     <Link to="/informacion-personal" className="no-text-decoration">
                         <button type="button" className="video-button font-regular mt-3">Continuar</button>

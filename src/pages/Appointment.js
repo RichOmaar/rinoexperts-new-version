@@ -151,6 +151,7 @@ const Appointment = () => {
 
             addUserImage(formData)
             .then(response => {
+                console.log(response);
                 let _respuesta = JSON.parse(response);
 
                 if(_respuesta.response === 'success') {
@@ -165,7 +166,7 @@ const Appointment = () => {
                         if(form === 'short') {
                             navigate('/registro-exitoso');
                         } else {
-                            navigate('/agendar-citas');
+                            navigate('/detalles-citas');
                         }
                     }, 2000);
                 }

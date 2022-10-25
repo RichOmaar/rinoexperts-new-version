@@ -5,6 +5,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 import Location from '../components/location/Location';
 
 import '../components/crisalixReceipt/crisalixReceipt.css';
+import LightButton from '../components/lightButton/LightButton';
 
 const CrisalixReceipt = () => {
   return (
@@ -23,9 +24,12 @@ const CrisalixReceipt = () => {
                     <h2 className="text-white-color font-regular">¡Felicidades!</h2>
                     <p className="text-white-color fs-4 px-2">Estás un paso más cerca de conocer tu nuevo yo</p>
                 </div>
-                <div className="card">
+                <div className="card shadow">
                     <div className="card-body">
-                        <p className="card-text">En un lapso no mayor a 5 días hábiles nos pondremos en contacto vía WhatsApp para enviarte los resultados que nuestros expertos están preprando para ti.</p>
+                        <p className="card-text">En un lapso no mayor a 5 días hábiles nos pondremos en contacto vía WhatsApp para darte seguimiento personalizado.</p>
+                    </div>
+                    <div className="pb-3">
+                        <LightButton url="/" text="Entendido" />
                     </div>
                 </div>
             </section>

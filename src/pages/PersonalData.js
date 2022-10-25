@@ -15,12 +15,13 @@ import { AiOutlineEye } from 'react-icons/ai';
 import { AiOutlineEyeInvisible } from 'react-icons/ai';
 
 import LogoHeader from '../components/logoHeader/LogoHeader';
-
+import getServices from '../services/getAllServices';
 
 const PersonalData = () => {
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        window.scrollTo(0, 0);
+        fetAllServices();
     }, [])
 
     const navigate = useNavigate();
@@ -51,6 +52,10 @@ const PersonalData = () => {
 
     const [passwordShow, setPasswordShow] = useState('password');
 
+    const [procedure, setProcedure] = useState("");
+
+    const [services, setServices] = useState("");
+
     // function getTokenSession() {
     //     const tokenString = sessionStorage.getItem('token');
     //     const userToken = JSON.parse(tokenString);
@@ -75,6 +80,16 @@ const PersonalData = () => {
     function onChangeEmail(e) {
         setEmail(e.target.value);
 
+    }
+
+    function fetAllServices() {
+        getServices().then((response) => {
+          let _respuesta = JSON.parse(response);
+    
+          if (_respuesta.response === "success") {
+            setServices(_respuesta.data);
+          }
+        });
     }
    
     function onChangePhone(e) {
@@ -182,6 +197,11 @@ const PersonalData = () => {
                 icon: 'error',
                 title: 'Por favor selecciona un género',
             })
+        } else if (procedure === "") {
+            Swal.fire({
+              icon: "error",
+              title: "Por favor selecciona el procedimiento en el que estás interesado",
+            });
         } else if (phone.length <= 9) {
             Swal.fire({
                 icon: 'error',
@@ -206,6 +226,7 @@ const PersonalData = () => {
             formData.append('phone', phone);
             formData.append('email', email);
             formData.append('key', key);
+            formData.append("procedure", procedure);
             
             addUser(formData)
             .then((response) => {
@@ -215,6 +236,7 @@ const PersonalData = () => {
                     localStorage.setItem("id_usuario",JSON.stringify(_respuesta.idUsuario));
                     localStorage.setItem("nombre",JSON.stringify(userName));
                     localStorage.setItem("apellidos",JSON.stringify(lastName));
+                    localStorage.setItem("procedimiento",JSON.stringify(procedure));
                     sessionStorage.setItem("token",JSON.stringify(_respuesta.idUsuario));
 
                     Swal.fire({
@@ -247,6 +269,10 @@ const PersonalData = () => {
             })
         }
 
+    }
+
+    function onChangeProcedure(e) {
+        setProcedure(e.target.value);
     }
 
   return (
@@ -304,6 +330,34 @@ const PersonalData = () => {
                         
                         <label className="font-regular form-label pt-2">Colonia:</label>
                         <input id="suburb" type="text" className="form-control-plaintext state" placeholder="Colonia" value={ suburb } onChange={ onChangeSuburb } required/>
+
+                        <label className="font-regular form-label pt-2">
+                            Procedimiento:
+                        </label>
+                        <p className="text-gray-color">
+                            Selecciona el procedimiento que te gustaría realizarte
+                        </p>
+
+                        <select
+                            id="procedure"
+                            className="form-select"
+                            aria-label="Default select example"
+                            value={procedure}
+                            onChange={onChangeProcedure}
+                            required
+                        >
+                            <option defaultValue>Selecciona una opción</option>
+
+                            {!services ? (
+                            <option defaultValue>Cargando...</option>
+                            ) : (
+                            services.map(
+                                (service) => (
+                                <option value={service.id_servicio}>{service.nombre}</option>
+                                )
+                            )
+                            )}
+                        </select>
                         
                         <p className="text-center pt-3">Introduzca una clave de 4 números. Esta clave te permitirá continuar con tu consulta más adelante, es importante que la recuerdes.</p>
 
