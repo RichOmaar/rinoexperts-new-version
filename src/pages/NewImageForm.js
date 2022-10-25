@@ -23,9 +23,9 @@ const NewImageForm = () => {
                 <div className="col-12">
                     <LogoHeader />
                 </div>
-                <div className="col-12">
+                {/* <div className="col-12">
                     <ProgressTop idStep={idStep}/>
-                </div>
+                </div> */}
                 <div className="col-12 pt-2">
                     <p>A través del siguiente formulario y fotografías recibirás una propuesta por parte Rinoexperts.</p>
                     <ul>

@@ -11,6 +11,9 @@ import medicalAnswers from "../services/addMedicalAnswers";
 import LogoHeader from "../components/logoHeader/LogoHeader";
 
 const MedicalRecord = () => {
+
+  let procedimiento = JSON.parse(localStorage.getItem('procedimiento'));
+
   const navigate = useNavigate();
 
   const idStep = ".step-2";
@@ -211,7 +214,7 @@ const MedicalRecord = () => {
           });
 
           setTimeout(() => {
-            navigate("/seleccion-nariz");
+            (procedimiento == 1) ? navigate("/seleccion-nariz") : navigate("/consulta");
           }, 2000);
         }
       })

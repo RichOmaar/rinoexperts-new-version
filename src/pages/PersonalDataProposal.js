@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import "../components/personalDataProposal/personalDataProposal.css";
 
 import ProgressTop from "../components/progressTop/ProgressTop";
-import validatePhone from '../services/validatePhoneNumber';
-import addUser from '../services/addUser';
-import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom';
+import validatePhone from "../services/validatePhoneNumber";
+import addUser from "../services/addUser";
+import Swal from "sweetalert2";
+import { useNavigate } from "react-router-dom";
+import getServices from "../services/getAllServices";
 
 const PersonalDataProposal = () => {
-
   const idStep = ".step-1";
 
   const navigate = useNavigate();
@@ -23,8 +23,13 @@ const PersonalDataProposal = () => {
 
   const [birthday, setBirthday] = useState("");
 
+  const [procedure, setProcedure] = useState("");
+
+  const [services, setServices] = useState("");
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    fetAllServices();
   }, []);
 
   function onChangeUserName(e) {
@@ -76,9 +81,23 @@ const PersonalDataProposal = () => {
     setBirthday(e.target.value);
   }
 
+  function onChangeProcedure(e) {
+    setProcedure(e.target.value);
+  }
+
+  function fetAllServices() {
+    getServices().then((response) => {
+      let _respuesta = JSON.parse(response);
+
+      if (_respuesta.response === "success") {
+        setServices(_respuesta.data);
+      }
+    });
+  }
+
   const personalData = (e) => {
     e.preventDefault();
-
+    console.log(procedure);
     if (genre === "") {
       Swal.fire({
         icon: "error",
@@ -89,8 +108,12 @@ const PersonalDataProposal = () => {
         icon: "error",
         title: "Por favor ingresa un número de teléfono válido",
       });
+    } else if (procedure === "") {
+      Swal.fire({
+        icon: "error",
+        title: "Por favor selecciona el procedimiento en el que estás interesado",
+      });
     } else {
-
       let formData = new FormData();
 
       formData.append("userName", userName);
@@ -98,42 +121,44 @@ const PersonalDataProposal = () => {
       formData.append("birthday", birthday);
       formData.append("genre", genre);
       formData.append("phone", phone);
+      formData.append("procedure", procedure);
 
       addUser(formData)
-      .then((response) => {
-        let _respuesta = JSON.parse(response);
-        console.log('_respuesta:',_respuesta);
-        if (_respuesta.response === "success") {
-          localStorage.setItem(
-            "id_usuario",
-            JSON.stringify(_respuesta.idUsuario)
-          );
-          localStorage.setItem("nombre", JSON.stringify(userName));
-          localStorage.setItem("apellidos", JSON.stringify(lastName));
-          localStorage.setItem("form",JSON.stringify("short"));
-          sessionStorage.setItem(
-            "token",
-            JSON.stringify(_respuesta.idUsuario)
-          );
+        .then((response) => {
+          let _respuesta = JSON.parse(response);
+          console.log("_respuesta:", _respuesta);
+          if (_respuesta.response === "success") {
+            localStorage.setItem(
+              "id_usuario",
+              JSON.stringify(_respuesta.idUsuario)
+            );
+            localStorage.setItem("nombre", JSON.stringify(userName));
+            localStorage.setItem("apellidos", JSON.stringify(lastName));
+            localStorage.setItem("form", JSON.stringify("short"));
+            localStorage.setItem("procedimiento", JSON.stringify(procedure));
+            sessionStorage.setItem(
+              "token",
+              JSON.stringify(_respuesta.idUsuario)
+            );
 
-          Swal.fire({
-            title: "Tus datos se han guardado con éxito",
-            icon: "success",
-            showConfirmButton: false,
-            timer: 2000,
-          });
+            Swal.fire({
+              title: "Tus datos se han guardado con éxito",
+              icon: "success",
+              showConfirmButton: false,
+              timer: 2000,
+            });
 
-          setTimeout(() => {
-            navigate("/historial-medico");
-          }, 2000);
-        }
-      })
-      .catch((error) => {
-        document
-          .querySelector("#sendPersonalData")
-          .removeAttribute("disabled");
-        console.log(error);
-      });
+            setTimeout(() => {
+              navigate("/historial-medico");
+            }, 2000);
+          }
+        })
+        .catch((error) => {
+          document
+            .querySelector("#sendPersonalData")
+            .removeAttribute("disabled");
+          console.log(error);
+        });
     }
   };
 
@@ -144,9 +169,9 @@ const PersonalDataProposal = () => {
           {/* <div className="col-12">
             <LogoHeader />
           </div> */}
-          {/* <div className="col-12 mt-3">
+          <div className="col-12 mt-3">
             <ProgressTop idStep={idStep} />
-          </div> */}
+          </div>
           <div className="col-12 text-center">
             <h2 className="font-bold text-red-color">DATOS PERSONALES</h2>
           </div>
@@ -156,9 +181,7 @@ const PersonalDataProposal = () => {
               id="personal-data-form"
               onSubmit={personalData}
             >
-              <label className="font-regular form-label pt-2">
-                Nombre(s):
-              </label>
+              <label className="font-regular form-label pt-2">Nombre(s):</label>
               <input
                 id="userName"
                 type="text"
@@ -206,6 +229,34 @@ const PersonalDataProposal = () => {
                 maxLength="10"
                 required
               />
+
+              <label className="font-regular form-label pt-2">
+                Procedimiento:
+              </label>
+              <p className="text-gray-color">
+                Selecciona el procedimiento que te gustaría realizarte
+              </p>
+
+              <select
+                id="procedure"
+                className="form-select"
+                aria-label="Default select example"
+                value={procedure}
+                onChange={onChangeProcedure}
+                required
+              >
+                <option defaultValue>Selecciona una opción</option>
+
+                {!services ? (
+                  <option defaultValue>Cargando...</option>
+                ) : (
+                  services.map(
+                    (service) => (
+                      <option value={service.id_servicio}>{service.nombre}</option>
+                    )
+                  )
+                )}
+              </select>
 
               <h4 className="text-center pt-3 font-semibold">
                 Fecha de nacimiento
