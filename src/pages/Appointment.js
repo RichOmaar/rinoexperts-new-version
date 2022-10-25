@@ -178,6 +178,10 @@ const Appointment = () => {
         }
     }
 
+    function onClickSendButton() {
+        document.querySelector('#sendAppointmentData').setAttribute("disabled", true);
+    }
+
   return (
     <div className="appointment-container black-background pt-3 pb-4">
         <div className="container text-white-color">
@@ -222,7 +226,7 @@ const Appointment = () => {
                             <input htmlFor="userImagesForm" type="file" onChange={(e) => previewImage(e, 'photo-appoinment-3')} className="form-control" id="inputGroupFile01" />
                         </div>
 
-                        <button type="sumbit" id="sendAppointmentData"className="presentation-next-button font-regular mt-5">Continuar</button>
+                        <button type="sumbit" id="sendAppointmentData" className="presentation-next-button font-regular mt-5" onClick={onClickSendButton}>Continuar</button>
 
                     </form>
                 </div>

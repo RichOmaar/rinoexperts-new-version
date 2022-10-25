@@ -39,7 +39,6 @@ import Lipopapada from "./pages/services/Lipopapada";
 import LiftLabios from "./pages/services/LiftLabios";
 import LiftCuello from "./pages/services/LiftCuello";
 import AboutUs from "./pages/AboutUs";
-import PurchaseResume from "./pages/PurchaseResume";
 import AddPassword from "./pages/AddPassword";
 import LoginNav from "./pages/LoginNav";
 import UserDashboard from "./pages/UserDashboard";
@@ -72,7 +71,6 @@ function App() {
         <Route path="/agendar-citas" element={<Schedule />} />
         <Route path="/detalles-citas" element={<PurchaseDetails />} />
         <Route path="/resumen-citas" element={<Summary />} />
-        <Route path="/resumen" element={<PurchaseResume />} />
         <Route path="/equipo" element={<Team />} />
         <Route path="/visualizar-imagen" element={<Crisalix />} />
         <Route path="/preguntas-frecuentes" element={<FAQ />} />
