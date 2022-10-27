@@ -8,6 +8,8 @@ import Location from "../components/location/Location";
 import Simulator from "../components/simulator/Simulator";
 import TopServices from "../components/topServices/TopServices";
 import { FiPlus } from "react-icons/fi";
+import ImageComparison from "../components/imageComparison/ImageComparison";
+import config from "../config";
 
 const Home = () => {
   useEffect(() => {
@@ -28,6 +30,22 @@ const Home = () => {
       <TopServices />
       <Simulator />
       <SliderResults />
+      <div className="container">
+        <div className="row">
+          <h2 className="text-white-color text-center py-4 fs-1">
+            RESULTADOS
+          </h2>
+          <div className="col-lx-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 my-4">
+            <ImageComparison img1={`${config.urlApi}assets/comparisons/patient-1-bf.jpg`} img2={`${config.urlApi}assets/comparisons/patient-1-af.jpg`}/>
+          </div>
+          <div className="col-lx-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 my-4">
+            <ImageComparison img1={`${config.urlApi}assets/comparisons/patient-2-bf.jpg`} img2={`${config.urlApi}assets/comparisons/patient-2-af.jpg`}/>
+          </div>
+          <div className="col-lx-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 my-4">
+            <ImageComparison img1={`${config.urlApi}assets/comparisons/patient-3-bf.jpg`} img2={`${config.urlApi}assets/comparisons/patient-3-af.jpg`}/>
+          </div>
+        </div>
+      </div>
       <Location />
     </div>
   );

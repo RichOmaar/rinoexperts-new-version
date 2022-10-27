@@ -37,10 +37,10 @@ const SliderResults = () => {
   return (
     <div className="slider-result-container py-5">
       <div className="row">
-        <div className="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-xs-12">
-          <h2 className="d-block text-white-color text-center py-4">Nuestros pacientes</h2>
+        <div className="col-12 col-xs-12">
+          <h2 className="d-block text-white-color text-center py-4 fs-1">RESEÑAS</h2>
         </div>
-        <div className="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-xs-12 px-5 slider-result-container__imgBack text-white-color">
+        <div className="col-12 px-5 slider-result-container__imgBack text-white-color">
           <OwlCarousel
             className="owl-theme"
             items="3"
