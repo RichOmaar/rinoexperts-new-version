@@ -30,7 +30,7 @@ const AboutUs = () => {
   return (
     <div className="aboutUs black-background container-fluid text-white-color p-0">
       <div className="container py-5 aboutUs__firstContainer">
-        <div className="row">
+        <div className="row d-flex align-items-center">
           <div
             className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 aboutUs__paddingContent"
             data-aos="fade-up"
@@ -76,7 +76,7 @@ const AboutUs = () => {
       <div className="container my-5">
         <div className="row">
           <div
-            className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12 aboutUs__paddingContent"
+            className="col-12 col-xl-6 col-lg-6 col-md-6 col-sm-12 col-xs-12"
             data-aos="fade-up"
           >
             <h2 className="title-light green-strong-text-color fs-2 aboutUs__paddingContent--partTitle">
@@ -131,30 +131,30 @@ const AboutUs = () => {
         <div className="row">
           <div className="col-4 text-center" data-aos="fade-up">
             <span
-              className="aboutUs__results--numbers green-tertiary-text-color"
+              className="aboutUs__results--numbers text-pink-color"
               id="valueClients"
             >
               10
             </span>
-            <span className="aboutUs__results--numbers green-tertiary-text-color">
+            <span className="aboutUs__results--numbers text-pink-color">
               +
             </span>
             <p className="font-regular">Ańos de experiencia</p>
           </div>
           <div className="col-4 text-center" data-aos="fade-up">
-            <span className="aboutUs__results--numbers green-tertiary-text-color">
+            <span className="aboutUs__results--numbers text-pink-color">
               2k+
             </span>
             <p className="font-regular">Cirugías realizadas</p>
           </div>
           <div className="col-4 text-center" data-aos="fade-up">
             <span
-              className="aboutUs__results--numbers green-tertiary-text-color"
+              className="aboutUs__results--numbers text-pink-color"
               id="valueCoverage"
             >
               100
             </span>
-            <span className="aboutUs__results--numbers green-tertiary-text-color">
+            <span className="aboutUs__results--numbers text-pink-color">
               %
             </span>
             <p className="font-regular">Clientes satisfechos</p>

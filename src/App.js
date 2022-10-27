@@ -42,6 +42,7 @@ import AboutUs from "./pages/AboutUs";
 import AddPassword from "./pages/AddPassword";
 import LoginNav from "./pages/LoginNav";
 import UserDashboard from "./pages/UserDashboard";
+import AppointmentCancel from "./pages/AppointmentCancel";
 
 function App() {
   return (
@@ -81,6 +82,7 @@ function App() {
         <Route path="/informacion-personal-previsualizacion" element={<PersonalDataProposal />} />
         <Route path="/historial-medico-previsualizacion" element={<MedicalRecordProposal />} />
         <Route path="/registro-exitoso" element={<CrisalixReceipt />} />
+        <Route path="/cita-cancelada" element={<AppointmentCancel />} />
         {/* Formulario apra previsualización de crisalix */}
         <Route path="/rinoexperts" element={<AboutUs />} />
         <Route path="/completar-perifl" element={<AddPassword />} />

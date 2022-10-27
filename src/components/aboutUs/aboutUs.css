@@ -33,7 +33,7 @@
 }
 
 .aboutUs__paddingContent {
-    padding: 0px 50px!important;
+    padding: 0px 50px;
 }
 
 .aboutUs__contact {
@@ -47,7 +47,7 @@
 /* Small devices (landscape phones, 576px and up)*/
 @media (max-width: 575px) {
     .aboutUs__paddingContent {
-        padding: 0px!important;
+        padding-right: 0px!important;
     }
     .aboutUs__paddingContent--partTitle {
         display: none;
@@ -73,6 +73,10 @@
 @media (max-width: 767px) and (min-width: 576px) {
     .aboutUs__paddingContent--fullTitle {
         display: none;
+    }
+
+    .aboutUs__paddingContent {
+        padding: 0px 50px!important;
     }
 }
 

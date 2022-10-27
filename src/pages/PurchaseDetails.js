@@ -63,7 +63,7 @@ const PurchaseDetails = () => {
         lineItems: [item],
         mode: 'payment',
         successUrl: `${window.location.origin}/registro-exitoso?token=${id_user}&session_id={CHECKOUT_SESSION_ID}`,
-        cancelUrl: `${window.location.origin}/cita-canleada`,
+        cancelUrl: `${window.location.origin}/cita-cancelada`,
     }
 
     const redirectToCheckout = async () => {
