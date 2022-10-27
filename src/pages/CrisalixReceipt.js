@@ -17,7 +17,8 @@ const CrisalixReceipt = () => {
   function sendPayment(sessionPayment) {
 
     let formData = new FormData();
-    formData.append("session", sessionPayment.split("=")[1]);
+    formData.append("session", sessionPayment.split("=")[2]);
+    formData.append("id_usuario", sessionPayment.split("=")[1]);
 
     addUserPayment(formData).then((response) => {
       let _respuesta = JSON.parse(response);

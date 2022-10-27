@@ -29,6 +29,20 @@ const getStripe = () => {
 
 const PurchaseDetails = () => {
 
+    const [totalAmount, setTotalAmount] = useState();
+
+    const [baseAmount, setBaseAmount] = useState(800);
+
+    // const [surgeryAmount, setSurgeryAmount] = useState(3000);
+
+    const [userDataAppointments, setUserDataAppointments] = useState('');
+
+    const id_user = JSON.parse(sessionStorage.getItem('token'));
+
+    const nombre = JSON.parse(localStorage.getItem('nombre'));
+    
+    const apellidos = JSON.parse(localStorage.getItem('apellidos'));
+
     // window.addEventListener("beforeunload", function (e) {
     //     e.preventDefault();
     //     console.log("Borrar los datos del usuario de todas las tablas.");
@@ -48,7 +62,7 @@ const PurchaseDetails = () => {
     const checkoutOptions = {
         lineItems: [item],
         mode: 'payment',
-        successUrl: `${window.location.origin}/registro-exitoso?session_id={CHECKOUT_SESSION_ID}`,
+        successUrl: `${window.location.origin}/registro-exitoso?token=${id_user}&session_id={CHECKOUT_SESSION_ID}`,
         cancelUrl: `${window.location.origin}/cita-canleada`,
     }
 
@@ -60,7 +74,7 @@ const PurchaseDetails = () => {
         const stripe = await getStripe();
         const { error } = await stripe.redirectToCheckout(checkoutOptions);
         
-        console.log("Stripe checkout error", error);
+        // console.log("Stripe checkout error", error);
         
         if (error) setStripeError(error.message);
 
@@ -68,20 +82,6 @@ const PurchaseDetails = () => {
     }
 
     if(stripeError) alert(stripeError);
-
-    const [totalAmount, setTotalAmount] = useState();
-
-    const [baseAmount, setBaseAmount] = useState(800);
-
-    // const [surgeryAmount, setSurgeryAmount] = useState(3000);
-
-    const [userDataAppointments, setUserDataAppointments] = useState('');
-
-    const id_user = JSON.parse(sessionStorage.getItem('token'));
-
-    const nombre = JSON.parse(localStorage.getItem('nombre'));
-    
-    const apellidos = JSON.parse(localStorage.getItem('apellidos'));
 
     useEffect(() => {
         window.scrollTo(0, 0);
