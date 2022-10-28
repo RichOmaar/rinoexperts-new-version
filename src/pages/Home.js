@@ -36,10 +36,10 @@ const Home = () => {
             RESULTADOS
           </h2>
           <div className="col-lx-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 my-4">
-            <ImageComparison img1={`${config.urlApi}assets/comparisons/patient-1-bf.jpg`} img2={`${config.urlApi}assets/comparisons/patient-1-af.jpg`}/>
+            <ImageComparison img1={`${config.urlApi}assets/comparisons/patient-3-bf.jpg`} img2={`${config.urlApi}assets/comparisons/patient-3-af.jpg`}/>
           </div>
           <div className="col-lx-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 my-4">
-            <ImageComparison img1={`${config.urlApi}assets/comparisons/patient-2-bf.jpg`} img2={`${config.urlApi}assets/comparisons/patient-2-af.jpg`}/>
+            <ImageComparison img1={`${config.urlApi}assets/comparisons/patient-3-bf.jpg`} img2={`${config.urlApi}assets/comparisons/patient-3-af.jpg`}/>
           </div>
           <div className="col-lx-4 col-lg-4 col-md-4 col-sm-6 col-xs-6 my-4">
             <ImageComparison img1={`${config.urlApi}assets/comparisons/patient-3-bf.jpg`} img2={`${config.urlApi}assets/comparisons/patient-3-af.jpg`}/>

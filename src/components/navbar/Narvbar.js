@@ -60,9 +60,9 @@ const Narvbar = () => {
             <li className="nav-item">
               <Link to="preguntas-frecuentes" className="nav-link">FAQ</Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link to="login-citas" className="nav-link"><FaUserAlt /></Link>
-            </li>
+            </li> */}
           </ul>
         </div>
       </div>
