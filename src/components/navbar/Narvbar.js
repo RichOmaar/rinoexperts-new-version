@@ -55,6 +55,9 @@ const Narvbar = () => {
               <Link to="/servicios" className="nav-link">Servicios</Link>
             </li>
             <li className="nav-item">
+              <Link to="/equipo" className="nav-link">Equipo</Link>
+            </li>
+            <li className="nav-item">
               <Link to="/rinoexperts" className="nav-link">Nosotros</Link>
             </li>
             <li className="nav-item">
