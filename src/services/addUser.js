@@ -2,7 +2,6 @@ import $ from 'jquery';
 import config from '../config';
 const URL_API = config.urlApi+'controllers/addUser.controller.php';
 
-console.log(URL_API);
 export default function addUser(values){
     return $.ajax({
         data: values,

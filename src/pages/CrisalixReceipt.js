@@ -12,14 +12,15 @@ const CrisalixReceipt = () => {
 
   useEffect(() => {
     sendPayment(window.location.search);
-  }, []);
+    localStorage.clear();
+  }, [window.location.search]);
 
   function sendPayment(sessionPayment) {
 
     let formData = new FormData();
     formData.append("session", sessionPayment.split("=")[2]);
     formData.append("id_usuario", sessionPayment.split("=")[1]);
-
+    console.log(sessionPayment.split("="))
     addUserPayment(formData).then((response) => {
       let _respuesta = JSON.parse(response);
       console.log(_respuesta);

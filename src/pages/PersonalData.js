@@ -95,29 +95,29 @@ const PersonalData = () => {
     function onChangePhone(e) {
         if (!isNaN(e.target.value)) {
             setPhone(e.target.value);
-            if((e.target.value).length === 10) {
+            // if((e.target.value).length === 10) {
 
-                let formData = new FormData();
+            //     let formData = new FormData();
 
-                formData.append('phone',  e.target.value);
+            //     formData.append('phone',  e.target.value);
                 
-                validatePhone(formData)
-                .then((response) => {
-                    let _respuesta = JSON.parse(response);
+            //     validatePhone(formData)
+            //     .then((response) => {
+            //         let _respuesta = JSON.parse(response);
 
-                    if(_respuesta.response === 'error') {
-                        Swal.fire({
-                            icon: 'error',
-                            text: 'Este número ya se encuentra registrado, por favor inicia sesión o verifica que tu número sea correcto',
-                        })
-                        setPhone('');
-                    }
-                })
-                .catch((error) => {
-                    console.log(error);
-                });
+            //         if(_respuesta.response === 'error') {
+            //             Swal.fire({
+            //                 icon: 'error',
+            //                 text: 'Este número ya se encuentra registrado, por favor inicia sesión o verifica que tu número sea correcto',
+            //             })
+            //             setPhone('');
+            //         }
+            //     })
+            //     .catch((error) => {
+            //         console.log(error);
+            //     });
 
-            }
+            // }
         } else {
             Swal.fire({
                 icon: 'error',
@@ -359,7 +359,7 @@ const PersonalData = () => {
                             )}
                         </select>
                         
-                        <p className="text-center pt-3">Introduzca una clave de 4 números. Esta clave te permitirá continuar con tu consulta más adelante, es importante que la recuerdes.</p>
+                        {/* <p className="text-center pt-3">Introduzca una clave de 4 números. Esta clave te permitirá continuar con tu consulta más adelante, es importante que la recuerdes.</p>
 
                         <label className="font-regular form-label pt-2">Clave:</label>
                         <div className="d-flex">
@@ -368,15 +368,15 @@ const PersonalData = () => {
                                 <AiOutlineEye id="opened-eye" className="icon-eye fs-3"/>
                                 <AiOutlineEyeInvisible id="closed-eye" className="fs-3"/>
                             </span>
-                        </div>
+                        </div> */}
                         <div className="text-center">
                             <button type="submit" id="sendPersonalData" className="presentation-next-button font-regular mt-3">Continuar</button>
                         </div>
                     </form>
 
-                    <div>
+                    {/* <div>
                         <InitialModal />
-                    </div>
+                    </div> */}
 
                 </div>
             </div>

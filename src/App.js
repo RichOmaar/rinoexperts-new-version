@@ -43,6 +43,7 @@ import AddPassword from "./pages/AddPassword";
 import LoginNav from "./pages/LoginNav";
 import UserDashboard from "./pages/UserDashboard";
 import AppointmentCancel from "./pages/AppointmentCancel";
+import DashboardHome from "./pages/DashboardHome";
 
 function App() {
   return (
@@ -89,6 +90,9 @@ function App() {
         <Route path="/login-citas" element={<LoginNav />} />
         <Route path="/mis-citas" element={<UserDashboard />} />
         
+        {/* Dashboard */}
+        <Route path="/dashboard" element={<DashboardHome />} />
+
       </Routes>
 
       <Footer />
