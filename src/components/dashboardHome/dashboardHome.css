@@ -1,0 +1,23 @@
+.dashboardHome__cardBlack {
+    border: #212121 0.2rem solid;
+    transition: all 0.4s ease-in;
+    box-shadow: 0.4rem 0.4rem 0.6rem #020202;
+    border-radius: 16px;
+    background: #212121;
+}
+
+.dashboardHome__cardBlack svg {
+    background-color: var(--aqua-color);
+    border-radius: 50px;
+}
+
+.dashboardHome__white {
+    border-radius: 16px;
+    background: var(--white-color);
+    transition: all 0.4s ease-in;
+    margin-left: -10px;
+}
+
+.dashboardHome__dataServices {
+    height: 250px;
+}
