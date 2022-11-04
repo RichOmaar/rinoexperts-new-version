@@ -86,7 +86,7 @@ const DashboardHome = () => {
         <h1 className="font-light">PANEL DE ADMINISTRACIÓN</h1>
         <hr className="separator"/>
         <div className="row my-4">
-          <div className="col-12 col-xl-4 col-lg-4 col-md-6 col-sm-12 col-xs-12 dashboardHome__cardBlack p-4">
+          <div className="col-12 col-xl-4 col-lg-4 col-md-12 col-sm-12 col-xs-12 dashboardHome__cardBlack p-4 my-3">
             <div>
               <h3 className="text-center">CITAS</h3>
             </div>
@@ -111,8 +111,8 @@ const DashboardHome = () => {
                 <p><AiOutlineCheckCircle className="fs-2"/> $6000 de ingresos en Septiembre</p>
             </div>
           </div>
-          <div className="col-1"></div>
-          <div className="col-12 col-xl-7 col-lg-7 col-md-6 col-sm-12 col-xs-12 dashboardHome__white p-4">
+          <div className="col-1 col-xl-1 col-lg-1 col-md-0 col-sm-0 col-xs-0"></div>
+          <div className="col-12 col-xl-7 col-lg-7 col-md-12 col-sm-12 col-xs-12 dashboardHome__white p-4 my-3">
             <DataChart data={data} />
           </div>
           <div className="col-12 my-4">

@@ -15,9 +15,50 @@
     border-radius: 16px;
     background: var(--white-color);
     transition: all 0.4s ease-in;
-    margin-left: -10px;
 }
 
 .dashboardHome__dataServices {
     height: 250px;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) {
+    .dashboardHome__white {
+        height: 250px;
+    }
+
+    .dashboardHome__cardBlack .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 767px) and (min-width: 576px) {
+    .dashboardHome__white {
+        height: 250px;
+    }
+    
+    .dashboardHome__cardBlack .table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 991px) and (min-width: 768px) {
+    .dashboardHome__white {
+        height: 250px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1199px) and (min-width: 992px) {
+  
+}
+
+@media (min-width: 1200px) {
+   
 }
