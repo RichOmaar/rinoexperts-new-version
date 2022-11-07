@@ -27,7 +27,7 @@ const AppointmentCancel = () => {
               Parece que has decidido no agendar tu cita. No te preocupes, recuerda que puedes volver a realizar el proceso nuevamente cuando lo desees.
             </p>
             <div className="mt-5 aboutUs__contact" data-aos="fade-up">
-                <BlackButton text="Agendar ahora" url="/" />
+                <BlackButton text="Agendar ahora" url="/servicios" />
             </div>
           </div>
         </div>
