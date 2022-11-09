@@ -44,6 +44,7 @@ import LoginNav from "./pages/LoginNav";
 import UserDashboard from "./pages/UserDashboard";
 import AppointmentCancel from "./pages/AppointmentCancel";
 import DashboardHome from "./pages/DashboardHome";
+import DashboardAppointmentsDetail from "./pages/DashboardAppointmentsDetail";
 
 function App() {
   return (
@@ -92,6 +93,7 @@ function App() {
         
         {/* Dashboard */}
         <Route path="/dashboard" element={<DashboardHome />} />
+        <Route path="/citas-agendadas/:id_usuario" element={<DashboardAppointmentsDetail />} />
 
       </Routes>
 

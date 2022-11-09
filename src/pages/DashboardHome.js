@@ -262,7 +262,7 @@ const DashboardHome = () => {
                         <th>{item.procedimiento}</th>
                         <th>{item.registro}</th>
                         <th>
-                          <Link to={`/detalles/${item.id_usuario}`}>
+                          <Link to={`/citas-agendadas/${item.id_usuario}`}>
                             Ver datalles
                           </Link>
                         </th>
