@@ -20,3 +20,41 @@
     border-radius: 30px;
     margin-top: 10px;
 }
+
+.team__description {
+    padding: 25px 250px;
+    text-align: center;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (max-width: 575px) {
+    .team__description {
+        padding: 25px 50px;
+        text-align: center;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (max-width: 767px) and (min-width: 576px) {
+    .team__description {
+        padding: 25px 150px;
+        text-align: center;
+    }
+}
+
+/* Large devices (desktops, 992px and up)*/
+@media (max-width: 991px) and (min-width: 768px) {
+    .team__description {
+        padding: 25px 150px;
+        text-align: center;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up)*/
+@media (max-width: 1199px) and (min-width: 992px) {
+
+}
+
+@media (min-width: 1200px){
+
+}

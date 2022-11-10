@@ -41,13 +41,13 @@ const Team = () => {
   return (
     <div className="black-background team-container">
         <div className="container py-3">
-            <div className="col-xs-12 col-sm-12">
+            {/* <div className="col-xs-12 col-sm-12">
                 <h2 className="font-bold text-white-color">Conoce A Nuestro Equipo</h2>
+            </div> */}
+            <div className="col-xs-12 col-sm-12 team__description">
+                <p className="text-white-color">El equipo de Rinoexperts está altamente calificado y capacitado para brindarte el mejor servicio y experiencia durante tu procedimiento.</p>
             </div>
-            <div className="col-xs-12 col-sm-12">
-                <p className="text-white-color"><em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</em></p>
-            </div>
-            <h2 className="font-bold text-white-color text-center my-4" id="our-team-tittle">NUESTROS ESPECIALISTAS</h2>
+            <h2 className="font-bold text-aqua-color text-center my-4" id="our-team-tittle">NUESTROS ESPECIALISTAS</h2>
             <div className="row text-center text-white-color px-3 d-flex justify-content-center">
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3">
                     {/* <img src={config.urlApi+'assets/images/hombre-1.png'} className="img-fluid team-image my-2" alt="..." /> */}
