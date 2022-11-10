@@ -50,49 +50,58 @@ const Team = () => {
             <h2 className="font-bold text-white-color text-center my-4" id="our-team-tittle">NUESTROS ESPECIALISTAS</h2>
             <div className="row text-center text-white-color px-3 d-flex justify-content-center">
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3">
-                    <img src={config.urlApi+'assets/images/hombre-1.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/hombre-1.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Dr. Jorge Ortiz</p>
                     <p className="m-0 font-light team-specialty">CIRUJANO MAXILOFACIAL</p>
                 </div>
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3">
-                    <img src={config.urlApi+'assets/images/mujer-1.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/mujer-1.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Dra. Charlotte Flores</p>
                     <p className="m-0 font-light team-specialty">REHABILITACIÓN</p>
                 </div>
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3">
-                    <img src={config.urlApi+'assets/images/hombre-2.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/hombre-2.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Pamela Anderson</p>
                     <p className="m-0 font-light team-specialty">AUXILIAR REHABILITACIÓN</p>
                 </div>
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3">
-                    <img src={config.urlApi+'assets/images/mujer-2.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/mujer-2.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Cristiano Ronaldo</p>
                     <p className="m-0 font-light team-specialty">AUXILIAR REHABILITACIÓN</p>
                 </div>
 
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3 hidden-membrer" id="team-membrer">
-                    <img src={config.urlApi+'assets/images/hombre-1.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/hombre-1.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Dr. Jorge Ortiz</p>
                     <p className="m-0 font-light team-specialty">CIRUJANO MAXILOFACIAL</p>
                 </div>
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3 hidden-membrer" id="team-membrer">
-                    <img src={config.urlApi+'assets/images/mujer-1.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/mujer-1.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Dra. Charlotte Flores</p>
                     <p className="m-0 font-light team-specialty">REHABILITACIÓN</p>
                 </div>
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3 hidden-membrer" id="team-membrer">
-                    <img src={config.urlApi+'assets/images/hombre-2.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/hombre-2.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Pamela Anderson</p>
                     <p className="m-0 font-light team-specialty">AUXILIAR REHABILITACIÓN</p>
                 </div>
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3 hidden-membrer" id="team-membrer">
-                    <img src={config.urlApi+'assets/images/mujer-2.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/mujer-2.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Cristiano Ronaldo</p>
                     <p className="m-0 font-light team-specialty">AUXILIAR REHABILITACIÓN</p>
                 </div> 
 
                 <div className="col-6 col-xs-6 col-sm-6 col-md-4 col-lg-3 col-xl-3 p-3 hidden-membrer" id="team-membrer">
-                    <img src={config.urlApi+'assets/images/hombre-1.png'} className="img-fluid team-image my-2" alt="..." />
+                    {/* <img src={config.urlApi+'assets/images/hombre-1.png'} className="img-fluid team-image my-2" alt="..." /> */}
+                    <img src="https://via.placeholder.com/500/" className="img-fluid team-image my-2" alt="..." />
                     <p className="m-0">Dr. Jorge Ortiz</p>
                     <p className="m-0 font-light team-specialty">CIRUJANO MAXILOFACIAL</p>
                 </div>
