@@ -1,0 +1,115 @@
+.countdown__container {
+    /* background-color: #f4f218; */
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(244,242,24,1) 100%); 
+    /* -webkit-box-shadow: 5px 5px 35px 3px #F4F218;  */
+    /* box-shadow: 5px 5px 35px 3px #F4F218; */
+}
+
+.countdown {
+    font-size: 35px;
+    color: var(--white-color);
+    font-weight: 800;
+}
+
+.countdown__title {
+    font-size: 35px;
+    color: var(--white-color);
+    font-weight: 800;
+}
+.spaces__container {
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(244,242,24,1) 100%); 
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+
+.spaces__container-card {
+    background: rgba( 255, 255, 255, 0.25 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+} 
+
+.countdown__img {
+    border-radius: 10px;
+}
+
+.rounded-circle.empty{
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    padding: 10px;
+}
+
+.rounded-circle.empty h2 {
+    font-size: 50px;
+    color: var(--true-black-color);
+    font-weight: 800;
+    margin: 0;
+}
+
+.placeholder__rounded {
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background-color: #eee;
+}
+
+/* @keyframes placeHolderShimmer{
+    0%{
+        background-position: -468px 0
+    }
+    100%{
+        background-position: 468px 0
+    } 
+}*/
+ 
+.animated-background {
+    
+    background-size: 800px 104px;
+    height: 100px;
+    position: relative;
+    font-size: 100px;
+    color: var(--true-black-color);
+}
+
+.video {
+    width: 640px;
+    height: 360px;
+    background-color: gray;
+}
+
+.team__members-card {
+    border-radius: 10px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(244,242,24,1) 100%); 
+}
+
+.team__members-card img {
+    border-radius: 10px;
+}
+
+.accordion-collapse.collapse.show {
+    color: var(--white-color); 
+    background-color: #00000048;
+    border-radius: 10px;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--true-black-color)!important;
+    border-color: var(--white-color);
+}
+
+.waterTreatment__video.embed-responsive-item {
+    height: auto;
+    width: 100%;
+}

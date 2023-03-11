@@ -45,14 +45,16 @@ import UserDashboard from "./pages/UserDashboard";
 import AppointmentCancel from "./pages/AppointmentCancel";
 import DashboardHome from "./pages/DashboardHome";
 import DashboardAppointmentsDetail from "./pages/DashboardAppointmentsDetail";
+import Lottery from "./pages/Lottery";
 
 function App() {
   return (
     <div>
-      <Navbar />
+      {/* <Navbar /> */}
       {/* https://mockuphone.com/ */}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Lottery />} />
+        {/* <Route path="/" element={<Home />} />
         <Route path="/servicios" element={<Servicios />} />
 
         <Route path="/servicios/rinoplastia" element={<Rinoplastia />} />
@@ -78,26 +80,26 @@ function App() {
         <Route path="/visualizar-imagen" element={<Crisalix />} />
         <Route path="/preguntas-frecuentes" element={<FAQ />} />
         <Route path="/top-faqs" element={<TopFAQ />} />
-        <Route path="/contacto" element={<ContactUs />} />
+        <Route path="/contacto" element={<ContactUs />} /> */}
         {/* Formulario apra previsualización de crisalix */}
-        <Route path="/formulario-nueva-imagen" element={<NewImageForm />} />
+        {/* <Route path="/formulario-nueva-imagen" element={<NewImageForm />} />
         <Route path="/informacion-personal-previsualizacion" element={<PersonalDataProposal />} />
         <Route path="/historial-medico-previsualizacion" element={<MedicalRecordProposal />} />
         <Route path="/registro-exitoso" element={<CrisalixReceipt />} />
-        <Route path="/cita-cancelada" element={<AppointmentCancel />} />
+        <Route path="/cita-cancelada" element={<AppointmentCancel />} /> */}
         {/* Formulario apra previsualización de crisalix */}
-        <Route path="/rinoexperts" element={<AboutUs />} />
+        {/* <Route path="/rinoexperts" element={<AboutUs />} />
         <Route path="/completar-perifl" element={<AddPassword />} />
         <Route path="/login-citas" element={<LoginNav />} />
-        <Route path="/mis-citas" element={<UserDashboard />} />
+        <Route path="/mis-citas" element={<UserDashboard />} /> */}
         
         {/* Dashboard */}
-        <Route path="/dashboard" element={<DashboardHome />} />
-        <Route path="/citas-agendadas/:id_usuario" element={<DashboardAppointmentsDetail />} />
+        {/* <Route path="/dashboard" element={<DashboardHome />} />
+        <Route path="/citas-agendadas/:id_usuario" element={<DashboardAppointmentsDetail />} /> */}
 
       </Routes>
 
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
