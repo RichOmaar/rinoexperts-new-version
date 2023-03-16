@@ -171,9 +171,7 @@ const Lottery = () => {
             <h2 className='font-bold fs-1 text-center'>PARTICIPA PARA GANAR UNA RINOPLASTIA</h2>
           </div>
           <div className='col-xl-6 col-lg-6 col-md-12 col-sm-12'>
-            {/* <span className='video d-block countdown__img shadow'></span> */}
-            {/* <video src="https://pro.kinesiuz.com/assets/videos/semarnat.mp4" class="waterTreatment__video embed-responsive-item" type="video/mp4" loop="" autoplay="" height="450"></video> */}
-            <iframe src="https://www.youtube.com/embed/_0KMSc7Jz_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className='waterTreatment__video embed-responsive-item'></iframe>
+            <video src={config.urlApi+'assets/rifa/intro.mp4'} class="waterTreatment__video embed-responsive-item shadow rounded" type="video/mp4" autoplay height="450" controls></video>
           </div>
         </div>
       </section>
@@ -187,13 +185,18 @@ const Lottery = () => {
             <p className='text-justify'>
               ¿Quiénes son estos Pequeños de tan solo 9 y 10 años? 🤷‍♂️🤷🏽‍♀️
               <br/>
+              <br/>
               Con gran Orgullo 🤩 podemos decir, que ellos son el SELECTIVO TAMAULIPAS DE BASKETBALL EN LA CATEGORIA 2013 ⛹🏻⛹️‍♂️⛹🏿‍♂️ los cuales en cada cancha 🏀 han tenido grandes y fuertes batallas dejando su corazón y garra dentro, 💪🏻 obteniendo Campeonatos para el Estado de Tamaulipas 🏆en el cual han mostrado su gran desafío como grandes jugadores. 
+              <br/>
               <br/>
               Pequeños que no han tenido miedo al fracaso y han luchado Juntos hasta el ultimo segundo.🥰
               <br/>
+              <br/>
               Nuestros niños los cuales cada uno pertenece a distintos clubs 🏀del estado han aprendido a trabajar y respetar juntos el trabajo de cada uno. Estos chiquitines son el gran talento Tamaulipeco el cual en base a sus grandes resultados han obtenido su Pase al Torneo International Global en Colombia Medellín 🇨🇴, representando con gran Orgullo a Nuestro País 🇲🇽
               <br/>
+              <br/>
               Te invitamos a ser parte de esta nueva y gran aventura para estos chiquitines!!!
+              <br/>
               <br/>
               “El talento gana partidos, pero el trabajo en equipo y la inteligencia ganan campeonatos.” 
             </p>
@@ -207,8 +210,7 @@ const Lottery = () => {
             <h2 className='font-bold fs-1 text-center'>CONOCE LAS BASES</h2>
           </div>
           <div className='col-xl-6 col-lg-6 col-md-12 col-sm-12'>
-            {/* <span className='video d-block countdown__img shadow'></span> */}
-            <iframe src="https://www.youtube.com/embed/_0KMSc7Jz_Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen className='waterTreatment__video embed-responsive-item'></iframe>
+            <video src={config.urlApi+'assets/rifa/bases.mp4'} class="waterTreatment__video embed-responsive-item shadow rounded" type="video/mp4" autoplay height="450" controls></video>
           </div>
         </div>
       </section>
