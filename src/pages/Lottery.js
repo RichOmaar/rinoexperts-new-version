@@ -270,8 +270,8 @@ const Lottery = () => {
                 <strong>
                   <ol>
                     <li>Realiza una transferencia de $1,000 a la siguiente cuenta: 014180605774788011, a nombre de Nohemí Charlotte Flores Zolozabal, con el concepto de “rifa”.</li>
-                    <li>Escoge un número disponible del 1 al 30 y envía el número elegido junto con el comprobante de transferencia al WhatsApp: 55 XXXX XXXX.</li>
-                    <li>Revisa el resultado de la rifa en rinoexperts.com el 30 de Marzo del 2023 a las 8:00pm.</li>
+                    <li>Escoge un número disponible del 1 al 30 y envía el número elegido junto con el comprobante de transferencia al WhatsApp: <a href='https://wa.me/+5215532118512' target="_blank" rel="noreferrer" className='whatsapp'>55 3211 8512</a>.</li>
+                    <li>Revisa el resultado de la rifa a través de un live en nuestra página de instagram <a href='https://www.instagram.com/rinoexperts/' target="_blank" rel="noreferrer" className='whatsapp'>(@rinoexperts)</a> el 30 de Marzo del 2023 a las 8:00pm.</li>
                   </ol>
                 </strong>
               </div>

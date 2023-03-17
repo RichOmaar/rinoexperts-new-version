@@ -113,3 +113,15 @@
     height: auto;
     width: 100%;
 }
+
+.whatsapp {
+    text-decoration: none;
+    color: var(--white-color);
+    animation: all 3ms;
+}
+
+.whatsapp:hover {
+    text-decoration: underline;
+    color: var(--white-color);
+    animation: all 3ms;
+}
