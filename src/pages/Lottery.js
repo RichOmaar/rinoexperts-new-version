@@ -132,7 +132,7 @@ const Lottery = () => {
       return (
         <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-sm-5 mt-3'>
           <div className='spaces__container-card d-flex align-items-center'>
-            <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" className="rounded-circle p-4" style={{width: '150px'}} alt="Avatar" />
+            <img src={participant.image} className="rounded-circle p-4" style={{width: '150px'}} alt="Avatar" />
             <div>
               <h3 className='font-bold'>Número: {participant.id_lottery}</h3>
               <p className='text-justify'>{participant.name}</p>
