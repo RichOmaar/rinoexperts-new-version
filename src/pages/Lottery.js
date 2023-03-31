@@ -107,7 +107,7 @@ const Lottery = () => {
       var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       var seconds = Math.floor((distance % (1000 * 60)) / 1000);
         
-      document.querySelector(".countdown").innerHTML = days + "d " + hours + "h "
+      document.querySelector(".countdown__title").innerHTML = days + "d " + hours + "h "
       + minutes + "m " + seconds + "s ";
         
       if (distance < 0) {
@@ -160,8 +160,8 @@ const Lottery = () => {
   return (
     <div>
       <div className='countdown__container py-3 text-center shadow'>
-        <span className='countdown__title'>Faltan: </span>
-        <span className='countdown'></span>
+        {/* <span className='countdown__title'>Faltan: </span> */}
+        <h2 className='text-white-color fw-bold'>Felicidades a Emmerson O. Díaz, en breve nos pondremos en contácto contigo.</h2>
       </div>
       {/* <h1 className='text-center font-bold my-3'>PARTICIPA PARA GANAR UNA RINOPLASTIA</h1> */}
       <img src={slider} alt='slider' className='d-block w-100' />
@@ -215,24 +215,14 @@ const Lottery = () => {
         </div>
       </section>
 
-      <section className='container my-5 spaces__container shadow'>
+      {/* <section className='container my-5 spaces__container shadow'>
         <div className='row d-flex align-items-center'>
           <h2 className='font-bold fs-1'>Lugares disponibles</h2>
           {participants?.map((participant) => (
             cards(participant)
           ))}
-          {/* <div className='col-xl-4 col-lg-4 col-md-6 col-sm-12 mt-sm-5'>
-            <div className='spaces__container-card d-flex align-items-center'>
-              <img src="https://mdbcdn.b-cdn.net/img/new/avatars/2.webp" className="rounded-circle p-4" style={{width: '150px'}} alt="Avatar" />
-              <div>
-                <h3 className='font-bold'>Lugar 1</h3>
-                <p className='text-justify'>Pancho Pantera</p>
-                <span><a href=''>Red Social: Pancho Pantera</a></span>
-              </div>
-            </div>
-          </div> */}
         </div>
-      </section>
+      </section> */}
 
       <section>
           <h2 className='text-center fw-bold fs-1 mb-5'>CONOCE A LOS CAMPEONES</h2>
